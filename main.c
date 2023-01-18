@@ -359,6 +359,13 @@ choices_t *read_iso_choices(char *filename)
     return choices;
 }
 
+void exit_cb()
+{
+    erase();
+    refresh();
+    endwin();
+}
+
 int main(int argc, char **argv)
 {
     args_t *args = args_create(argc, argv);
@@ -368,6 +375,8 @@ int main(int argc, char **argv)
         logger("initscr failure");
         return 1;
     }
+
+    atexit(exit_cb);
 
     noecho();
 
@@ -440,8 +449,5 @@ int main(int argc, char **argv)
     choices_free(iso_info);
     args_free(args);
 
-    erase();
-    refresh();
-    endwin();
     return 0;
 }
