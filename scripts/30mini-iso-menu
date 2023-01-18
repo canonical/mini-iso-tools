@@ -26,8 +26,6 @@ iso_chooser_step1() {
     # use the requested ISO size to figure out if we have the memory or not,
     # and kexec to reserve that memory
 
-    set -x
-
     echo "###########################################"
     echo "iso_chooser_step1"
     echo "###########################################"
@@ -43,7 +41,7 @@ iso_chooser_step1() {
 
     . /out.vars
 
-    dev=$(blkid | grep ISOIMAGE | cut -d: -f1)
+    dev=$(blkid --match-token LABEL=ISOIMAGE | cut -d: -f1)
 
     modprobe isofs
     mount -o ro "$dev" "${mountpoint}"
