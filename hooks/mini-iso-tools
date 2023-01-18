@@ -1,0 +1,40 @@
+#!/bin/sh -e
+
+PREREQS=""
+
+prereqs()
+{
+    echo "$PREREQS"
+}
+
+case "$1" in
+    prereqs)
+       prereqs
+       exit 0
+       ;;
+esac
+
+. /usr/share/initramfs-tools/hook-functions
+
+_copy_recursive()
+{
+    type="${1}"
+    remove_prefix="${2}"
+    src="${3}"
+
+    for f in $(find $src -type f) ; do
+        target=$f
+        if [ "$remove_prefix" = "true" ] ; then
+            target=${f#$src}
+        fi
+        copy_file $type $f $target
+    done
+}
+
+copy_exec /usr/sbin/kexec
+
+copy_exec /sbin/agetty
+copy_exec /bin/setfont
+_copy_recursive locale false /usr/lib/locale/C.utf8
+_copy_recursive assets true /usr/lib/mini-iso-tools
+copy_file terminfo /lib/terminfo/l/linux

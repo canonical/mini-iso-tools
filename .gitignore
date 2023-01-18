@@ -1,0 +1,4 @@
+*.o
+iso-chooser-menu
+out.vars
+ubuntu-server.json

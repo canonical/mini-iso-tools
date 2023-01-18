@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# given an input size, return a memmap directive of memory to request to
+# protect
+
+set -e
+
+requested_size="$1"  # size in bytes of protected memory to reserve
+input="$2"           # input file to read, or /proc/iomem
+
+if [ -z "$input" ] ; then
+    input="/proc/iomem"
+elif [ ! -f "$input" ] ; then
+    echo "input file not found"
+    exit 1
+fi
+
+directive=$(grep -E "100000000"'-.*System RAM' "$input" || true)
+if [ -z "$directive" ] ; then
+    echo "range at address 4GiB not found"
+    exit 1
+fi
+
+range_start_hex=$(echo "$directive" | awk '-F[- ]' '{print $1}')
+range_end_hex=$(echo "$directive" | awk '-F[- ]' '{print $2}')
+range_start=$(printf "%d" "0x$range_start_hex")
+range_end=$(printf "%d" "0x$range_end_hex")
+
+# range size needs +1 due to the inclusive values
+# range of 10-11 is 2 bytes long
+range_size=$((range_end - range_start + 1))
+range_MiB=$((range_size / 1024 / 1024))
+
+# Align requested size to 4MiB boundary
+requested_KiB=$(((requested_size + 1023) / 1024))
+requested_MiB=$(((requested_KiB  + 1023) / 1024))
+requested_MiB=$(((requested_MiB  +    3) &   ~3))
+
+if [ "$requested_MiB" -gt "$range_MiB" ] ; then
+    echo "available memory insufficient"
+    echo "requested ${requested_MiB}MiB"
+    echo "available ${range_MiB}MiB"
+    exit 1
+fi
+
+echo "${requested_MiB}M"'!4G'

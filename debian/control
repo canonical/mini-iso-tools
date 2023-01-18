@@ -1,0 +1,29 @@
+Source: mini-iso-tools
+Section: misc
+Priority: extra
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ libjson-c-dev,
+ libncurses-dev,
+ pkg-config,
+Standards-Version: 4.6.1
+Homepage: https://github.com/canonical/mini-iso-tools
+Vcs-Browser: https://github.com/canonical/mini-iso-tools
+Vcs-Git: https://github.com/canonical/mini-iso-tools.git
+
+Package: mini-iso-tools
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ casper,
+ kbd,
+ kexec-tools,
+Description: Show a menu of bootable ISOs
+ This package provides hook scripts for the new mini.iso to allow it to
+ present a menu of possible boot targets.
+ .
+ This package should not be installed on normal systems and is only offered
+ to support the install media creation process.

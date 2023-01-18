@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+dmesg -c
+
+# ensures we have the unicode glyphs - half-blocks, right arrow
+/usr/bin/setfont /usr/lib/mini-iso-tools/subiquity.psf
+
+cdimage_json=/cdimage.json
+wget -O $cdimage_json \
+    http://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
+
+/usr/bin/iso-chooser-menu \
+    --input $cdimage_json \
+    --output /out.vars

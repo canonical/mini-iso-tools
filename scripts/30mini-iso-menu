@@ -1,0 +1,114 @@
+#!/bin/sh
+
+PREREQ=""
+
+prereqs()
+{
+       echo "$PREREQ"
+}
+
+case $1 in
+# get pre-requisites
+prereqs)
+       prereqs
+       exit 0
+       ;;
+esac
+
+. /scripts/casper-functions
+. /scripts/casper-helpers
+
+mountpoint=/cdrom
+
+iso_chooser_step1() {
+    # download JSON of simplestreams for showing the list of ISOs we might
+    # chain-boot to, hand that off to the menu, look what the choice was,
+    # use the requested ISO size to figure out if we have the memory or not,
+    # and kexec to reserve that memory
+
+    set -x
+
+    echo "###########################################"
+    echo "iso_chooser_step1"
+    echo "###########################################"
+
+    /usr/sbin/agetty --skip-login \
+        --login-program /usr/bin/iso-menu-session \
+        tty1 linux
+
+    if [ ! -f /out.vars ] ; then
+        echo "menu failure, debug shell"
+        /bin/sh
+    fi
+
+    . /out.vars
+
+    dev=$(blkid | grep ISOIMAGE | cut -d: -f1)
+
+    modprobe isofs
+    mount -o ro "$dev" "${mountpoint}"
+
+    configure_networking
+
+    echo "Loading $MEDIA_LABEL ..."
+
+    pmem_directive="memmap=$(/usr/bin/get_memmap_directive $MEDIA_SIZE)"
+
+    kexec \
+        --command-line="iso-url=$MEDIA_URL iso-chooser-step2 $pmem_directive nokaslr ---" \
+        --load "$mountpoint/casper/vmlinuz" \
+        --initrd="$mountpoint/casper/initrd"
+    kexec --exec
+}
+
+iso_chooser_step2() {
+    # Download the real ISO to the reserved memory region, and kexec to that
+
+    echo "###########################################"
+    echo "iso_chooser_step2"
+    echo "###########################################"
+
+    configure_networking
+
+    target="/dev/pmem0"
+
+    if [ ! -e $target ] ; then
+        echo "failed to find $target"
+        /bin/sh
+    fi
+
+    echo "download $URL"
+    wget "${URL}" -O "${target}"
+
+    modprobe isofs
+    mount -o ro "${target}" "${mountpoint}"
+
+    query=memmap
+    len=$(expr length $query)
+
+    for n in $(cat /proc/cmdline) ; do
+        begin=$(expr substr $n 1 $len)
+        if [ "$begin" = "$query" ] ; then
+            pmem_directive=$n
+            break
+        fi
+    done
+
+    if [ -z "$pmem_directive" ] ; then
+        panic "memmap directive not found"
+    fi
+
+    kexec \
+        --command-line="live-media=$target $pmem_directive nokaslr ---" \
+        --load "$mountpoint/casper/vmlinuz" \
+        --initrd="$mountpoint/casper/initrd"
+    kexec --exec
+}
+
+for x in $(cat /proc/cmdline); do
+    case $x in
+        iso-chooser-menu)  iso_chooser_step1;;
+        iso-chooser-step2) iso_chooser_step2;;
+        *) ;;
+    esac
+done
