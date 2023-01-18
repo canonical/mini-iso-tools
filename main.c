@@ -42,6 +42,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdnoreturn.h>
 #include <sys/param.h>
 
 #include <json-c/json.h>
@@ -50,9 +51,9 @@ int ubuntu_orange = COLOR_RED;
 int text_white = COLOR_WHITE;
 int back_green = COLOR_GREEN;
 
-void usage(char *prog)
+noreturn void usage(char *prog)
 {
-    printf("usage: %s --input path --output path", prog);
+    fprintf(stderr, "usage: %s --input path --output path\n", prog);
     exit(1);
 }
 
@@ -128,6 +129,9 @@ typedef struct _iso_data_t
     int size;
 } iso_data_t;
 
+/* create the iso_data_t structure.  Caller allocates a free()able string, and
+ * a later call to iso_data_free() will release both the iso_data_t and the
+ * strings supplied here. */
 iso_data_t *iso_data_create(char *label, char *url, int size)
 {
     iso_data_t *ret = calloc(sizeof(iso_data_t), 1);
@@ -306,10 +310,13 @@ void choice_handle_event(args_t *args, choices_t *choices, choice_event evt)
     }
 }
 
+#define UNUSED(X) __attribute__((unused(X)))
+
 char *find_largest_subkey(json_object *obj)
 {
     char *ret = NULL;
     json_object_object_foreach(obj, key, val) {
+        (void)val;
         if(!ret || strcmp(ret, key) < 0) {
             ret = key;
         }
