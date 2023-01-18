@@ -42,6 +42,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <syslog.h>
 #include <stdnoreturn.h>
 #include <sys/param.h>
 
@@ -93,17 +94,6 @@ void args_free(args_t *args)
     free(args->infile);
     free(args->outfile);
     free(args);
-}
-
-void logger(char *fmt, ...)
-{
-    va_list ap;
-    va_start(ap, fmt);
-
-    FILE *out = fopen("/tmp/iso-chooser-menu.log", "a");
-    vfprintf(out, fmt, ap);
-    fprintf(out, "\n");
-    fclose(out);
 }
 
 char *saprintf(char *fmt, ...)
@@ -275,7 +265,7 @@ void write_output(char *fname, iso_data_t *iso_data)
 {
     FILE *f = fopen(fname, "w");
     if(!f) {
-        logger("failed to open output file [%s]", fname);
+        syslog(LOG_ERR, "failed to open output file [%s]", fname);
         exit(1);
     }
 
@@ -296,8 +286,8 @@ void choice_handle_event(args_t *args, choices_t *choices, choice_event evt)
         case SELECT:
             iso_data_t *cur = choices->values[choices->cur];
             write_output(args->outfile, cur);
-            logger("selected:\n\t%s\n\t%s\n\t%d",
-                    cur->label, cur->url, cur->size);
+            syslog(LOG_DEBUG, "selected:%s %s %d",
+                   cur->label, cur->url, cur->size);
             break;
         case INCREASE:
             if(choices->cur < choices->len - 1) {
@@ -305,7 +295,7 @@ void choice_handle_event(args_t *args, choices_t *choices, choice_event evt)
             }
             break;
         default:
-            logger("invalid event id [%d]", evt);
+            syslog(LOG_ERR, "invalid event id [%d]", evt);
             exit(1);
     }
 }
@@ -372,7 +362,7 @@ int main(int argc, char **argv)
     setlocale(LC_ALL, "C.UTF-8");
 
     if(!initscr()) {
-        logger("initscr failure");
+        syslog(LOG_ERR, "initscr failure");
         return 1;
     }
 
@@ -381,14 +371,12 @@ int main(int argc, char **argv)
     noecho();
 
     if(!has_colors()) {
-        logger("has_colors failure");
-        endwin();
+        syslog(LOG_ERR, "has_colors failure");
         return 1;
     }
 
     if(start_color() == ERR) {
-        logger("start_color failure");
-        endwin();
+        syslog(LOG_ERR, "start_color failure");
         return 1;
     }
 
@@ -399,9 +387,7 @@ int main(int argc, char **argv)
     curs_set(0); /* hide */
     refresh();
 
-    logger("start");
-
-    logger("can_change_color [%d]", can_change_color());
+    syslog(LOG_DEBUG, "can_change_color [%d]", can_change_color());
     if(can_change_color()) {
         init_color_from_bytes(ubuntu_orange, 0xE9, 0x54, 0x20);
         init_color_from_bytes(text_white, 0xFF, 0xFF, 0xFF);
@@ -423,7 +409,6 @@ int main(int argc, char **argv)
         orange_banner("Choose an Ubuntu version to install");
         add_chooser(iso_info, iso_info->cur);
         ch = getch();
-        logger("got input [%d]\n", ch);
         switch(ch) {
             case KEY_DOWN:
                 choice_handle_event(args, iso_info, INCREASE);
