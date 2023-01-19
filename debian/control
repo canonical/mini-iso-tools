@@ -1,6 +1,6 @@
 Source: mini-iso-tools
 Section: misc
-Priority: extra
+Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Rules-Requires-Root: no
 Build-Depends:
