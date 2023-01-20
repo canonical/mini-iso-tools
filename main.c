@@ -342,7 +342,7 @@ choices_t *read_iso_choices(char *filename)
             saprintf("Ubuntu Server %s (%s)",
                     json_object_get_string(title),
                     json_object_get_string(codename)),
-            saprintf("http://cdimage.ubuntu.com/%s",
+            saprintf("https://cdimage.ubuntu.com/%s",
                     json_object_get_string(path)),
             json_object_get_int(size));
 
