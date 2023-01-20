@@ -51,7 +51,9 @@ iso_chooser_step1() {
 
     cmdline=iso-url=$MEDIA_URL
     cmdline="$cmdline iso-size=$MEDIA_SIZE"
-    cmdline="$cmdline iso-256sum=$MEDIA_256SUM"
+    if [ "$VALIDATE_CHECKSUM" = "1" ]; then
+        cmdline="$cmdline iso-256sum=$MEDIA_256SUM"
+    fi
     cmdline="$cmdline iso-chooser-step2"
     cmdline="$cmdline $pmem_directive"
     cmdline="$cmdline nokaslr"
@@ -79,13 +81,17 @@ iso_chooser_step2() {
     echo "Downloading $URL ..."
     wget "$URL" -O "$target"
 
-    echo "Checksum verification ..."
-    if ! /usr/lib/mini-iso-tools/checksum-device \
-            $target $MEDIA_SIZE $MEDIA_256SUM; then
-        echo "ISO checksum verification failure, debug shell"
-        /bin/sh
+    if [ -n "$MEDIA_256SUM" -a "$VALIDATE_CHECKSUM" = "1" ]; then
+        echo "Checksum verification ..."
+        if ! /usr/lib/mini-iso-tools/checksum-device \
+                $target $MEDIA_SIZE $MEDIA_256SUM; then
+            echo "ISO checksum verification failure, debug shell"
+            /bin/sh
+        fi
+        echo "ISO checksum pass"
+    else
+        echo "Skipping checksum validation"
     fi
-    echo "ISO checksum pass"
 
     modprobe isofs
     mount -o ro "${target}" "${mountpoint}"
@@ -106,12 +112,15 @@ iso_chooser_step2() {
     kexec --exec
 }
 
+export VALIDATE_CHECKSUM=1
+
 for x in $(cat /proc/cmdline); do
     case $x in
-        iso-chooser-*) export MENU_STEP=$x;;
-        iso-size=*)    export MEDIA_SIZE="${x#iso-size=}";;
-        iso-256sum=*)  export MEDIA_256SUM="${x#iso-256sum=}";;
-        memmap=*)      export MEMMAP="$x";;
+        iso-chooser-*)  export MENU_STEP=$x;;
+        iso-size=*)     export MEDIA_SIZE="${x#iso-size=}";;
+        iso-256sum=*)   export MEDIA_256SUM="${x#iso-256sum=}";;
+        fsck.mode=skip) export VALIDATE_CHECKSUM=0;;
+        memmap=*)       export MEMMAP="$x";;
         *);;
     esac
 done
