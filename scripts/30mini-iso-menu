@@ -26,16 +26,12 @@ iso_chooser_step1() {
     # use the requested ISO size to figure out if we have the memory or not,
     # and kexec to reserve that memory
 
-    echo "###########################################"
-    echo "iso_chooser_step1"
-    echo "###########################################"
-
     /usr/sbin/agetty --skip-login \
         --login-program /usr/lib/mini-iso-tools/iso-menu-session \
         tty1 linux
 
     if [ ! -f /out.vars ] ; then
-        echo "menu failure, debug shell"
+        echo "ISO menu failed, dropping to debug shell"
         /bin/sh
     fi
 
@@ -63,20 +59,16 @@ iso_chooser_step1() {
 iso_chooser_step2() {
     # Download the real ISO to the reserved memory region, and kexec to that
 
-    echo "###########################################"
-    echo "iso_chooser_step2"
-    echo "###########################################"
-
     configure_networking
 
     target="/dev/pmem0"
 
     if [ ! -e $target ] ; then
-        echo "failed to find $target"
+        echo "Failed to find $target, dropping to debug shell"
         /bin/sh
     fi
 
-    echo "download $URL"
+    echo "Downloading $URL ..."
     wget "${URL}" -O "${target}"
 
     modprobe isofs
