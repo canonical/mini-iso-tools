@@ -49,8 +49,16 @@ iso_chooser_step1() {
     memmap_size="$(/usr/lib/mini-iso-tools/get_memmap_directive $MEDIA_SIZE)"
     pmem_directive="memmap=$memmap_size"
 
+    cmdline=iso-url=$MEDIA_URL
+    cmdline="$cmdline iso-size=$MEDIA_SIZE"
+    cmdline="$cmdline iso-256sum=$MEDIA_256SUM"
+    cmdline="$cmdline iso-chooser-step2"
+    cmdline="$cmdline $pmem_directive"
+    cmdline="$cmdline nokaslr"
+    cmdline="$cmdline ---"
+
     kexec \
-        --command-line="iso-url=$MEDIA_URL iso-chooser-step2 $pmem_directive nokaslr ---" \
+        --command-line="$cmdline" \
         --load "$mountpoint/casper/vmlinuz" \
         --initrd="$mountpoint/casper/initrd"
     kexec --exec
@@ -64,33 +72,35 @@ iso_chooser_step2() {
     target="/dev/pmem0"
 
     if [ ! -e $target ] ; then
-        echo "Failed to find $target, dropping to debug shell"
+        echo "Failed to find $target, debug shell"
         /bin/sh
     fi
 
     echo "Downloading $URL ..."
-    wget "${URL}" -O "${target}"
+    wget "$URL" -O "$target"
+
+    echo "Checksum verification ..."
+    if ! /usr/lib/mini-iso-tools/checksum-device \
+            $target $MEDIA_SIZE $MEDIA_256SUM; then
+        echo "ISO checksum verification failure, debug shell"
+        /bin/sh
+    fi
+    echo "ISO checksum pass"
 
     modprobe isofs
     mount -o ro "${target}" "${mountpoint}"
 
-    query=memmap
-    len=$(expr length $query)
-
-    for n in $(cat /proc/cmdline) ; do
-        begin=$(expr substr $n 1 $len)
-        if [ "$begin" = "$query" ] ; then
-            pmem_directive=$n
-            break
-        fi
-    done
-
-    if [ -z "$pmem_directive" ] ; then
+    if [ -z "$MEMMAP" ] ; then
         panic "memmap directive not found"
     fi
 
+    cmdline="live-media=$target"
+    cmdline="$cmdline $MEMMAP"
+    cmdline="$cmdline nokaslr"
+    cmdline="$cmdline ---"
+
     kexec \
-        --command-line="live-media=$target $pmem_directive nokaslr ---" \
+        --command-line="$cmdline" \
         --load "$mountpoint/casper/vmlinuz" \
         --initrd="$mountpoint/casper/initrd"
     kexec --exec
@@ -98,8 +108,15 @@ iso_chooser_step2() {
 
 for x in $(cat /proc/cmdline); do
     case $x in
-        iso-chooser-menu)  iso_chooser_step1;;
-        iso-chooser-step2) iso_chooser_step2;;
-        *) ;;
+        iso-chooser-*) export MENU_STEP=$x;;
+        iso-size=*)    export MEDIA_SIZE="${x#iso-size=}";;
+        iso-256sum=*)  export MEDIA_256SUM="${x#iso-256sum=}";;
+        memmap=*)      export MEMMAP="$x";;
+        *);;
     esac
 done
+
+case "$MENU_STEP" in
+    iso-chooser-menu)  iso_chooser_step1;;
+    iso-chooser-step2) iso_chooser_step2;;
+esac

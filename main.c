@@ -117,19 +117,21 @@ typedef struct _iso_data_t
 {
     char *label;
     char *url;
+    char *sha256sum;
     int size;
 } iso_data_t;
 
 /* create the iso_data_t structure.  Caller allocates a free()able string, and
  * a later call to iso_data_free() will release both the iso_data_t and the
  * strings supplied here. */
-iso_data_t *iso_data_create(char *label, char *url, int size)
+iso_data_t *iso_data_create(char *label, char *url, char *sha256sum, int size)
 {
     iso_data_t *ret = calloc(sizeof(iso_data_t), 1);
     if(!ret) return NULL;
 
     ret->label = label;
     ret->url = url;
+    ret->sha256sum = sha256sum;
     ret->size = size;
     return ret;
 }
@@ -272,6 +274,7 @@ void write_output(char *fname, iso_data_t *iso_data)
 
     fprintf(f, "MEDIA_URL=\"%s\"\n", iso_data->url);
     fprintf(f, "MEDIA_LABEL=\"%s\"\n", iso_data->label);
+    fprintf(f, "MEDIA_256SUM=\"%s\"\n", iso_data->sha256sum);
     fprintf(f, "MEDIA_SIZE=\"%d\"\n", iso_data->size);
     fclose(f);
 }
@@ -332,11 +335,13 @@ choices_t *read_iso_choices(char *filename)
     json_object *iso = json_object_object_get(items, "iso");
     json_object *path = json_object_object_get(iso, "path");
     json_object *size = json_object_object_get(iso, "size");
+    json_object *sha256 = json_object_object_get(iso, "sha256");
 
     choices_t *choices = choices_create(2);
     choices->values[0] = iso_data_create(
             strdup("Ubuntu Server 22.10 (Kinetic Kudu)"),
             strdup("https://releases.ubuntu.com/kinetic/ubuntu-22.10-live-server-amd64.iso"),
+            strdup("874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed"),
             1642631168);
     choices->values[1] = iso_data_create(
             saprintf("Ubuntu Server %s (%s)",
@@ -344,6 +349,7 @@ choices_t *read_iso_choices(char *filename)
                     json_object_get_string(codename)),
             saprintf("https://cdimage.ubuntu.com/%s",
                     json_object_get_string(path)),
+            strdup(json_object_get_string(sha256)),
             json_object_get_int(size));
 
     json_object_put(root);

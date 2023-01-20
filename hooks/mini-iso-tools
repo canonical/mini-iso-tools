@@ -21,17 +21,31 @@ _copy_recursive()
     type="${1}"
     src="${2}"
 
-    for f in $(find $src -type f) ; do
-        copy_file $type $f $target
+    for f in $(find "$src" -type f) ; do
+        copy_file "$type" "$f"
     done
 }
 
+_copy_exec_force()
+{
+    src="${1}"
+    tgt="$DESTDIR/$src"
+
+    if [ -e "$tgt" ] && ! cmp -s "$tgt" "$src"; then
+        rm "$tgt"
+    fi
+    copy_exec "$src"
+}
+
 copy_exec /usr/sbin/kexec
+copy_exec /usr/bin/sha256sum
 copy_exec /sbin/agetty
 copy_exec /bin/setfont
+_copy_exec_force /usr/bin/dd
 _copy_recursive locale /usr/lib/locale/C.utf8
 copy_file terminfo /lib/terminfo/l/linux
 copy_file script /usr/lib/mini-iso-tools/iso-menu-session
 copy_file script /usr/lib/mini-iso-tools/get_memmap_directive
+copy_file script /usr/lib/mini-iso-tools/checksum-device
 copy_file font /usr/lib/mini-iso-tools/subiquity.psf
 copy_exec /usr/lib/mini-iso-tools/iso-chooser-menu
