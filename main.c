@@ -46,7 +46,8 @@
 #include <stdnoreturn.h>
 #include <sys/param.h>
 
-#include <json-c/json.h>
+#include "common.h"
+#include "json.h"
 
 int ubuntu_orange = COLOR_RED;
 int text_white = COLOR_WHITE;
@@ -113,14 +114,6 @@ typedef enum {
     INCREASE=1,
 } choice_event;
 
-typedef struct _iso_data_t
-{
-    char *label;
-    char *url;
-    char *sha256sum;
-    int size;
-} iso_data_t;
-
 /* create the iso_data_t structure.  Caller allocates a free()able string, and
  * a later call to iso_data_free() will release both the iso_data_t and the
  * strings supplied here. */
@@ -143,13 +136,6 @@ void iso_data_free(iso_data_t *iso_data)
     free(iso_data->url);
     free(iso_data);
 }
-
-typedef struct _choices
-{
-    int len;
-    int cur;
-    iso_data_t **values;
-} choices_t;
 
 choices_t *choices_create(int len)
 {
@@ -302,58 +288,6 @@ void choice_handle_event(args_t *args, choices_t *choices, choice_event evt)
             syslog(LOG_ERR, "invalid event id [%d]", evt);
             exit(1);
     }
-}
-
-#define UNUSED(X) __attribute__((unused(X)))
-
-char *find_largest_subkey(json_object *obj)
-{
-    char *ret = NULL;
-    json_object_object_foreach(obj, key, val) {
-        (void)val;
-        if(!ret || strcmp(ret, key) < 0) {
-            ret = key;
-        }
-    }
-    return ret;
-}
-
-choices_t *read_iso_choices(char *filename)
-{
-    json_object *root = json_object_from_file(filename);
-    if(!root) return NULL;
-
-    json_object *products = json_object_object_get(root, "products");
-    json_object *lunar = json_object_object_get(products,
-            "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:23.04:amd64");
-    json_object *codename = json_object_object_get(lunar, "release_codename");
-    json_object *title = json_object_object_get(lunar, "release_title");
-    json_object *versions = json_object_object_get(lunar, "versions");
-    char *recent = find_largest_subkey(versions);
-    json_object *date = json_object_object_get(versions, recent);
-    json_object *items = json_object_object_get(date, "items");
-    json_object *iso = json_object_object_get(items, "iso");
-    json_object *path = json_object_object_get(iso, "path");
-    json_object *size = json_object_object_get(iso, "size");
-    json_object *sha256 = json_object_object_get(iso, "sha256");
-
-    choices_t *choices = choices_create(2);
-    choices->values[0] = iso_data_create(
-            strdup("Ubuntu Server 22.10 (Kinetic Kudu)"),
-            strdup("https://releases.ubuntu.com/kinetic/ubuntu-22.10-live-server-amd64.iso"),
-            strdup("874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed"),
-            1642631168);
-    choices->values[1] = iso_data_create(
-            saprintf("Ubuntu Server %s (%s)",
-                    json_object_get_string(title),
-                    json_object_get_string(codename)),
-            saprintf("https://cdimage.ubuntu.com/%s",
-                    json_object_get_string(path)),
-            strdup(json_object_get_string(sha256)),
-            json_object_get_int(size));
-
-    json_object_put(root);
-    return choices;
 }
 
 void exit_cb()
