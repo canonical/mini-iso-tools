@@ -17,6 +17,9 @@
 
 #pragma once
 
+#define _GNU_SOURCE
+#include <stdio.h>
+
 typedef struct _iso_data
 {
     char *label;
@@ -33,6 +36,9 @@ typedef struct _choices
 } choices_t;
 
 iso_data_t *iso_data_create(char *label, char *url, char *sha256sum, int size);
+void iso_data_free(iso_data_t *iso_data);
+
 choices_t *choices_create(int len);
+void choices_free(choices_t *c);
 
 char *saprintf(char *fmt, ...);

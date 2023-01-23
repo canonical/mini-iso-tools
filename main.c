@@ -34,7 +34,8 @@
  * MEDIA_SIZE="1642631168"
  */
 
-#define _GNU_SOURCE
+#include "common.h"
+
 #include <locale.h>
 #include <ncurses.h>
 #include <stdbool.h>
@@ -46,7 +47,6 @@
 #include <stdnoreturn.h>
 #include <sys/param.h>
 
-#include "common.h"
 #include "json.h"
 
 int ubuntu_orange = COLOR_RED;
@@ -97,69 +97,11 @@ void args_free(args_t *args)
     free(args);
 }
 
-char *saprintf(char *fmt, ...)
-{
-    va_list ap;
-    va_start(ap, fmt);
-
-    char *out = NULL;
-    int rv = vasprintf(&out, fmt, ap);
-    if(rv == -1) return NULL;
-    return out;
-}
-
 typedef enum {
     DECREASE=-1,
     SELECT=0,
     INCREASE=1,
 } choice_event;
-
-/* create the iso_data_t structure.  Caller allocates a free()able string, and
- * a later call to iso_data_free() will release both the iso_data_t and the
- * strings supplied here. */
-iso_data_t *iso_data_create(char *label, char *url, char *sha256sum, int size)
-{
-    iso_data_t *ret = calloc(sizeof(iso_data_t), 1);
-    if(!ret) return NULL;
-
-    ret->label = label;
-    ret->url = url;
-    ret->sha256sum = sha256sum;
-    ret->size = size;
-    return ret;
-}
-
-void iso_data_free(iso_data_t *iso_data)
-{
-    if(!iso_data) return;
-    free(iso_data->label);
-    free(iso_data->url);
-    free(iso_data);
-}
-
-choices_t *choices_create(int len)
-{
-    choices_t *ret = (choices_t *)calloc(sizeof(choices_t), 1);
-    if(!ret) return NULL;
-
-    ret->values = (iso_data_t **)calloc(sizeof(iso_data_t *), len);
-    if(!ret->values) {
-        free(ret);
-        return NULL;
-    }
-    ret->len = len;
-    return ret;
-}
-
-void choices_free(choices_t *c)
-{
-    if(!c) return;
-
-    for(int i = 0; i < c->len; i++) {
-        iso_data_free(c->values[i]);
-    }
-    free(c);
-}
 
 int horizontal_center(int len)
 {

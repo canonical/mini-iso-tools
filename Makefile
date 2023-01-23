@@ -16,6 +16,12 @@ LDFLAGS+=$(shell pkg-config --libs json-c)
 SRCS:=$(wildcard *.c)
 OBJS:=$(SRCS:.c=.o)
 
+TEST_SRCS:=$(wildcard test/*.c)
+TEST_OBJS:=$(TEST_SRCS:.c=.o)
+
+TEST_CFLAGS:=$(CFLAGS) $(shell pkg-config --cflags cmocka)
+TEST_LDFLAGS:=$(LDFLAGS) $(shell pkg-config --libs cmocka)
+
 default: new
 
 new: clean build
@@ -24,7 +30,7 @@ ubuntu-server.json:
 	wget "$(URL)" -O $@
 
 clean:
-	rm -f $(BIN) $(OBJS) out.vars
+	rm -f $(BIN) $(OBJS) $(TEST_OBJS) out.vars
 
 distclean: clean
 	rm -f ubuntu-server.json
@@ -34,3 +40,10 @@ build: $(OBJS)
 
 run: ubuntu-server.json
 	./$(BIN) --input "$^" --output "out.vars"
+
+.PHONY: test
+test: runtests
+
+runtests: json.o common.o $(TEST_OBJS)
+	$(CC) -o $@ $^ $(TEST_CFLAGS) $(TEST_LDFLAGS)
+	./$@
