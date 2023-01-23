@@ -1,5 +1,5 @@
 *.o
 iso-chooser-menu
 out.vars
-*.json
+/*.json
 runtests
