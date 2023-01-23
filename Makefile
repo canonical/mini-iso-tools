@@ -3,7 +3,7 @@ BIN:=iso-chooser-menu
 
 URL:=http://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
 
-CFLAGS:=-Wall -Werror -Wfatal-errors -std=c11
+CFLAGS+=-Wall -Werror -Wfatal-errors -std=c11
 LDFLAGS:=-static
 
 # CFLAGS+=-g
@@ -25,7 +25,7 @@ ubuntu-server.json:
 	wget "$(URL)" -O $@
 
 clean:
-	rm -f $(BIN) $(OBJS) iso-chooser-menu.log out.vars
+	rm -f $(BIN) $(OBJS) out.vars
 
 distclean: clean
 	rm -f ubuntu-server.json
