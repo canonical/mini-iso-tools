@@ -2,8 +2,6 @@
 
 set -e
 
-dmesg -c
-
 # ensures we have the unicode glyphs - half-blocks, right arrow
 /usr/bin/setfont /usr/lib/mini-iso-tools/subiquity.psf
 

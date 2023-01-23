@@ -26,12 +26,14 @@ iso_chooser_step1() {
     # use the requested ISO size to figure out if we have the memory or not,
     # and kexec to reserve that memory
 
+    chvt 2  # the chvts work around messages bleeding into the agetty
     /usr/sbin/agetty --skip-login \
         --login-program /usr/lib/mini-iso-tools/iso-menu-session \
-        tty1 linux
+        tty2 linux
+    chvt 1
 
     if [ ! -f /out.vars ] ; then
-        echo "ISO menu failed, dropping to debug shell"
+        echo "ISO menu failed, debug shell"
         /bin/sh
     fi
 
