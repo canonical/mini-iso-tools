@@ -11,6 +11,6 @@ cdimage_json=/cdimage.json
 wget -O $cdimage_json \
     http://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
 
-/usr/bin/iso-chooser-menu \
+/usr/lib/mini-iso-tools/iso-chooser-menu \
     --input $cdimage_json \
     --output /out.vars

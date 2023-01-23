@@ -31,7 +31,7 @@ iso_chooser_step1() {
     echo "###########################################"
 
     /usr/sbin/agetty --skip-login \
-        --login-program /usr/bin/iso-menu-session \
+        --login-program /usr/lib/mini-iso-tools/iso-menu-session \
         tty1 linux
 
     if [ ! -f /out.vars ] ; then
@@ -50,7 +50,8 @@ iso_chooser_step1() {
 
     echo "Loading $MEDIA_LABEL ..."
 
-    pmem_directive="memmap=$(/usr/bin/get_memmap_directive $MEDIA_SIZE)"
+    memmap_size="$(/usr/lib/mini-iso-tools/get_memmap_directive $MEDIA_SIZE)"
+    pmem_directive="memmap=$memmap_size"
 
     kexec \
         --command-line="iso-url=$MEDIA_URL iso-chooser-step2 $pmem_directive nokaslr ---" \

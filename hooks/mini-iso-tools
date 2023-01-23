@@ -19,22 +19,19 @@ esac
 _copy_recursive()
 {
     type="${1}"
-    remove_prefix="${2}"
-    src="${3}"
+    src="${2}"
 
     for f in $(find $src -type f) ; do
-        target=$f
-        if [ "$remove_prefix" = "true" ] ; then
-            target=${f#$src}
-        fi
         copy_file $type $f $target
     done
 }
 
 copy_exec /usr/sbin/kexec
-
 copy_exec /sbin/agetty
 copy_exec /bin/setfont
-_copy_recursive locale false /usr/lib/locale/C.utf8
-_copy_recursive assets true /usr/lib/mini-iso-tools
+_copy_recursive locale /usr/lib/locale/C.utf8
 copy_file terminfo /lib/terminfo/l/linux
+copy_file script /usr/lib/mini-iso-tools/iso-menu-session
+copy_file script /usr/lib/mini-iso-tools/get_memmap_directive
+copy_file font /usr/lib/mini-iso-tools/subiquity.psf
+copy_exec /usr/lib/mini-iso-tools/iso-chooser-menu
