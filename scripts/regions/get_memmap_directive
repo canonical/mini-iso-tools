@@ -3,6 +3,10 @@
 # given an input size, return a memmap directive of memory to request to
 # protect
 
+err() {
+    echo "$@" 1>&2
+}
+
 set -e
 
 requested_size="$1"  # size in bytes of protected memory to reserve
@@ -11,13 +15,13 @@ input="$2"           # input file to read, or /proc/iomem
 if [ -z "$input" ] ; then
     input="/proc/iomem"
 elif [ ! -f "$input" ] ; then
-    echo "input file not found"
+    err "input file not found"
     exit 1
 fi
 
 directive=$(grep -E "100000000"'-.*System RAM' "$input" || true)
 if [ -z "$directive" ] ; then
-    echo "range at address 4GiB not found"
+    err "range at address 4GiB not found"
     exit 1
 fi
 
@@ -37,9 +41,9 @@ requested_MiB=$(((requested_KiB  + 1023) / 1024))
 requested_MiB=$(((requested_MiB  +    3) &   ~3))
 
 if [ "$requested_MiB" -gt "$range_MiB" ] ; then
-    echo "available memory insufficient"
-    echo "requested ${requested_MiB}MiB"
-    echo "available ${range_MiB}MiB"
+    err "available memory insufficient"
+    err "requested ${requested_MiB}MiB"
+    err "available ${range_MiB}MiB"
     exit 1
 fi
 

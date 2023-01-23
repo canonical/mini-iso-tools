@@ -46,16 +46,21 @@ iso_chooser_step1() {
 
     echo "Loading $MEDIA_LABEL ..."
 
-    memmap_size="$(/usr/lib/mini-iso-tools/get_memmap_directive $MEDIA_SIZE)"
-    pmem_directive="memmap=$memmap_size"
-
     cmdline=iso-url=$MEDIA_URL
     cmdline="$cmdline iso-size=$MEDIA_SIZE"
     if [ "$VALIDATE_CHECKSUM" = "1" ]; then
         cmdline="$cmdline iso-256sum=$MEDIA_256SUM"
     fi
+
     cmdline="$cmdline iso-chooser-step2"
-    cmdline="$cmdline $pmem_directive"
+
+    memmap_size="$(/usr/lib/mini-iso-tools/get_memmap_directive $MEDIA_SIZE)"
+    if [ -z "$memmap_size" -o "$?" -ne "0" ] ; then
+        echo "failed to determine size reservation for memmap, debug shell"
+        /bin/sh
+    fi
+    cmdline="$cmdline memmap=$memmap_size"
+
     cmdline="$cmdline nokaslr"
     cmdline="$cmdline ---"
 
