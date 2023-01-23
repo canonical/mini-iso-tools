@@ -101,9 +101,10 @@ char *saprintf(char *fmt, ...)
     va_list ap;
     va_start(ap, fmt);
 
-    char *ret = NULL;
-    vasprintf(&ret, fmt, ap);
-    return ret;
+    char *out = NULL;
+    int rv = vasprintf(&out, fmt, ap);
+    if(rv == -1) return NULL;
+    return out;
 }
 
 typedef enum {
