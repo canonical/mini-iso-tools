@@ -415,6 +415,7 @@ int main(int argc, char **argv)
     while(continuing) {
         orange_banner("Choose an Ubuntu version to install");
         add_chooser(iso_info, iso_info->cur);
+        redrawwin(stdscr);
         ch = getch();
         switch(ch) {
             case KEY_DOWN:
@@ -422,9 +423,6 @@ int main(int argc, char **argv)
                 break;
             case KEY_UP:
                 choice_handle_event(args, iso_info, DECREASE);
-                break;
-            case '\f':  /* ctrl-L */
-                redrawwin(stdscr);
                 break;
             case KEY_ENTER:
             case '\r':
