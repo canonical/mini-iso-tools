@@ -23,15 +23,17 @@
 
 #include "json.h"
 
-char *find_largest_subkey(json_object *obj)
+json_object *find_obj_of_biggest_key(json_object *obj)
 {
-    char *ret = NULL;
     if(!obj) return NULL;
 
+    char *cmp = NULL;
+    json_object *ret = NULL;
+
     json_object_object_foreach(obj, key, val) {
-        (void)val;
-        if(!ret || strcmp(ret, key) < 0) {
-            ret = key;
+        if(!cmp || strcmp(cmp, key) < 0) {
+            cmp = key;
+            ret = val;
         }
     }
     return ret;
@@ -55,12 +57,9 @@ choices_t *read_iso_choices(char *filename)
     if(!codename) return NULL;
     json_object *title = get(product, "release_title");
     if(!title) return NULL;
-    json_object *versions = get(product, "versions");
-    if(!versions) return NULL;
-
-    char *recent = find_largest_subkey(versions);
+    json_object *recent = find_obj_of_biggest_key(get(product, "versions"));
     if(!recent) return NULL;
-    json_object *iso = get(get(get(versions, recent), "items"), "iso");
+    json_object *iso = get(get(recent, "items"), "iso");
     if(!iso) return NULL;
 
     json_object *path = get(iso, "path");

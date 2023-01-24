@@ -8,11 +8,11 @@
 
 #include "json.h"
 
-char *find_largest_subkey(json_object *obj);
+json_object *find_obj_of_biggest_key(json_object *obj);
 
 static void find_largest_NULL(void **state)
 {
-    assert_null(find_largest_subkey(NULL));
+    assert_null(find_obj_of_biggest_key(NULL));
 }
 
 static void find_largest_simple(void **state)
@@ -20,8 +20,9 @@ static void find_largest_simple(void **state)
     json_object *root = json_object_from_file(
             "test/find-largest-simple.json");
     assert_non_null(root);
-    char *actual = find_largest_subkey(root);
-    assert_string_equal("3", actual);
+    json_object *largest = find_obj_of_biggest_key(root);
+    assert_non_null(largest);
+    assert_int_equal(3, json_object_get_int(largest));
 }
 
 static void find_largest_reversed(void **state)
@@ -29,8 +30,9 @@ static void find_largest_reversed(void **state)
     json_object *root = json_object_from_file(
             "test/find-largest-reversed.json");
     assert_non_null(root);
-    char *actual = find_largest_subkey(root);
-    assert_string_equal("3", actual);
+    json_object *largest = find_obj_of_biggest_key(root);
+    assert_non_null(largest);
+    assert_int_equal(3, json_object_get_int(largest));
 }
 
 static void read_NULL(void **state)
