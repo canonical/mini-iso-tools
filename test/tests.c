@@ -10,6 +10,11 @@
 
 char *find_largest_subkey(json_object *obj);
 
+static void find_largest_NULL(void **state)
+{
+    assert_null(find_largest_subkey(NULL));
+}
+
 static void find_largest_simple(void **state)
 {
     json_object *root = json_object_from_file(
@@ -72,6 +77,7 @@ static void read_ubuntu_server(void **state)
 int main(void)
 {
     const struct CMUnitTest tests[] = {
+        cmocka_unit_test(find_largest_NULL),
         cmocka_unit_test(find_largest_simple),
         cmocka_unit_test(find_largest_reversed),
 

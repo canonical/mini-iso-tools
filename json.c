@@ -26,6 +26,8 @@
 char *find_largest_subkey(json_object *obj)
 {
     char *ret = NULL;
+    if(!obj) return NULL;
+
     json_object_object_foreach(obj, key, val) {
         (void)val;
         if(!ret || strcmp(ret, key) < 0) {
