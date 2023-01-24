@@ -18,7 +18,8 @@
 #pragma once
 
 #define _GNU_SOURCE
-#include <stdio.h>
+
+#define UNUSED(X) __attribute__((unused(X)))
 
 typedef struct _iso_data
 {

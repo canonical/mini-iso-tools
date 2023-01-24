@@ -21,8 +21,6 @@
 
 #include "json.h"
 
-#define UNUSED(X) __attribute__((unused(X)))
-
 char *find_largest_subkey(json_object *obj)
 {
     char *ret = NULL;
@@ -41,18 +39,36 @@ choices_t *read_iso_choices(char *filename)
     if(!root) return NULL;
 
     json_object *products = json_object_object_get(root, "products");
-    json_object *lunar = json_object_object_get(products,
+    if(!products) return NULL;
+
+    json_object *product = json_object_object_get(products,
             "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:23.04:amd64");
-    json_object *codename = json_object_object_get(lunar, "release_codename");
-    json_object *title = json_object_object_get(lunar, "release_title");
-    json_object *versions = json_object_object_get(lunar, "versions");
+    if(!product) return NULL;
+
+    json_object *codename = json_object_object_get(
+            product, "release_codename");
+    if(!codename) return NULL;
+    json_object *title = json_object_object_get(product, "release_title");
+    if(!title) return NULL;
+
+    json_object *versions = json_object_object_get(product, "versions");
+    if(!versions) return NULL;
+
     char *recent = find_largest_subkey(versions);
+    if(!recent) return NULL;
     json_object *date = json_object_object_get(versions, recent);
+    if(!date) return NULL;
     json_object *items = json_object_object_get(date, "items");
+    if(!items) return NULL;
     json_object *iso = json_object_object_get(items, "iso");
+    if(!iso) return NULL;
+
     json_object *path = json_object_object_get(iso, "path");
+    if(!path) return NULL;
     json_object *size = json_object_object_get(iso, "size");
+    if(!size) return NULL;
     json_object *sha256 = json_object_object_get(iso, "sha256");
+    if(!sha256) return NULL;
 
     choices_t *choices = choices_create(2);
     choices->values[0] = iso_data_create(

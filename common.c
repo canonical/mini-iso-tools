@@ -19,6 +19,7 @@
 
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 char *saprintf(char *fmt, ...)
 {

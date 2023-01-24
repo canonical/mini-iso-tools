@@ -284,6 +284,10 @@ int main(int argc, char **argv)
     }
 
     choices_t *iso_info = read_iso_choices(args->infile);
+    if(!iso_info) {
+        syslog(LOG_ERR, "failed to read JSON data");
+        return 1;
+    }
 
     bool continuing = true;
     int ch = 0;
