@@ -1,5 +1,5 @@
-mini-iso-tools (0.1.0) UNRELEASED; urgency=medium
+mini-iso-tools (0.1.0) lunar; urgency=medium
 
-  * Initial release.
+  * Initial release (LP: #2003913).
 
- -- Dan Bungert <daniel.bungert@canonical.com>  Wed, 11 Jan 2023 09:49:10 -0700
+ -- Dan Bungert <daniel.bungert@canonical.com>  Wed, 25 Jan 2023 14:07:26 -0700
