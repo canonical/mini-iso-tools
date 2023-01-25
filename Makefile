@@ -1,7 +1,7 @@
 
 BIN:=iso-chooser-menu
 
-URL:=http://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
+URL:=https://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
 
 CFLAGS+=-Wall -Werror -Wfatal-errors -std=c11 -I.
 
