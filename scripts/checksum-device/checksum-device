@@ -10,6 +10,6 @@ infile=$1
 infile_size=$2
 expected=$3
 
-actual=$(dd if=$infile iflag=count_bytes count=$infile_size \
+actual=$(dd "if=$infile" iflag=count_bytes "count=$infile_size" \
          | sha256sum | cut -d' ' -f1)
 [ "$actual" = "$expected" ]
