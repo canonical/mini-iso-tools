@@ -196,7 +196,7 @@ void write_output(char *fname, iso_data_t *iso_data)
 {
     FILE *f = fopen(fname, "w");
     if(!f) {
-        syslog(LOG_ERR, "failed to open output file [%s]", fname);
+        syslog(LOG_ERR, "failed to open output file [%s]: %m", fname);
         exit(1);
     }
 
@@ -232,7 +232,7 @@ void choice_handle_event(args_t *args, choices_t *choices, choice_event evt)
     }
 }
 
-void exit_cb()
+void exit_cb(void)
 {
     erase();
     refresh();

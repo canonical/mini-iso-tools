@@ -42,4 +42,4 @@ void iso_data_free(iso_data_t *iso_data);
 choices_t *choices_create(int len);
 void choices_free(choices_t *c);
 
-char *saprintf(char *fmt, ...);
+char *saprintf(char *fmt, ...) __attribute__((format(printf, 1, 2)));
