@@ -31,7 +31,7 @@ ubuntu-server.json:
 
 .PHONY: clean
 clean:
-	rm -f $(BIN) $(OBJS) $(TEST_OBJS) out.vars
+	rm -f $(BIN) $(OBJS) $(TEST_OBJS) test/runtests out.vars
 
 .PHONY: distclean
 distclean: clean
