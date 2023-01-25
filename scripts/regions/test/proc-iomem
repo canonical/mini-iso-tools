@@ -1,0 +1,4 @@
+00000000-00000fff : Reserved
+00001000-0009ffff : System RAM
+100000000-103f37ffff : System RAM
+103f380000-103fffffff : Reserved

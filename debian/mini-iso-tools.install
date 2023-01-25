@@ -1,0 +1,7 @@
+hooks                                   usr/share/initramfs-tools
+scripts/30mini-iso-menu                 usr/share/initramfs-tools/scripts/casper-premount
+scripts/iso-menu-session                usr/lib/mini-iso-tools
+scripts/regions/get_memmap_directive    usr/lib/mini-iso-tools
+share/subiquity.psf                     usr/lib/mini-iso-tools
+iso-chooser-menu                        usr/lib/mini-iso-tools
+scripts/checksum-device/checksum-device usr/lib/mini-iso-tools

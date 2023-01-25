@@ -1,0 +1,4127 @@
+{
+  "content_id": "com.ubuntu.cdimage.daily:ubuntu-server",
+  "datatype": "image-downloads",
+  "format": "products:1.0",
+  "products": {
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:20.04:amd64": {
+      "arch": "amd64",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20221013.2": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-amd64.iso",
+              "sha256": "4db807086cc8ad6b0b0660c780a96dfcce070895b7aa4073b3000afcc382417e",
+              "size": 1409286144
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-amd64.iso.zsync",
+              "sha256": "d98a3fe3a643f1755b5ea9b86a21828e66fb1788bb7fd3230841f10629261d89",
+              "size": 2752739
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-amd64.list",
+              "sha256": "53af03393f6335fcd20c4666e265c7773c1bb5c49d9c6de009d38195998834ae",
+              "size": 10302
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-amd64.manifest",
+              "sha256": "cb2d17c679da960355e5e56c921c30877585f941e11d09d58e40c31455e5c6b1",
+              "size": 17404
+            }
+          }
+        },
+        "20221017": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-amd64.iso",
+              "sha256": "4db807086cc8ad6b0b0660c780a96dfcce070895b7aa4073b3000afcc382417e",
+              "size": 1409286144
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-amd64.iso.zsync",
+              "sha256": "d98a3fe3a643f1755b5ea9b86a21828e66fb1788bb7fd3230841f10629261d89",
+              "size": 2752739
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-amd64.list",
+              "sha256": "53af03393f6335fcd20c4666e265c7773c1bb5c49d9c6de009d38195998834ae",
+              "size": 10302
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-amd64.manifest",
+              "sha256": "cb2d17c679da960355e5e56c921c30877585f941e11d09d58e40c31455e5c6b1",
+              "size": 17404
+            }
+          }
+        },
+        "20221018": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-amd64.iso",
+              "sha256": "7ee1c001f84298b9b09969585e3ba5765a8bc97fe132ceaa7130d1815b9302b7",
+              "size": 1409286144
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-amd64.iso.zsync",
+              "sha256": "b02ee1be5d3eb0cd7e3ab1557cff274cb7440c283968f5ca7c6d59ba4668d69e",
+              "size": 2752739
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-amd64.list",
+              "sha256": "0de58853a919a84ba8929bce94a56a1be6e414e05c827d8567dba2cb7a50c9bc",
+              "size": 10302
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-amd64.manifest",
+              "sha256": "d11b346a27f9e0bd5e069f2a916b1f3cf0aeb0c0c5b73a8831ff1d408fc8bc38",
+              "size": 17424
+            }
+          }
+        },
+        "20221031": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-amd64.iso",
+              "sha256": "421907b3b29c3ac8b8991ce0d58dc8b3df13f9bd9e206d7edf37f3639074aaec",
+              "size": 1409286144
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-amd64.iso.zsync",
+              "sha256": "f0c39e590b9ead1b8d41c9fced20dcc5197ea0202a130bff52fc4efa94942e52",
+              "size": 2752739
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-amd64.list",
+              "sha256": "0e759b3916fbcab78d2c66eee0cce9e9b89e96ec0e55625495df74f27406ee58",
+              "size": 10310
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-amd64.manifest",
+              "sha256": "d0ff49593a793b563a95fcccdb99e4e0132617b617497a43d185bcde12440cff",
+              "size": 17476
+            }
+          }
+        },
+        "20221101": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-amd64.iso",
+              "sha256": "5c2a0106941c4328db83dba0359ce88d283426c21222056f41ca0ebbf09e04a6",
+              "size": 1428750336
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-amd64.iso.zsync",
+              "sha256": "2360dc8f1f343e34f29f3b76bb43fc9ae47c37745fd2bfa5a37c14bde67002e2",
+              "size": 2790755
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-amd64.list",
+              "sha256": "7547e2614d586f9f6fb384ce62b2c28c13f9c9cfb0aef3d7a95fc5648d6031b2",
+              "size": 10310
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-amd64.manifest",
+              "sha256": "b79dff8d039806e8ab05667a4a473affec9b77980979161ee392db76873e1463",
+              "size": 17510
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:20.04:arm64": {
+      "arch": "arm64",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20221013.2": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-arm64.iso",
+              "sha256": "4e9498d31495ccaed5947a44adc7dfcba1e65ef88bb84f5ce9d3a9499bd6fe76",
+              "size": 1378381824
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-arm64.iso.zsync",
+              "sha256": "4cb62f62d27cadb9dc9af7730aa6e1908d1dab2358bf0edb4ad5743e2e2d7d50",
+              "size": 2692379
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-arm64.list",
+              "sha256": "6cc41de0045a13de69bcae5938a5bd77bbc0017006e81f395f254b3cde45f85c",
+              "size": 4255
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-arm64.manifest",
+              "sha256": "92bf5c834dbee5a33e92300b83c3202df96424c6f7e0d32afdf888e9ead39f0f",
+              "size": 17116
+            }
+          }
+        },
+        "20221017": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-arm64.iso",
+              "sha256": "4e9498d31495ccaed5947a44adc7dfcba1e65ef88bb84f5ce9d3a9499bd6fe76",
+              "size": 1378381824
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-arm64.iso.zsync",
+              "sha256": "4cb62f62d27cadb9dc9af7730aa6e1908d1dab2358bf0edb4ad5743e2e2d7d50",
+              "size": 2692379
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-arm64.list",
+              "sha256": "6cc41de0045a13de69bcae5938a5bd77bbc0017006e81f395f254b3cde45f85c",
+              "size": 4255
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-arm64.manifest",
+              "sha256": "92bf5c834dbee5a33e92300b83c3202df96424c6f7e0d32afdf888e9ead39f0f",
+              "size": 17116
+            }
+          }
+        },
+        "20221018": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-arm64.iso",
+              "sha256": "555a12f744f66cae4d32822896cfc368579e269cd8524a4b8b1df1fd1d509ab3",
+              "size": 1378433024
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-arm64.iso.zsync",
+              "sha256": "aa8c2d668d4eac2037755d0f07bf9e6254edbb717b24baa1e329ea88a93a58a2",
+              "size": 2692483
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-arm64.list",
+              "sha256": "b280245f264bd3164551ce83d402dae715582e5753df50da3cd3dcf31cafbcd8",
+              "size": 4255
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-arm64.manifest",
+              "sha256": "0ec2abe607247f1ab92dd17cc354f7cc63cfe27d910625a62432a21bc2ef7dba",
+              "size": 17136
+            }
+          }
+        },
+        "20221031": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-arm64.iso",
+              "sha256": "2a5d8d0161d418bf03f6480ade8bb1d6b378f9029b4b46ef085badd8d96327e3",
+              "size": 1378195456
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-arm64.iso.zsync",
+              "sha256": "b3b43c63664958aba1632f0e661afd8c5e92a4cf863e912db7a271d4521b81a5",
+              "size": 2692019
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-arm64.list",
+              "sha256": "7687983a11ee0f5d117f13fd94718c3f49875726b5c02bbf6e04696b7e5fe8e3",
+              "size": 4263
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-arm64.manifest",
+              "sha256": "60c102c072f09f222d87437deff69475607f82657e09178ebe3ce2eef1d3af33",
+              "size": 17188
+            }
+          }
+        },
+        "20221101": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-arm64.iso",
+              "sha256": "fb3277e0ece0e3d4ca12c3371aba08326504cc3b336175268a5447ac20055ffe",
+              "size": 1398685696
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-arm64.iso.zsync",
+              "sha256": "d820798746c5c3e8bdf2a2ed3b316f64e2c1f9e525427d4c2e4a96e1f080e3e8",
+              "size": 2732035
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-arm64.list",
+              "sha256": "3f0db5c0191b96da4cfa5933798ed4737cbdf49565ad28a174943208beaad92e",
+              "size": 4201
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-arm64.manifest",
+              "sha256": "5082eb8929969820a4dbbecdc0f54480534e93398ca5ad80e514c35bea19aa87",
+              "size": 17268
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:20.04:iot": {
+      "arch": "iot",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20221013.2": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-amd64+intel-iot.iso",
+              "sha256": "ecf9a2dc1a396fb3f281b961a640bbd183c505d15cbe409f138dcaf4bb51980d",
+              "size": 1342177280
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-amd64+intel-iot.iso.zsync",
+              "sha256": "50e818e338fb0d3ce395e7adc45a8cd999c0fd4da15996ccda46810d9c490677",
+              "size": 2621687
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-amd64+intel-iot.list",
+              "sha256": "d1326fc47e566b13632fc2d8084f36347fd9b7a35cd59f9c311dfdd6e48c0906",
+              "size": 10940
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-amd64+intel-iot.manifest",
+              "sha256": "cb2d17c679da960355e5e56c921c30877585f941e11d09d58e40c31455e5c6b1",
+              "size": 17404
+            }
+          }
+        },
+        "20221017": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-amd64+intel-iot.iso",
+              "sha256": "f62117a756b97563bbb0e7b3a895b907a490fd6e34f5b7da330eae45885f3ca3",
+              "size": 1343029248
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-amd64+intel-iot.iso.zsync",
+              "sha256": "9f3b0fb41d7c225e15edb3d09643fe52614845b798d85091b21a44455a7ef5f4",
+              "size": 2623351
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-amd64+intel-iot.list",
+              "sha256": "89e9a09617618604f5ebbf16d9370884067c551b537aaa6db6227ba9a8b5920a",
+              "size": 10940
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-amd64+intel-iot.manifest",
+              "sha256": "d11b346a27f9e0bd5e069f2a916b1f3cf0aeb0c0c5b73a8831ff1d408fc8bc38",
+              "size": 17424
+            }
+          }
+        },
+        "20221018": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-amd64+intel-iot.iso",
+              "sha256": "f62117a756b97563bbb0e7b3a895b907a490fd6e34f5b7da330eae45885f3ca3",
+              "size": 1343029248
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-amd64+intel-iot.iso.zsync",
+              "sha256": "9f3b0fb41d7c225e15edb3d09643fe52614845b798d85091b21a44455a7ef5f4",
+              "size": 2623351
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-amd64+intel-iot.list",
+              "sha256": "89e9a09617618604f5ebbf16d9370884067c551b537aaa6db6227ba9a8b5920a",
+              "size": 10940
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-amd64+intel-iot.manifest",
+              "sha256": "d11b346a27f9e0bd5e069f2a916b1f3cf0aeb0c0c5b73a8831ff1d408fc8bc38",
+              "size": 17424
+            }
+          }
+        },
+        "20221031": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-amd64+intel-iot.iso",
+              "sha256": "f62117a756b97563bbb0e7b3a895b907a490fd6e34f5b7da330eae45885f3ca3",
+              "size": 1343029248
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-amd64+intel-iot.iso.zsync",
+              "sha256": "9f3b0fb41d7c225e15edb3d09643fe52614845b798d85091b21a44455a7ef5f4",
+              "size": 2623351
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-amd64+intel-iot.list",
+              "sha256": "89e9a09617618604f5ebbf16d9370884067c551b537aaa6db6227ba9a8b5920a",
+              "size": 10940
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-amd64+intel-iot.manifest",
+              "sha256": "d11b346a27f9e0bd5e069f2a916b1f3cf0aeb0c0c5b73a8831ff1d408fc8bc38",
+              "size": 17424
+            }
+          }
+        },
+        "20221101": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-amd64+intel-iot.iso",
+              "sha256": "f62117a756b97563bbb0e7b3a895b907a490fd6e34f5b7da330eae45885f3ca3",
+              "size": 1343029248
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-amd64+intel-iot.iso.zsync",
+              "sha256": "9f3b0fb41d7c225e15edb3d09643fe52614845b798d85091b21a44455a7ef5f4",
+              "size": 2623351
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-amd64+intel-iot.list",
+              "sha256": "89e9a09617618604f5ebbf16d9370884067c551b537aaa6db6227ba9a8b5920a",
+              "size": 10940
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-amd64+intel-iot.manifest",
+              "sha256": "d11b346a27f9e0bd5e069f2a916b1f3cf0aeb0c0c5b73a8831ff1d408fc8bc38",
+              "size": 17424
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:20.04:ppc64el": {
+      "arch": "ppc64el",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20221013.2": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-ppc64el.iso",
+              "sha256": "81e58404cbab7c6e0f0dd10a9b1850b215273715c645caacf5085fd02cdffe2f",
+              "size": 1439868928
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-ppc64el.iso.zsync",
+              "sha256": "146891f5c94d367dc4b227eaf709d0be2ba6b053ca7046f5a429f4d8b22a7e22",
+              "size": 2812479
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-ppc64el.list",
+              "sha256": "a54efbc406993f8c416a0814dd6abe645723257c07f33d5575b9e3154c1cb076",
+              "size": 4079
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-ppc64el.manifest",
+              "sha256": "eeb516e9731cb8a71b9b6dfcf3521f39067c22fa4e523a35af4353a6e2e8f9f9",
+              "size": 17700
+            }
+          }
+        },
+        "20221017": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-ppc64el.iso",
+              "sha256": "81e58404cbab7c6e0f0dd10a9b1850b215273715c645caacf5085fd02cdffe2f",
+              "size": 1439868928
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-ppc64el.iso.zsync",
+              "sha256": "146891f5c94d367dc4b227eaf709d0be2ba6b053ca7046f5a429f4d8b22a7e22",
+              "size": 2812479
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-ppc64el.list",
+              "sha256": "a54efbc406993f8c416a0814dd6abe645723257c07f33d5575b9e3154c1cb076",
+              "size": 4079
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-ppc64el.manifest",
+              "sha256": "eeb516e9731cb8a71b9b6dfcf3521f39067c22fa4e523a35af4353a6e2e8f9f9",
+              "size": 17700
+            }
+          }
+        },
+        "20221018": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-ppc64el.iso",
+              "sha256": "96e0251e3545491e2ef42747c5f85c367412d299f85df158f8191805230b1ebb",
+              "size": 1439913984
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-ppc64el.iso.zsync",
+              "sha256": "910e12174c276cdb6aa100809bbccac3b0364e0001dd28fc4091b473ba400253",
+              "size": 2812567
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-ppc64el.list",
+              "sha256": "a54efbc406993f8c416a0814dd6abe645723257c07f33d5575b9e3154c1cb076",
+              "size": 4079
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-ppc64el.manifest",
+              "sha256": "02d854bcc66748d9d9b3a668b5766b6556e54501b88084d9f680655556441d5f",
+              "size": 17720
+            }
+          }
+        },
+        "20221031": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-ppc64el.iso",
+              "sha256": "f74787b7b269b04fff3ebce138804d02d342c54ae0286974bc8994d2f31edd0e",
+              "size": 1438990336
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-ppc64el.iso.zsync",
+              "sha256": "d1a6198ca6bfd53a19de1504ef7f01ef1075879a508cc1803c60866f7ada84cd",
+              "size": 2810759
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-ppc64el.list",
+              "sha256": "7bdf5c3ea5edb140e06516282f005691e47201ac075eba93d6955793b67caf24",
+              "size": 4079
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-ppc64el.manifest",
+              "sha256": "c5f407f8510917b119933d1954bafeeaf7424b3db79861d1601d04de62a4c875",
+              "size": 17774
+            }
+          }
+        },
+        "20221101": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-ppc64el.iso",
+              "sha256": "d5006a1e5917d4d9123eeaa21817481a945eb7737ebefe72288000246048d78c",
+              "size": 1459130368
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-ppc64el.iso.zsync",
+              "sha256": "5111f6f7b2b3ec59b7a76d6bf35d712f29a2345aae3ca072fd12bd0b3f7d68ab",
+              "size": 2850095
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-ppc64el.list",
+              "sha256": "9f76e810aa24a0ced625c1670af6d7cca64e881199b7c89dd8be326bb5d07b5a",
+              "size": 4079
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-ppc64el.manifest",
+              "sha256": "561701d4febe20f51f0270413f1b13e31b9587249ea9a42f038abc251683f964",
+              "size": 17800
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:20.04:s390x": {
+      "arch": "s390x",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20221013.2": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-s390x.iso",
+              "sha256": "78f292d5f8db797d760c27f7d81227d1502953bb752bc8da9f29a7cab5b16bd5",
+              "size": 882216960
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-s390x.iso.zsync",
+              "sha256": "95da05a4466ce113722e51d395f5d0a3cd8d84b7bf8f34bda26207d09a1cba0c",
+              "size": 1723306
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-s390x.list",
+              "sha256": "820b445773a52556a6bd0a5ac8014c206e875e9e09e9ab6059851744ddc7cc09",
+              "size": 3663
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221013.2/focal-live-server-s390x.manifest",
+              "sha256": "98c62c060d0e12d8699a911f34912ea66d4af23dcad76e2d2fb3f89ef387b324",
+              "size": 17099
+            }
+          }
+        },
+        "20221017": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-s390x.iso",
+              "sha256": "78f292d5f8db797d760c27f7d81227d1502953bb752bc8da9f29a7cab5b16bd5",
+              "size": 882216960
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-s390x.iso.zsync",
+              "sha256": "95da05a4466ce113722e51d395f5d0a3cd8d84b7bf8f34bda26207d09a1cba0c",
+              "size": 1723306
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-s390x.list",
+              "sha256": "820b445773a52556a6bd0a5ac8014c206e875e9e09e9ab6059851744ddc7cc09",
+              "size": 3663
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221017/focal-live-server-s390x.manifest",
+              "sha256": "98c62c060d0e12d8699a911f34912ea66d4af23dcad76e2d2fb3f89ef387b324",
+              "size": 17099
+            }
+          }
+        },
+        "20221018": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-s390x.iso",
+              "sha256": "43f1307bf114f2ebd7aecd8d5ca139db9cece3354eb4d5128a5f54a05c915c1c",
+              "size": 882294784
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-s390x.iso.zsync",
+              "sha256": "45f2f8b9f1aae8d3f59a0c9670d2baff2b8753555ec03e363562c854fd392da9",
+              "size": 1723458
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-s390x.list",
+              "sha256": "820b445773a52556a6bd0a5ac8014c206e875e9e09e9ab6059851744ddc7cc09",
+              "size": 3663
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221018/focal-live-server-s390x.manifest",
+              "sha256": "b9ee1b3e1b53432d6baed2192a38b5b943074cf9b3d18243fb91b38ecc24f505",
+              "size": 17119
+            }
+          }
+        },
+        "20221031": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-s390x.iso",
+              "sha256": "dc500f8fc07fed95b7c8c9ef78afbd6715bfd9262065cbd935abc0dbce5027aa",
+              "size": 882180096
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-s390x.iso.zsync",
+              "sha256": "fb435aaaf642c64ff6dd02cdc2f7bb4ebda7efda448bccfe7e75aa36d8db0932",
+              "size": 1723234
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-s390x.list",
+              "sha256": "2bb2833ae2542e53eb9d46fb97b297cccb80f93e0f3f151ef3f0015bdd0c1df9",
+              "size": 3663
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221031/focal-live-server-s390x.manifest",
+              "sha256": "f25eecc59cb0211d795ce84ba60018b05c996952e73aa9207d199108269aba8a",
+              "size": 17171
+            }
+          }
+        },
+        "20221101": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-s390x.iso",
+              "sha256": "2b7e64e09a5440e323c1216007834ca5f45741481ff7f3acce6ba6977f82ec95",
+              "size": 896409600
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-s390x.iso.zsync",
+              "sha256": "9a5c6ad4e4d266204e6bed945f9f9de4a6cc3aebab3ea9bd46b51cde18ab015b",
+              "size": 1751026
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-s390x.list",
+              "sha256": "7be4983f295bd3df2c92249132c9a1a1850cac70e095299bb9dd01533ff3d3e5",
+              "size": 3663
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-live/20221101/focal-live-server-s390x.manifest",
+              "sha256": "89bac14807a90e352db14076473a8af70ad282a61452782dd15b052bea229998",
+              "size": 17197
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:22.04:amd64": {
+      "arch": "amd64",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20221013.2": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-amd64.iso",
+              "sha256": "e35b3a9c115a149fa0564d732077be88b625d35f4161a23ad1f5cd84ce00b702",
+              "size": 1511362560
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-amd64.iso.zsync",
+              "sha256": "b3b93192dbd2755f24a297ac3beacd4e1ce876e748839723735fdd8eef9b4e3d",
+              "size": 2952107
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-amd64.list",
+              "sha256": "f462ed47af8388745e1484ccb01653e937926e2f73efd3befb29a8d309087637",
+              "size": 6786
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-amd64.manifest",
+              "sha256": "0ea3599924db4c5e44532eea7e35d82b5e5796eee5ec0e9ecbfb0bf1cf9c882c",
+              "size": 18097
+            }
+          }
+        },
+        "20230109": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-amd64.iso",
+              "sha256": "4a7f6648748f83b6c81eef63322a1a574014305508da1bed5aa3e8487ed69fc5",
+              "size": 1518034944
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-amd64.iso.zsync",
+              "sha256": "b1af5c3d85c7ff47d7fee929da7019a539df2af68b4c27a5facf16fc4fc40fd9",
+              "size": 2965139
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-amd64.list",
+              "sha256": "b5b1a9f8800cf426bdab44922a62c7afffccf5e2ce925fc6a0e7038b5a60a594",
+              "size": 6823
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-amd64.manifest",
+              "sha256": "33fcb1e92932d88722d393f9344cc2faacef3bdf310fce29a8a3a5d745b51808",
+              "size": 18338
+            }
+          }
+        },
+        "20230110": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-amd64.iso",
+              "sha256": "e09e79bdf92721446a139953827992d2c8ed4c120a04dbf5686d0d250a01c04e",
+              "size": 1516732416
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-amd64.iso.zsync",
+              "sha256": "276731a556df4ff15cf83cc5b1b2a74368d9ff5e1751da94c1795aad394e22a0",
+              "size": 2962595
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-amd64.list",
+              "sha256": "b5b1a9f8800cf426bdab44922a62c7afffccf5e2ce925fc6a0e7038b5a60a594",
+              "size": 6823
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-amd64.manifest",
+              "sha256": "33fcb1e92932d88722d393f9344cc2faacef3bdf310fce29a8a3a5d745b51808",
+              "size": 18338
+            }
+          }
+        },
+        "20230122": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-amd64.iso",
+              "sha256": "e09e79bdf92721446a139953827992d2c8ed4c120a04dbf5686d0d250a01c04e",
+              "size": 1516732416
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-amd64.iso.zsync",
+              "sha256": "276731a556df4ff15cf83cc5b1b2a74368d9ff5e1751da94c1795aad394e22a0",
+              "size": 2962595
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-amd64.list",
+              "sha256": "b5b1a9f8800cf426bdab44922a62c7afffccf5e2ce925fc6a0e7038b5a60a594",
+              "size": 6823
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-amd64.manifest",
+              "sha256": "33fcb1e92932d88722d393f9344cc2faacef3bdf310fce29a8a3a5d745b51808",
+              "size": 18338
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:22.04:arm64": {
+      "arch": "arm64",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20221013.2": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-arm64.iso",
+              "sha256": "3337a4e2dcbc9bae8b0d8dd8f1121bfa71307bfc7cd266156e4e2f8167d8f1df",
+              "size": 1469493248
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-arm64.iso.zsync",
+              "sha256": "578bbfee77bcb43d3693f90176d110755dbcea72f89c92a17bf78e204e66b9e4",
+              "size": 2870331
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-arm64.list",
+              "sha256": "9574593687a64c5d00c78121f0600d52f9fb8774c68323f53cfe2da22923cef8",
+              "size": 5295
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-arm64.manifest",
+              "sha256": "112b95feb3563dc1a310fd707b4caf0b574a7b61a35d615096fd1197eca0b069",
+              "size": 17762
+            }
+          }
+        },
+        "20230109": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-arm64.iso",
+              "sha256": "acb1aabb86d6e7aaa09b737c994d02f7ed3e0e479e531d7faca3ba1b7d6b028a",
+              "size": 1475260416
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-arm64.iso.zsync",
+              "sha256": "a7de413c3e2b097bb8b8a71474eefd09ed4ddf829fb86ee5d383a64d00930762",
+              "size": 2881595
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-arm64.list",
+              "sha256": "8d155507f7340a5dc4ba8a2b169601181eb2c0e0819a96d4ecaa07174e4f555d",
+              "size": 5326
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-arm64.manifest",
+              "sha256": "c0753bee7556929ad50cbf0106014a3c5680ed6fe25478d8785e76c48ce55a9f",
+              "size": 17997
+            }
+          }
+        },
+        "20230110": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-arm64.iso",
+              "sha256": "acb1aabb86d6e7aaa09b737c994d02f7ed3e0e479e531d7faca3ba1b7d6b028a",
+              "size": 1475260416
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-arm64.iso.zsync",
+              "sha256": "a7de413c3e2b097bb8b8a71474eefd09ed4ddf829fb86ee5d383a64d00930762",
+              "size": 2881595
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-arm64.list",
+              "sha256": "8d155507f7340a5dc4ba8a2b169601181eb2c0e0819a96d4ecaa07174e4f555d",
+              "size": 5326
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-arm64.manifest",
+              "sha256": "c0753bee7556929ad50cbf0106014a3c5680ed6fe25478d8785e76c48ce55a9f",
+              "size": 17997
+            }
+          }
+        },
+        "20230122": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-arm64.iso",
+              "sha256": "acb1aabb86d6e7aaa09b737c994d02f7ed3e0e479e531d7faca3ba1b7d6b028a",
+              "size": 1475260416
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-arm64.iso.zsync",
+              "sha256": "a7de413c3e2b097bb8b8a71474eefd09ed4ddf829fb86ee5d383a64d00930762",
+              "size": 2881595
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-arm64.list",
+              "sha256": "8d155507f7340a5dc4ba8a2b169601181eb2c0e0819a96d4ecaa07174e4f555d",
+              "size": 5326
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-arm64.manifest",
+              "sha256": "c0753bee7556929ad50cbf0106014a3c5680ed6fe25478d8785e76c48ce55a9f",
+              "size": 17997
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:22.04:iot": {
+      "arch": "iot",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20221013.2": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-amd64+intel-iot.iso",
+              "sha256": "e66be61f9746e9b16f561a74fc9280d4e7503fb0d57cc5c62b68f65efd08b18a",
+              "size": 1623558144
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-amd64+intel-iot.iso.zsync",
+              "sha256": "7e6b3fc2d528ba86aeba6675f4788611066e830e4b69dd215cffabbfaf732776",
+              "size": 3171263
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-amd64+intel-iot.list",
+              "sha256": "07fd81420d7bd292870c8411a3111dd3c02080cece65c9a1933878f02980b945",
+              "size": 7512
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-amd64+intel-iot.manifest",
+              "sha256": "a760dde4034f66139d75943f542f976b05044de09d411781a05058f0406e42dd",
+              "size": 18155
+            }
+          }
+        },
+        "20230109": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-amd64+intel-iot.iso",
+              "sha256": "e66be61f9746e9b16f561a74fc9280d4e7503fb0d57cc5c62b68f65efd08b18a",
+              "size": 1623558144
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-amd64+intel-iot.iso.zsync",
+              "sha256": "7e6b3fc2d528ba86aeba6675f4788611066e830e4b69dd215cffabbfaf732776",
+              "size": 3171263
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-amd64+intel-iot.list",
+              "sha256": "07fd81420d7bd292870c8411a3111dd3c02080cece65c9a1933878f02980b945",
+              "size": 7512
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-amd64+intel-iot.manifest",
+              "sha256": "a760dde4034f66139d75943f542f976b05044de09d411781a05058f0406e42dd",
+              "size": 18155
+            }
+          }
+        },
+        "20230110": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-amd64+intel-iot.iso",
+              "sha256": "e66be61f9746e9b16f561a74fc9280d4e7503fb0d57cc5c62b68f65efd08b18a",
+              "size": 1623558144
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-amd64+intel-iot.iso.zsync",
+              "sha256": "7e6b3fc2d528ba86aeba6675f4788611066e830e4b69dd215cffabbfaf732776",
+              "size": 3171263
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-amd64+intel-iot.list",
+              "sha256": "07fd81420d7bd292870c8411a3111dd3c02080cece65c9a1933878f02980b945",
+              "size": 7512
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-amd64+intel-iot.manifest",
+              "sha256": "a760dde4034f66139d75943f542f976b05044de09d411781a05058f0406e42dd",
+              "size": 18155
+            }
+          }
+        },
+        "20230122": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-amd64+intel-iot.iso",
+              "sha256": "e66be61f9746e9b16f561a74fc9280d4e7503fb0d57cc5c62b68f65efd08b18a",
+              "size": 1623558144
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-amd64+intel-iot.iso.zsync",
+              "sha256": "7e6b3fc2d528ba86aeba6675f4788611066e830e4b69dd215cffabbfaf732776",
+              "size": 3171263
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-amd64+intel-iot.list",
+              "sha256": "07fd81420d7bd292870c8411a3111dd3c02080cece65c9a1933878f02980b945",
+              "size": 7512
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-amd64+intel-iot.manifest",
+              "sha256": "a760dde4034f66139d75943f542f976b05044de09d411781a05058f0406e42dd",
+              "size": 18155
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:22.04:ppc64el": {
+      "arch": "ppc64el",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20221013.2": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-ppc64el.iso",
+              "sha256": "6271dad12427e3dc11552a11c114bbfa775705d2e208fc86a15a446c9b8d418c",
+              "size": 1503438848
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-ppc64el.iso.zsync",
+              "sha256": "09fd6b116a36752ff6d91a611f7783b19a419795370a8e26150793ce4a7767f1",
+              "size": 2936639
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-ppc64el.list",
+              "sha256": "84c22a0e775acb8c2a5382a0ac049111413dea4a3d2d8280ba5c6b3a37fca66b",
+              "size": 5498
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-ppc64el.manifest",
+              "sha256": "d53cd2c6a9480ec904db20eec7c26a54486d3990d0adfeb43c43438170001631",
+              "size": 18090
+            }
+          }
+        },
+        "20230109": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-ppc64el.iso",
+              "sha256": "24dff74ee387adb3b7eba060286731615fe2e7550ac4878bae8b5c598d091b43",
+              "size": 1508745216
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-ppc64el.iso.zsync",
+              "sha256": "35b6f3f4ddb8227f3872d0d19f7f0b0f53d7e7c3a1d1c8c9489729726d79eb5e",
+              "size": 2946999
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-ppc64el.list",
+              "sha256": "c04a8b2c1f72e1d80f9f50ed33706873e444e3a9fefda4f5fa048a1b349a7c8b",
+              "size": 5522
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-ppc64el.manifest",
+              "sha256": "6797dea36bb987902c2c8a4d7e095e57384c1f5299aa9f09643b8ea0b827558e",
+              "size": 18331
+            }
+          }
+        },
+        "20230110": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-ppc64el.iso",
+              "sha256": "24dff74ee387adb3b7eba060286731615fe2e7550ac4878bae8b5c598d091b43",
+              "size": 1508745216
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-ppc64el.iso.zsync",
+              "sha256": "35b6f3f4ddb8227f3872d0d19f7f0b0f53d7e7c3a1d1c8c9489729726d79eb5e",
+              "size": 2946999
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-ppc64el.list",
+              "sha256": "c04a8b2c1f72e1d80f9f50ed33706873e444e3a9fefda4f5fa048a1b349a7c8b",
+              "size": 5522
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-ppc64el.manifest",
+              "sha256": "6797dea36bb987902c2c8a4d7e095e57384c1f5299aa9f09643b8ea0b827558e",
+              "size": 18331
+            }
+          }
+        },
+        "20230122": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-ppc64el.iso",
+              "sha256": "24dff74ee387adb3b7eba060286731615fe2e7550ac4878bae8b5c598d091b43",
+              "size": 1508745216
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-ppc64el.iso.zsync",
+              "sha256": "35b6f3f4ddb8227f3872d0d19f7f0b0f53d7e7c3a1d1c8c9489729726d79eb5e",
+              "size": 2946999
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-ppc64el.list",
+              "sha256": "c04a8b2c1f72e1d80f9f50ed33706873e444e3a9fefda4f5fa048a1b349a7c8b",
+              "size": 5522
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-ppc64el.manifest",
+              "sha256": "6797dea36bb987902c2c8a4d7e095e57384c1f5299aa9f09643b8ea0b827558e",
+              "size": 18331
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:22.04:riscv64": {
+      "arch": "riscv64",
+      "ftype": "manifest",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20221013.2": {
+          "items": {
+            "manifest": {
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-riscv64.manifest",
+              "sha256": "f8b167ad5057f9ca408b705c7cff422e7190b4c6200239c1ac11d5acf03455df",
+              "size": 17898
+            }
+          }
+        },
+        "20230109": {
+          "items": {
+            "manifest": {
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-riscv64.manifest",
+              "sha256": "24f46b66f6ce24beae0338dc696f556b713729476944023c149bbb1228eec672",
+              "size": 18133
+            }
+          }
+        },
+        "20230110": {
+          "items": {
+            "manifest": {
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-riscv64.manifest",
+              "sha256": "24f46b66f6ce24beae0338dc696f556b713729476944023c149bbb1228eec672",
+              "size": 18133
+            }
+          }
+        },
+        "20230122": {
+          "items": {
+            "manifest": {
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-riscv64.manifest",
+              "sha256": "bb9473292585fb2903a5713d66d890a1cd7c7e7e6f89ee4e622cb1a987a91e01",
+              "size": 18213
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:22.04:s390x": {
+      "arch": "s390x",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20221013.2": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-s390x.iso",
+              "sha256": "f691d20640ed525ac3a1630394800f5a9b323dcefdab573943ed2a4005582ab9",
+              "size": 1004574720
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-s390x.iso.zsync",
+              "sha256": "f882cb07171c8df383bc21a3d9efef74e3d1a556a32aa96d14fb01fb13216bf8",
+              "size": 1962291
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-s390x.list",
+              "sha256": "d9b96f06d59dc90168015f6a45297e6bf8a00b174b8582071a89079a090d2609",
+              "size": 4432
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20221013.2/jammy-live-server-s390x.manifest",
+              "sha256": "728d837962ef6e668f921dfd232c043e1f7999aabf4487600447688017f9e532",
+              "size": 17258
+            }
+          }
+        },
+        "20230109": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-s390x.iso",
+              "sha256": "0afd59df2919c4363537fab012556ad4438978e2430a319464156800b3e37f41",
+              "size": 1008566272
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-s390x.iso.zsync",
+              "sha256": "9b7ab711c8e77baa05cbf5c3fa41ee0cd24d4f83c638bf4916e53c1172906845",
+              "size": 1970083
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-s390x.list",
+              "sha256": "53273f68eb53faba73891c6f83b70443b5e050ff7180db9fe5491970d2d2f02a",
+              "size": 4448
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230109/jammy-live-server-s390x.manifest",
+              "sha256": "f19844bc4236168e5d7b15768a3ddb69326b3483b02e8e6b039de21caa735d4f",
+              "size": 17491
+            }
+          }
+        },
+        "20230110": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-s390x.iso",
+              "sha256": "0afd59df2919c4363537fab012556ad4438978e2430a319464156800b3e37f41",
+              "size": 1008566272
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-s390x.iso.zsync",
+              "sha256": "9b7ab711c8e77baa05cbf5c3fa41ee0cd24d4f83c638bf4916e53c1172906845",
+              "size": 1970083
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-s390x.list",
+              "sha256": "53273f68eb53faba73891c6f83b70443b5e050ff7180db9fe5491970d2d2f02a",
+              "size": 4448
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230110/jammy-live-server-s390x.manifest",
+              "sha256": "f19844bc4236168e5d7b15768a3ddb69326b3483b02e8e6b039de21caa735d4f",
+              "size": 17491
+            }
+          }
+        },
+        "20230122": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-s390x.iso",
+              "sha256": "0afd59df2919c4363537fab012556ad4438978e2430a319464156800b3e37f41",
+              "size": 1008566272
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-s390x.iso.zsync",
+              "sha256": "9b7ab711c8e77baa05cbf5c3fa41ee0cd24d4f83c638bf4916e53c1172906845",
+              "size": 1970083
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-s390x.list",
+              "sha256": "53273f68eb53faba73891c6f83b70443b5e050ff7180db9fe5491970d2d2f02a",
+              "size": 4448
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-live/20230122/jammy-live-server-s390x.manifest",
+              "sha256": "f19844bc4236168e5d7b15768a3ddb69326b3483b02e8e6b039de21caa735d4f",
+              "size": 17491
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:23.04:amd64": {
+      "arch": "amd64",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20221019": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-amd64.iso",
+              "sha256": "874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed",
+              "size": 1642631168
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-amd64.iso.zsync",
+              "sha256": "68665d288e651405315b6698c7538cf698b7daf4ce52b7d26ea765a3d798769e",
+              "size": 3208495
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-amd64.list",
+              "sha256": "20f8ea45746a9bf8f6293eb751bedb7edbd1bf91afaecf42c3f661da98c45d56",
+              "size": 6501
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-amd64.manifest",
+              "sha256": "857673d7b5607a579869fb9e291a5b35a837b7b2ce825f3df7ca3dfb7a9c7c25",
+              "size": 17453
+            }
+          }
+        },
+        "20221019.1": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-amd64.iso",
+              "sha256": "874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed",
+              "size": 1642631168
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-amd64.iso.zsync",
+              "sha256": "68665d288e651405315b6698c7538cf698b7daf4ce52b7d26ea765a3d798769e",
+              "size": 3208495
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-amd64.list",
+              "sha256": "20f8ea45746a9bf8f6293eb751bedb7edbd1bf91afaecf42c3f661da98c45d56",
+              "size": 6501
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-amd64.manifest",
+              "sha256": "857673d7b5607a579869fb9e291a5b35a837b7b2ce825f3df7ca3dfb7a9c7c25",
+              "size": 17453
+            }
+          }
+        },
+        "20221210": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-amd64.iso",
+              "sha256": "2e85548c93db7503408314facc4ae19836881e6f781153e3365291ce3a887371",
+              "size": 1737938944
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-amd64.iso.zsync",
+              "sha256": "64a585252100e902c2f85d92b5d02641fd8cb362d62839bd9d2f14f00cd92b73",
+              "size": 3394643
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-amd64.list",
+              "sha256": "c3fba823e1b29e0de2313dc9fa3a13c5010fb411e94e9226ef93a3268c54b837",
+              "size": 6428
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-amd64.manifest",
+              "sha256": "10965b7c0e4c48e3fe0e9baef64256609862ec7d8f396dc378833f42716fc1c0",
+              "size": 17375
+            }
+          }
+        },
+        "20221213": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-amd64.iso",
+              "sha256": "ee967568aa4e9f6c0d6981ce759e50ec625cf3bb43eafeca3431a87a259d490d",
+              "size": 1748099072
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-amd64.iso.zsync",
+              "sha256": "5c2c62be3844a515c9b222680e7ff7fcb6649f0d791cf0a3e51d26588712b09b",
+              "size": 3414483
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-amd64.list",
+              "sha256": "8997af4c2a97d09786a286101294d1876db8e5f4d354adca1d9913a988a7ee8a",
+              "size": 6428
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-amd64.manifest",
+              "sha256": "97559eb1a9da22d43d0ce48fc6070e78be430f5ae8c7a3a7db9b8d4e2ecbd12c",
+              "size": 17497
+            }
+          }
+        },
+        "20230122": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-amd64.iso",
+              "sha256": "b67e566f6b7ff5d314173a2b55bb413cf4ab2b1b94c59f1ff8b65b862c1d7de7",
+              "size": 1762381824
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-amd64.iso.zsync",
+              "sha256": "da5cef0da92ddc2b8c7a1f0b04528131e0494a0d404edc67decbc9283862afba",
+              "size": 3442379
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-amd64.list",
+              "sha256": "9a344b8b4083ab503523faaff4bff63cdffd783ea0c7788a6d427394c379a34c",
+              "size": 6444
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-amd64.manifest",
+              "sha256": "ebeca51f57e8493b146f8f61c40ac2d1c679af46352272a499b8b63df1eb7fd4",
+              "size": 17436
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:23.04:arm64": {
+      "arch": "arm64",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20221019": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-arm64.iso",
+              "sha256": "a19d956e993a16fc6496c371e36dcc0eb85d2bdf6a8e86028b92ce62e9f585cd",
+              "size": 1606201344
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-arm64.iso.zsync",
+              "sha256": "b7f97f8ec7cff193eb61c04330fc0ddf43a9ff1a72da310bdef5d4390a9b11de",
+              "size": 3137343
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-arm64.list",
+              "sha256": "1886ec4a10cc1059d1746b4325d343042257b6a43addd979a636cfb497cfc85b",
+              "size": 5279
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-arm64.manifest",
+              "sha256": "8bcf1d3d2068141ff3afaba49e7d2a48e649cf452152ba8f8e88e53ad00ffe65",
+              "size": 16977
+            }
+          }
+        },
+        "20221019.1": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-arm64.iso",
+              "sha256": "a19d956e993a16fc6496c371e36dcc0eb85d2bdf6a8e86028b92ce62e9f585cd",
+              "size": 1606201344
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-arm64.iso.zsync",
+              "sha256": "b7f97f8ec7cff193eb61c04330fc0ddf43a9ff1a72da310bdef5d4390a9b11de",
+              "size": 3137343
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-arm64.list",
+              "sha256": "1886ec4a10cc1059d1746b4325d343042257b6a43addd979a636cfb497cfc85b",
+              "size": 5279
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-arm64.manifest",
+              "sha256": "8bcf1d3d2068141ff3afaba49e7d2a48e649cf452152ba8f8e88e53ad00ffe65",
+              "size": 16977
+            }
+          }
+        },
+        "20221210": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-arm64.iso",
+              "sha256": "9967e0171f90a183b5d12a743201861dac12c21471ad4fe265933e446169d1e4",
+              "size": 1703227392
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-arm64.iso.zsync",
+              "sha256": "8c163756b00acd0ddd1cd1f084c6943b4fd9cff24a8ee72db99eac3a7439f31d",
+              "size": 3326843
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-arm64.list",
+              "sha256": "b0118a5b5646a3b2ab048a2c22db52d5bc2dbf382811530bac84bac682e4e96a",
+              "size": 5317
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-arm64.manifest",
+              "sha256": "aac6ae7e4c816c879d53859424dd06d7a6e8f50b829db2feb90ef5872c1f9c89",
+              "size": 16892
+            }
+          }
+        },
+        "20221213": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-arm64.iso",
+              "sha256": "1f34b01ef5ea3954a5a0ac720cf15ed6d7d2b5e3ccf3a0e8aec05d2ff09e412e",
+              "size": 1704898560
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-arm64.iso.zsync",
+              "sha256": "96e2c3dccfaed1e8ff83061578401a154924e0130670a21d06055ccb5e2f7f32",
+              "size": 3330107
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-arm64.list",
+              "sha256": "092b7166ad79b9b1ca52d8efcd74df237754021fd8945411c48e6dffaa1d0d03",
+              "size": 5317
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-arm64.manifest",
+              "sha256": "b4fedca56de4bcea5e459cc4a1af668fdaa1b34494a008060d9c4badb02f9b37",
+              "size": 16946
+            }
+          }
+        },
+        "20230122": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-arm64.iso",
+              "sha256": "982a923a7b9c3c2084673c52b24203e54f8053548842e321d9c94303fb00475d",
+              "size": 1728360448
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-arm64.iso.zsync",
+              "sha256": "5d91648defb468d235f6fe7846af73a7514de7c3b5ab77d7559d74cc4f28fbd7",
+              "size": 3375931
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-arm64.list",
+              "sha256": "efe232fab54b2c22445c93b7d3242f4dbb078082d73b089635a88b9b5a6e93ac",
+              "size": 5337
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-arm64.manifest",
+              "sha256": "6986228a77b88174c5e27703bd6c41b351f5a309d1a2906c7ad79808a36030ea",
+              "size": 16959
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:23.04:ppc64el": {
+      "arch": "ppc64el",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20221019": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-ppc64el.iso",
+              "sha256": "3ecd4e6064dfe118df854be57575cc93a99274cb45a20babde64332a19bf550c",
+              "size": 1664567296
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-ppc64el.iso.zsync",
+              "sha256": "2d676b209ece5a0de1b9cff1cf4cc1221ed27fc546d60c6f3a7cbd03fcdc94ff",
+              "size": 3251347
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-ppc64el.list",
+              "sha256": "509e7283f25a21ad8fcbf8952b7dd4c720e74964631bfcf1b46fa18bb33c236c",
+              "size": 5467
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-ppc64el.manifest",
+              "sha256": "5b79d3f17422375e830b0c1a4ec772d1d094ec792b68096ffab2b508375691b6",
+              "size": 17278
+            }
+          }
+        },
+        "20221019.1": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-ppc64el.iso",
+              "sha256": "3ecd4e6064dfe118df854be57575cc93a99274cb45a20babde64332a19bf550c",
+              "size": 1664567296
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-ppc64el.iso.zsync",
+              "sha256": "2d676b209ece5a0de1b9cff1cf4cc1221ed27fc546d60c6f3a7cbd03fcdc94ff",
+              "size": 3251347
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-ppc64el.list",
+              "sha256": "509e7283f25a21ad8fcbf8952b7dd4c720e74964631bfcf1b46fa18bb33c236c",
+              "size": 5467
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-ppc64el.manifest",
+              "sha256": "5b79d3f17422375e830b0c1a4ec772d1d094ec792b68096ffab2b508375691b6",
+              "size": 17278
+            }
+          }
+        },
+        "20221210": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-ppc64el.iso",
+              "sha256": "7ec3723e95f9747f72db0f7b8051a5c580fe479174c1d3150e9042bee31c6505",
+              "size": 1759287296
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-ppc64el.iso.zsync",
+              "sha256": "689317e55abd2622a3c1b0e6180baa3a7660fc0a9c9327b6c78726795e3fa746",
+              "size": 3436343
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-ppc64el.list",
+              "sha256": "36d43dafab13262163f93d106d3aedac9126c8764eec3cde4b9a05435d8fcb10",
+              "size": 5498
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-ppc64el.manifest",
+              "sha256": "6c58f4723579534eaed2ee153440d638f8f70263c9a0be9139188e037e52da4d",
+              "size": 17191
+            }
+          }
+        },
+        "20221213": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-ppc64el.iso",
+              "sha256": "236d1fdad96794cbb05aff3a0366690da4722b3dae1921ccd2797073cefc98ad",
+              "size": 1760995328
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-ppc64el.iso.zsync",
+              "sha256": "210dff1c8cb978b473c57791f2c1ed9fae2f9bf559fb0d7ec7c6fe7bdf358928",
+              "size": 3439679
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-ppc64el.list",
+              "sha256": "c9ed8c4242c65e384efd69b7322ba99981947cd67fdaab879be17fcac332ce58",
+              "size": 5498
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-ppc64el.manifest",
+              "sha256": "8ffeaca054e0588ad35e8ce8a51682332371127e8a3d117df022c706406113f5",
+              "size": 17249
+            }
+          }
+        },
+        "20230122": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-ppc64el.iso",
+              "sha256": "485d261c8c8070e953b528525b0ab6c35ff3d25da413720bb65d1d7f90474587",
+              "size": 1785739264
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-ppc64el.iso.zsync",
+              "sha256": "ce9515cda926db0e4378e4541b6247301e5adad3b9ab9399f1c991c8c61e477c",
+              "size": 3488007
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-ppc64el.list",
+              "sha256": "7aca8dd308998d91c5b8ad173e1acba72d10b89ae520c14d41808a1cc7d13d29",
+              "size": 5519
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-ppc64el.manifest",
+              "sha256": "5f7574f6aeb6dd9b2d5e019a35f4d3f37ef232005a1e59b742a73cb87af6cebe",
+              "size": 17228
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:23.04:riscv64": {
+      "arch": "riscv64",
+      "ftype": "manifest",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20221019": {
+          "items": {
+            "manifest": {
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-riscv64.manifest",
+              "sha256": "6e9df5dd5f242a9ea84fbb844a9d34e838851eedcd5ee2ea1c30993ac8b58268",
+              "size": 17132
+            }
+          }
+        },
+        "20221019.1": {
+          "items": {
+            "manifest": {
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-riscv64.manifest",
+              "sha256": "0ec96dd6c0dee0fc9a1b24192a355d36ae037aa40cea5f7c4aea4318e4bd9c37",
+              "size": 17132
+            }
+          }
+        },
+        "20221210": {
+          "items": {
+            "manifest": {
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-riscv64.manifest",
+              "sha256": "39931704f06a629cae5df39328dc978faf6604a511300289cf536af51af39a6a",
+              "size": 17045
+            }
+          }
+        },
+        "20221213": {
+          "items": {
+            "manifest": {
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-riscv64.manifest",
+              "sha256": "e0843c09056043b457e7bf881a01fcf5de0a18abc0e446e1953ebaac28c2f163",
+              "size": 17103
+            }
+          }
+        },
+        "20230122": {
+          "items": {
+            "manifest": {
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-riscv64.manifest",
+              "sha256": "41fa048a8df4eed76f8ddc798968e6aee7dbe72c43916ae74982538632049274",
+              "size": 17109
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:23.04:s390x": {
+      "arch": "s390x",
+      "image_type": "daily-live",
+      "os": "ubuntu-server",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20221019": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-s390x.iso",
+              "sha256": "d06d6de124ffc146db31f3d88c9116d3793388062b3fcdbacf901e03ed62fda6",
+              "size": 1069783040
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-s390x.iso.zsync",
+              "sha256": "4e26173888d94654eb69eea37cc7a510c620fc12c39ee06dc640abc448f12fae",
+              "size": 2089655
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-s390x.list",
+              "sha256": "2986fc1525819b55c7076c6b6a8f4e6f29ad8efb9af87c7b5e3b66701d26a5ae",
+              "size": 4422
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221019/kinetic-live-server-s390x.manifest",
+              "sha256": "8a1397e03a06086dea18b53b8909c7525d9a6442865323ef225bff5dc45ae5e0",
+              "size": 16572
+            }
+          }
+        },
+        "20221019.1": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-s390x.iso",
+              "sha256": "d06d6de124ffc146db31f3d88c9116d3793388062b3fcdbacf901e03ed62fda6",
+              "size": 1069783040
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-s390x.iso.zsync",
+              "sha256": "4e26173888d94654eb69eea37cc7a510c620fc12c39ee06dc640abc448f12fae",
+              "size": 2089655
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-s390x.list",
+              "sha256": "2986fc1525819b55c7076c6b6a8f4e6f29ad8efb9af87c7b5e3b66701d26a5ae",
+              "size": 4422
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221019.1/kinetic-live-server-s390x.manifest",
+              "sha256": "8a1397e03a06086dea18b53b8909c7525d9a6442865323ef225bff5dc45ae5e0",
+              "size": 16572
+            }
+          }
+        },
+        "20221210": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-s390x.iso",
+              "sha256": "f1ee4b07e12c5a655552310411efc182ee385f7fe80cf0af728da80b69e88492",
+              "size": 1126328320
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-s390x.iso.zsync",
+              "sha256": "97effd0f7b20d8c66c7821c1c269e62ea4200b2b10f04ebf35fb2cde5f374b06",
+              "size": 2200091
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-s390x.list",
+              "sha256": "dba5908caceb967348045d00ac63a90af2923b5fd2f9ecc5343024fc998232a7",
+              "size": 4460
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221210/lunar-live-server-s390x.manifest",
+              "sha256": "d91e314283587c0e60b1c4095f1e1a21c6042dbcf0726f752fbf9597b90133fc",
+              "size": 16487
+            }
+          }
+        },
+        "20221213": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-s390x.iso",
+              "sha256": "32177371a1b2a2cdecaf3b20a60f267658464413482e222284c33cf0ab36d1c3",
+              "size": 1127448576
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-s390x.iso.zsync",
+              "sha256": "e26db9e2f59d07adfc0864f48c230665934cab1bfa845f1ee165667726b111aa",
+              "size": 2202275
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-s390x.list",
+              "sha256": "dba5908caceb967348045d00ac63a90af2923b5fd2f9ecc5343024fc998232a7",
+              "size": 4460
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20221213/lunar-live-server-s390x.manifest",
+              "sha256": "541e19ff5bcb3c10e832817f5573a7292cb9e0204bccd38840cdc63c2284b9e3",
+              "size": 16541
+            }
+          }
+        },
+        "20230122": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-s390x.iso",
+              "sha256": "3d1972944fb7710435b0838309d05005910cdb78bf403d1e8a01c0d9805f0800",
+              "size": 1147285504
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-s390x.iso.zsync",
+              "sha256": "bdc91d783243b74b50ad421fbb68b705dc6a26a61d0fdf580769501daccb277c",
+              "size": 2241019
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-s390x.list",
+              "sha256": "86b933b9cb6aaf57533e5efbc7fc6d738cf2f8294900b980338f70bdcbd3713e",
+              "size": 4489
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-live/20230122/lunar-live-server-s390x.manifest",
+              "sha256": "4ac6bd5dd4eaac2fe69f6ccc6d33815b0f3e271f341eecf26eea07d97adcb742",
+              "size": 16470
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:20.04:arm64+raspi": {
+      "arch": "arm64+raspi",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20221017": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-arm64+raspi.img.xz",
+              "sha256": "87f0dd735de77352a9c75b369d3a849f56a803562a48b042875225e1c09b29fd",
+              "size": 795364164
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-arm64+raspi.img.xz.zsync",
+              "sha256": "2536819e2a34c619302fa58b58b954f5302e0c4479f8cfe313470c694c99bd3d",
+              "size": 1553708
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-arm64+raspi.manifest",
+              "sha256": "d49c2c0d6ce4fe022e46f1bddd743db98e8b4651b2841a395a9a0f1d125f03c7",
+              "size": 16745
+            }
+          }
+        },
+        "20221030": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-arm64+raspi.img.xz",
+              "sha256": "5907d191b45d0715b3eb5ba70b58b80a05fe0471ed3a407ca01d807809c86258",
+              "size": 815182368
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-arm64+raspi.img.xz.zsync",
+              "sha256": "6113cfd427bbf26372c07b284b759a46a2146935223a0021f08e11998417f946",
+              "size": 1592420
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-arm64+raspi.manifest",
+              "sha256": "f547043ac6a4bc3b7bd8d0c37fcd9b67a3c6c3a467b63562c51178bd3ecffd10",
+              "size": 16792
+            }
+          }
+        },
+        "20221031": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-arm64+raspi.img.xz",
+              "sha256": "7c735749f4172d391de6b7ace5dc34f776da0455d4fd41673ce4a95e1cbff515",
+              "size": 815186068
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-arm64+raspi.img.xz.zsync",
+              "sha256": "664091e8c2e8f98590ee1c877ab2fa63b2717f0fe92af18c8a4b8164bdb3d5f9",
+              "size": 1592428
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-arm64+raspi.manifest",
+              "sha256": "f547043ac6a4bc3b7bd8d0c37fcd9b67a3c6c3a467b63562c51178bd3ecffd10",
+              "size": 16792
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:20.04:armhf+raspi": {
+      "arch": "armhf+raspi",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20221017": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-armhf+raspi.img.xz",
+              "sha256": "f03a4fb0669f13884e3db8c48060cb32d35bfd7ef53395fd2406ddb5b5e0a4bf",
+              "size": 753160232
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-armhf+raspi.img.xz.zsync",
+              "sha256": "0b46a51de2393f0c567e2e3894ccd804025a6a17b3751e14160873ad88d0983c",
+              "size": 1471284
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-armhf+raspi.manifest",
+              "sha256": "4eb29aeca0da17c6ff0bdbac4c801df2dd56d24b6f210a1b5f3cfa7fb2b5c4e5",
+              "size": 16673
+            }
+          }
+        },
+        "20221030": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-armhf+raspi.img.xz",
+              "sha256": "4fc4e1608cddd00ddc12b7182b97f1ab168170fe9ee1180902a9c22825bd0e56",
+              "size": 772198260
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-armhf+raspi.img.xz.zsync",
+              "sha256": "bea065fb18ad055d53b0cda3783d4b2dda956896a757626cd3d32715fbc377cd",
+              "size": 1508460
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-armhf+raspi.manifest",
+              "sha256": "06512b5a426e7bb4520743726b8576d66abb4e149ca08b3d0a27277ad4712439",
+              "size": 16720
+            }
+          }
+        },
+        "20221031": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-armhf+raspi.img.xz",
+              "sha256": "ca526a238a4a35186e1c8a392f5de50365be2ecae5be1749fe3b3577a5a524b1",
+              "size": 772205288
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-armhf+raspi.img.xz.zsync",
+              "sha256": "376f5d7a425cea758f94227d2e23d18e30125b25f632d0b25010c3eae377ae75",
+              "size": 1508476
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-armhf+raspi.manifest",
+              "sha256": "06512b5a426e7bb4520743726b8576d66abb4e149ca08b3d0a27277ad4712439",
+              "size": 16720
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:20.04:iot": {
+      "arch": "iot",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20221017": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-amd64+intel-iot.img.xz",
+              "sha256": "a28f3704b63ea6e96ac9f12a9e577eb37d8baf6fffdf39dc94a6a3a6b1526b7d",
+              "size": 899170408
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-amd64+intel-iot.img.xz.zsync",
+              "sha256": "ed4f46bff69f6904ee68f7009b01f34fbdfdaf308975ae9bc4aeb4c40810c967",
+              "size": 1756468
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-amd64+intel-iot.manifest",
+              "sha256": "cbce18787fab916b0e4489d7cc8c5d19fd2c5609b687919053e9479981a9d37c",
+              "size": 17319
+            }
+          }
+        },
+        "20221030": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-amd64+intel-iot.img.xz",
+              "sha256": "a28f3704b63ea6e96ac9f12a9e577eb37d8baf6fffdf39dc94a6a3a6b1526b7d",
+              "size": 899170408
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-amd64+intel-iot.img.xz.zsync",
+              "sha256": "ed4f46bff69f6904ee68f7009b01f34fbdfdaf308975ae9bc4aeb4c40810c967",
+              "size": 1756468
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-amd64+intel-iot.manifest",
+              "sha256": "cbce18787fab916b0e4489d7cc8c5d19fd2c5609b687919053e9479981a9d37c",
+              "size": 17319
+            }
+          }
+        },
+        "20221031": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-amd64+intel-iot.img.xz",
+              "sha256": "a28f3704b63ea6e96ac9f12a9e577eb37d8baf6fffdf39dc94a6a3a6b1526b7d",
+              "size": 899170408
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-amd64+intel-iot.img.xz.zsync",
+              "sha256": "ed4f46bff69f6904ee68f7009b01f34fbdfdaf308975ae9bc4aeb4c40810c967",
+              "size": 1756468
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-amd64+intel-iot.manifest",
+              "sha256": "cbce18787fab916b0e4489d7cc8c5d19fd2c5609b687919053e9479981a9d37c",
+              "size": 17319
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:20.04:riscv64": {
+      "arch": "riscv64",
+      "ftype": "manifest",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20221017": {
+          "items": {
+            "manifest": {
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-riscv64.manifest",
+              "sha256": "cf31e03b26231c9838840f0f69b8c2ca8c535de81962047f85f531d3e3e83219",
+              "size": 16792
+            }
+          }
+        },
+        "20221030": {
+          "items": {
+            "manifest": {
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-riscv64.manifest",
+              "sha256": "cf31e03b26231c9838840f0f69b8c2ca8c535de81962047f85f531d3e3e83219",
+              "size": 16792
+            }
+          }
+        },
+        "20221031": {
+          "items": {
+            "manifest": {
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-riscv64.manifest",
+              "sha256": "cf31e03b26231c9838840f0f69b8c2ca8c535de81962047f85f531d3e3e83219",
+              "size": 16792
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:20.04:riscv64+unleashed": {
+      "arch": "riscv64+unleashed",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20221017": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-riscv64+unleashed.img.xz",
+              "sha256": "3c882c86483ddce3da256bc1a71d65b5f5bd7484f9efbf59b5afaf6cc9f7720e",
+              "size": 450302432
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-riscv64+unleashed.img.xz.zsync",
+              "sha256": "554da531dd144c50ea2fa736c8e846055fda9f2355da5886d696b1895f277cda",
+              "size": 879776
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-riscv64+unleashed.manifest",
+              "sha256": "fdc26689314a39990206e6e59a58806b2a23f5a4cce736e38e0a07bb86567e68",
+              "size": 18065
+            }
+          }
+        },
+        "20221030": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-riscv64+unleashed.img.xz",
+              "sha256": "32c7447602c8af35da1bbe72f75a656db399270c91329adcba382013ff103ec0",
+              "size": 453074376
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-riscv64+unleashed.img.xz.zsync",
+              "sha256": "ae29fdfd8caea0d68c01fb70e9476134d803d3b19e3f9a32c37443cb452ab2ac",
+              "size": 885184
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-riscv64+unleashed.manifest",
+              "sha256": "21f76d4c9bdc307a6d4ddf572a11c0fc9f6bc2b5a7ad192e0c6f5edd70afa115",
+              "size": 18112
+            }
+          }
+        },
+        "20221031": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-riscv64+unleashed.img.xz",
+              "sha256": "6cf863740fbf5e99a0c2e635b4b22f304abb6f75b66b09bd05c87154a9b170f7",
+              "size": 455316620
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-riscv64+unleashed.img.xz.zsync",
+              "sha256": "345903f4752640051bf1c2d344302d87abdd56a63c02c8059f16137454a7bb51",
+              "size": 889568
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-riscv64+unleashed.manifest",
+              "sha256": "21f76d4c9bdc307a6d4ddf572a11c0fc9f6bc2b5a7ad192e0c6f5edd70afa115",
+              "size": 18112
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:20.04:riscv64+unmatched": {
+      "arch": "riscv64+unmatched",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20221017": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-riscv64+unmatched.img.xz",
+              "sha256": "a23bead420b371c63e7fa48f212a94214788c66c02c779d44a95e675b1e7c1f4",
+              "size": 447628852
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-riscv64+unmatched.img.xz.zsync",
+              "sha256": "355d12a30e8e4826707dd1609a433f71261065811abf24b5f899b68e7fade169",
+              "size": 874552
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221017/focal-preinstalled-server-riscv64+unmatched.manifest",
+              "sha256": "fdc26689314a39990206e6e59a58806b2a23f5a4cce736e38e0a07bb86567e68",
+              "size": 18065
+            }
+          }
+        },
+        "20221030": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-riscv64+unmatched.img.xz",
+              "sha256": "b0c6abcc8aa94ac82d4d37423bd5817b67b1904a58425136f83ea426054580b3",
+              "size": 455591348
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-riscv64+unmatched.img.xz.zsync",
+              "sha256": "9e87db05559c94479cc20ad0fcb2124129f9eb1d08a02db707f021e20356a1cc",
+              "size": 890104
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221030/focal-preinstalled-server-riscv64+unmatched.manifest",
+              "sha256": "21f76d4c9bdc307a6d4ddf572a11c0fc9f6bc2b5a7ad192e0c6f5edd70afa115",
+              "size": 18112
+            }
+          }
+        },
+        "20221031": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-riscv64+unmatched.img.xz",
+              "sha256": "cf2483f1b82eae88dce9f53e20cdcc4d40e05dfaadf6c9c96881b4bdcd4f3781",
+              "size": 453338792
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-riscv64+unmatched.img.xz.zsync",
+              "sha256": "563b8c1ac73f4c04fc3658a1889824f0d1cf6715dfe6947b3176fe5837d02b3b",
+              "size": 885704
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily-preinstalled/20221031/focal-preinstalled-server-riscv64+unmatched.manifest",
+              "sha256": "21f76d4c9bdc307a6d4ddf572a11c0fc9f6bc2b5a7ad192e0c6f5edd70afa115",
+              "size": 18112
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:22.04:amd64": {
+      "arch": "amd64",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-amd64.img.xz",
+              "sha256": "6c4cc68a5b813f15caa924182c67f44aab5243d86d2ec1dacdb6ce4e01a6396d",
+              "size": 881716140
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-amd64.img.xz.zsync",
+              "sha256": "4cfae8a62fa4226090f4fdf606cb09b21ce669db20eca10760675cfa81e1eeea",
+              "size": 1722352
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-amd64.manifest",
+              "sha256": "d894d5c23e53066e305d8bb9afc1c124f786b019a0ae33b6f4b80ab456f30959",
+              "size": 18170
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-amd64.img.xz",
+              "sha256": "aad600ab5673935ff78898ee8b6d25b0b8654e9d7a3907f05650e63dd1d856ac",
+              "size": 881032588
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-amd64.img.xz.zsync",
+              "sha256": "e791f6f4d332b9bb853ea30768ad868faddc64326e567f9d1db4911df559c793",
+              "size": 1721016
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-amd64.manifest",
+              "sha256": "d894d5c23e53066e305d8bb9afc1c124f786b019a0ae33b6f4b80ab456f30959",
+              "size": 18170
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:22.04:arm64": {
+      "arch": "arm64",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-arm64.img.xz",
+              "sha256": "45f85f2a4ca0d9b1741dd43cced79ce57dfd4377881c286c9427c0f30ea9206d",
+              "size": 856568708
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-arm64.img.xz.zsync",
+              "sha256": "baae88c8004b703acab04acef5b7b8e70c689b641d38866a1ec7413c9d949a4f",
+              "size": 1673240
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-arm64.manifest",
+              "sha256": "08a572e1f13fa51bf694ddd66b0a07f24cb731733e822c7409b8d234871ab531",
+              "size": 17935
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-arm64.img.xz",
+              "sha256": "7bd1fd0ae5edfca9f9eba25fd3f3f93b2672d9eb744a0accdd6116248df831a3",
+              "size": 855496456
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-arm64.img.xz.zsync",
+              "sha256": "ad4047b72902cf6f0e8c6c852fcc8691fc55779c1c67f1aafdbb817e79a27908",
+              "size": 1671144
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-arm64.manifest",
+              "sha256": "08a572e1f13fa51bf694ddd66b0a07f24cb731733e822c7409b8d234871ab531",
+              "size": 17935
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:22.04:arm64+raspi": {
+      "arch": "arm64+raspi",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-arm64+raspi.img.xz",
+              "sha256": "62f22bbe0988aefb91b3f18e0523972544cb1db4445cc0aca7c2dc23281e0fd2",
+              "size": 1003287372
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-arm64+raspi.img.xz.zsync",
+              "sha256": "1d2eb4eb2a78eb12c09a22471a116e3cc6e964997008de798b9a6a31077fc91e",
+              "size": 1959813
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-arm64+raspi.manifest",
+              "sha256": "2c355bfaf0021ca5c67272dbb04f1511e9f0e7d9478b4a77ec00c4ed9100e9d4",
+              "size": 16685
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-arm64+raspi.img.xz",
+              "sha256": "d34bacaf5f7924ffad900ef2faf9176867cb964bdc57d2283953b2080aa32687",
+              "size": 1003262212
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-arm64+raspi.img.xz.zsync",
+              "sha256": "94b2a32de0461325afd2a902c41f5f06a534297304d9511d3ed800a65002152c",
+              "size": 1959765
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-arm64+raspi.manifest",
+              "sha256": "2c355bfaf0021ca5c67272dbb04f1511e9f0e7d9478b4a77ec00c4ed9100e9d4",
+              "size": 16685
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:22.04:armhf+raspi": {
+      "arch": "armhf+raspi",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-armhf+raspi.img.xz",
+              "sha256": "37a8b2b738c44cae55b1841134d03c90059ac4b5be955815b79434746cdeb241",
+              "size": 936967416
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-armhf+raspi.img.xz.zsync",
+              "sha256": "9ac4ac4a2e381372cd40de177f8f99eacda22b7ef080264249414fc8bfc02979",
+              "size": 1830276
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-armhf+raspi.manifest",
+              "sha256": "558eb0f992aea5f179163181df225bb859b032d7135ba5ca8b4b6045a2c0815d",
+              "size": 16458
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-armhf+raspi.img.xz",
+              "sha256": "95522cf0db3ef20b8d2da050c887a21a98465b28a1f10239da101f5fc1a10140",
+              "size": 936976892
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-armhf+raspi.img.xz.zsync",
+              "sha256": "9aa63ec05e9866daac16b732ea235872b7b05994009f46c9cce8c4b206f16fcd",
+              "size": 1830300
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-armhf+raspi.manifest",
+              "sha256": "558eb0f992aea5f179163181df225bb859b032d7135ba5ca8b4b6045a2c0815d",
+              "size": 16458
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:22.04:riscv64+icicle": {
+      "arch": "riscv64+icicle",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+icicle.img.xz",
+              "sha256": "5fd156754682305e0cb77b10fe764629ca01f4cad40abb8aa65c8d23c9b5f82c",
+              "size": 804980132
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+icicle.img.xz.zsync",
+              "sha256": "75d25e2b5d473a2284356c606fd8b518ff08364fd949d8c29545aa3c9f14bcfc",
+              "size": 1572498
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+icicle.manifest",
+              "sha256": "c7c191202702d8f1da8e40a93df25aacd551143ae0ebca571d5d8253399bd4e0",
+              "size": 18288
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+icicle.img.xz",
+              "sha256": "c513fdf716826ee1a33c9216762596cbf670cc890ca8768f86086ceb983718bf",
+              "size": 803285804
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+icicle.img.xz.zsync",
+              "sha256": "a82c64416ce81145faf66dcdc597a834e7cc9031b3e54205416f6f52b36ef616",
+              "size": 1569186
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+icicle.manifest",
+              "sha256": "c7c191202702d8f1da8e40a93df25aacd551143ae0ebca571d5d8253399bd4e0",
+              "size": 18288
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:22.04:riscv64+licheerv": {
+      "arch": "riscv64+licheerv",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+licheerv.img.xz",
+              "sha256": "ff0291cb72117a850471985658c3d58b7e34e5a36f40e11c4f306fa58a7aeaf6",
+              "size": 707475464
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+licheerv.img.xz.zsync",
+              "sha256": "63ccb8fbe1a1f5e4bfad38f74d6fad2b3fd9bcbea4d5925c5dcb3f7a81e744ce",
+              "size": 1382062
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+licheerv.manifest",
+              "sha256": "5a22c425ae23a199fe9dda6b5f028167842806de8a31fd3c86223b6bc6068987",
+              "size": 18293
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+licheerv.img.xz",
+              "sha256": "69a8f9c1cd5117ef75e5ee01d83541fb1884eaf046d0c9bf099f986eb06fe9ac",
+              "size": 702339980
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+licheerv.img.xz.zsync",
+              "sha256": "ca5de81ab54f57d78940dd3526e54077eefb7b0d795bb6d1f146b95c3c5d71a0",
+              "size": 1372030
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+licheerv.manifest",
+              "sha256": "5a22c425ae23a199fe9dda6b5f028167842806de8a31fd3c86223b6bc6068987",
+              "size": 18293
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:22.04:riscv64+nezha": {
+      "arch": "riscv64+nezha",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+nezha.img.xz",
+              "sha256": "68d87863034ee07f2bd8a8a240ae290aab8e37796ab701ba8da8c5213e144a5d",
+              "size": 733439812
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+nezha.img.xz.zsync",
+              "sha256": "22d6b3efbc3e61ee00c38884905ff33ac87ddab0a4b6b783afc2b9fb6f2e4153",
+              "size": 1432768
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+nezha.manifest",
+              "sha256": "5a22c425ae23a199fe9dda6b5f028167842806de8a31fd3c86223b6bc6068987",
+              "size": 18293
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+nezha.img.xz",
+              "sha256": "5882a4cd89f3e38f53fcea540a72d6bdbf3551c5686c9c188a38d433ce1e3a1a",
+              "size": 734306100
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+nezha.img.xz.zsync",
+              "sha256": "e88666783047a8f9f28c6c490254a827bc90ec12df834cbad72ac13b2e387c1f",
+              "size": 1434456
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+nezha.manifest",
+              "sha256": "5a22c425ae23a199fe9dda6b5f028167842806de8a31fd3c86223b6bc6068987",
+              "size": 18293
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:22.04:riscv64+unmatched": {
+      "arch": "riscv64+unmatched",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+unmatched.img.xz",
+              "sha256": "c00d8bce7be6a1b1a4c4f2dd8385aee707b14ec42bbbcf25d8ab5218002b1cdf",
+              "size": 798017900
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+unmatched.img.xz.zsync",
+              "sha256": "3652f4cf5d9784c760e987e76b09a5000aa8ebef42bd1e67b815f0b1ac183e95",
+              "size": 1558904
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+unmatched.manifest",
+              "sha256": "f8ac34c8187fb07f60d3fa754e2b036cf66b4b8e1cf7699ae7d82fe6cc4437f7",
+              "size": 17700
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+unmatched.img.xz",
+              "sha256": "9425f0474ded69de38838c193716584811e4bf5ab278d98772253ecc257a8d8e",
+              "size": 798188324
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+unmatched.img.xz.zsync",
+              "sha256": "f64dda05fe37ff4e65822e9f9b844f92edd437d1efd46a644b71edfcf6b32ff6",
+              "size": 1559240
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+unmatched.manifest",
+              "sha256": "f8ac34c8187fb07f60d3fa754e2b036cf66b4b8e1cf7699ae7d82fe6cc4437f7",
+              "size": 17700
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:22.04:riscv64+visionfive": {
+      "arch": "riscv64+visionfive",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+visionfive.img.xz",
+              "sha256": "a114427d55a2e009d64b9f547a500c8b3b77a87859163bba1f65da0ea5b08de0",
+              "size": 793773688
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+visionfive.img.xz.zsync",
+              "sha256": "341cc0284ab4e4b88291d736dbe0a7a457410c7634182edc19a0fe561f9a7ef6",
+              "size": 1550618
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230122/jammy-preinstalled-server-riscv64+visionfive.manifest",
+              "sha256": "e2b4be35d0be664fd3b54beac408cba0a80a0c401c695dfd9ad58e823caaff15",
+              "size": 18185
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+visionfive.img.xz",
+              "sha256": "013df3558e5f0eeb88b8bb8fa2ca7e4bb466a9dc208398dd65d06bb9db95846f",
+              "size": 789360456
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+visionfive.img.xz.zsync",
+              "sha256": "e2ba3a099fb30327c9b8194b34236bcd6e09805a4f0af152e5a20e2ba6ade1cc",
+              "size": 1541994
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/jammy/daily-preinstalled/20230123/jammy-preinstalled-server-riscv64+visionfive.manifest",
+              "sha256": "e2b4be35d0be664fd3b54beac408cba0a80a0c401c695dfd9ad58e823caaff15",
+              "size": 18185
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:23.04:amd64": {
+      "arch": "amd64",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-amd64.img.xz",
+              "sha256": "f0c156f35d7988c15eba8c2697c620d731153685862ab66324f87838d8aefa34",
+              "size": 1019731752
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-amd64.img.xz.zsync",
+              "sha256": "bcb7d33eb3cc57f0e9d16501741bb4fe2ca9cec6995a9c388bfe7bee6742f78d",
+              "size": 1991913
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-amd64.manifest",
+              "sha256": "fb7296c9abacc7af0e5229990e9bf5af31e52754893132ffa493341b333a0a49",
+              "size": 17255
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-amd64.img.xz",
+              "sha256": "74c3b28af8d19e3886dd9976b415e9e1193865fa3777b1444f57c79f3fc10508",
+              "size": 1021587532
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-amd64.img.xz.zsync",
+              "sha256": "a89cc62d9981b172a8d2aefe575d14f413891446c90b550a4f5f49945286b4d5",
+              "size": 1995545
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-amd64.manifest",
+              "sha256": "e1ff65abe54da380d4b1fb6f933b5c8b0639c664d642dbd74f843fa5e3f36907",
+              "size": 17166
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:23.04:arm64": {
+      "arch": "arm64",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-arm64.img.xz",
+              "sha256": "3a40e6366d2a2ba7ed67b8353c9cd50a34e615a98087af046765e9eca11c850d",
+              "size": 987318288
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-arm64.img.xz.zsync",
+              "sha256": "72edf18474689f17e9248a84570a2d7e7951506b29e050624d405745e08de1d5",
+              "size": 1928608
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-arm64.manifest",
+              "sha256": "c64a34d22d7b2ab2ad0490a05f2e2276a04a296e2748f480557639b20c0aa33b",
+              "size": 16873
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-arm64.img.xz",
+              "sha256": "be10a12ebdc8407f58e4c6a121c52baecd4d9af54d9bcb84c2dd6936fba73ccb",
+              "size": 990041512
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-arm64.img.xz.zsync",
+              "sha256": "bc80356739c8c5478e4391d21f0f0cb23397e6799f5a3e9fd9ec0d81d78fa829",
+              "size": 1933928
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-arm64.manifest",
+              "sha256": "671143e62decb610e04dc4cd9cd2f6e301108ed9af03b8a37087b2a045a06445",
+              "size": 16784
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:23.04:arm64+raspi": {
+      "arch": "arm64+raspi",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-arm64+raspi.img.xz",
+              "sha256": "daebf8605b40b2ac0c29ed88d9cabce2b8617d24efd5b9da055d6eaccceb5df1",
+              "size": 1103712964
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-arm64+raspi.img.xz.zsync",
+              "sha256": "9c76de023a6764902d963343c6e7d56801944afd3d9a1a0b450a4ce339530023",
+              "size": 2155957
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-arm64+raspi.manifest",
+              "sha256": "58797bc4e1a9474243ec5b8f1f03b7fd9c9a5d6b75586042c2933122ea469c87",
+              "size": 15537
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-arm64+raspi.img.xz",
+              "sha256": "31315fd400ba28b6d251776be39505dc726d13eae6abc207202ccafa51d2bccf",
+              "size": 1103681704
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-arm64+raspi.img.xz.zsync",
+              "sha256": "8312637f509269a58fb5ea8b0c172d1561f0eabbcc9aeda887e25d4e59cd2dd0",
+              "size": 2155893
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-arm64+raspi.manifest",
+              "sha256": "806127cc0ac40ddf5b4537f0cb00354946db410c767658cb39a0400c854fd365",
+              "size": 15448
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:23.04:armhf+raspi": {
+      "arch": "armhf+raspi",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-armhf+raspi.img.xz",
+              "sha256": "4b19e2ae8435b47e27d5019c9ea1bb8b43e7c40bd148ea59b30471f6cf440aa2",
+              "size": 1040837292
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-armhf+raspi.img.xz.zsync",
+              "sha256": "092dfdd8642813a153ef730e1bf529e0c373dd5ccd713b2779d9f3299ee593fa",
+              "size": 2033149
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-armhf+raspi.manifest",
+              "sha256": "e332ef0a42a29fe43a68e715882f173e2b27d1d482ff9e1d7165461f77d9e9e7",
+              "size": 15313
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-armhf+raspi.img.xz",
+              "sha256": "bd2cb9fcc4ff0162f928ac762cec2ac872ad3ddf65b8db4bfc0260877ee899ab",
+              "size": 1040874200
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-armhf+raspi.img.xz.zsync",
+              "sha256": "29e1339442a1c8baeeb9010b363576cef43774d404e47c362e748d23c299f914",
+              "size": 2033221
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-armhf+raspi.manifest",
+              "sha256": "1d1180f12615c1e15bab1d5115ba7617514acaafb8a94b98b6479f733e46dd2c",
+              "size": 15236
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:23.04:riscv64+icicle": {
+      "arch": "riscv64+icicle",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+icicle.img.xz",
+              "sha256": "c972113ab084fc653c20bf9be4016ed67ade8d6b83724281a2f3cb05cdd4d20c",
+              "size": 889729452
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+icicle.img.xz.zsync",
+              "sha256": "616eab0138933dbc4fd5ceaaeb3ddb52dc4fa99b6971096aefdc46695765109d",
+              "size": 1738026
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+icicle.manifest",
+              "sha256": "54643306bb80756605b718d79135b0f64a36e0bae114205d0f58faf577d568a0",
+              "size": 17187
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+icicle.img.xz",
+              "sha256": "7a4806b4503bca0bb92851778641d93e3f9babdf30a6f7174578b421d8c16085",
+              "size": 882306232
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+icicle.img.xz.zsync",
+              "sha256": "1b49a6e710d242f08ed32b2f10f7271f106138c0539c495e555f0516d7e4f44a",
+              "size": 1723522
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+icicle.manifest",
+              "sha256": "aa9aa1eb3117ad8d95f0461b4f19a9881eeefb9a057ae4659ec17e9298c24ead",
+              "size": 17110
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:23.04:riscv64+licheerv": {
+      "arch": "riscv64+licheerv",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+licheerv.img.xz",
+              "sha256": "37d374c380e6a393b6dbabf507bc854bd5839d524d3efa966d40816e564ab9a5",
+              "size": 839527896
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+licheerv.img.xz.zsync",
+              "sha256": "4cfde269690696b67dfa81e190b6524721d0f20d2d2b0aa32656fe4ae415c99d",
+              "size": 1639974
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+licheerv.manifest",
+              "sha256": "822b4ffc9f6d5172afa05ea61c2c8ef1aeb820f513123afd18bdf79d11372306",
+              "size": 18669
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+licheerv.img.xz",
+              "sha256": "4e38694e140f847fe99b636e865b68e7b7dec70278d3906554751c158e21865a",
+              "size": 839533632
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+licheerv.img.xz.zsync",
+              "sha256": "bcba803eecce24404ff56811514e71004977cbd6c4868cd444f6c62ef18c8962",
+              "size": 1639990
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+licheerv.manifest",
+              "sha256": "9065a47c42e5b5d4b6900578e5d7699d33f97cfd01d5bef1884782bf46b30d46",
+              "size": 18558
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:23.04:riscv64+nezha": {
+      "arch": "riscv64+nezha",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+nezha.img.xz",
+              "sha256": "2faf460f70fd55851329232b2c7ad6ba685fcb7f48846c125a10f493cd8ae5dc",
+              "size": 828649004
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+nezha.img.xz.zsync",
+              "sha256": "103436defef836f58739f69102794d5cdb1dee91073c6c864db4ca056b10b540",
+              "size": 1618720
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+nezha.manifest",
+              "sha256": "181f02d00c5b9530148980b9b4ad8d69b5c92ae273de792510250377e3a83116",
+              "size": 17205
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+nezha.img.xz",
+              "sha256": "fadad5bd83c7c5eac35c41fa2914751bd4907a7ad2450704e25b360833c60841",
+              "size": 827694940
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+nezha.img.xz.zsync",
+              "sha256": "864a633859c880b1e4cba13e131612e80657a22afedd03af5fad3b62c5ab7bf4",
+              "size": 1616856
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+nezha.manifest",
+              "sha256": "96601945d99d5c380206fe55d132fa0f1157959bc04ce58ea37de000079524b4",
+              "size": 17128
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:23.04:riscv64+unmatched": {
+      "arch": "riscv64+unmatched",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+unmatched.img.xz",
+              "sha256": "7f25ad51df843b29ccd4c6acc29cb6c6d9f40abf9052fdc15e7526c4d49e6d71",
+              "size": 876607072
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+unmatched.img.xz.zsync",
+              "sha256": "ba2ea54a799f889659052402f0007e8f9ca9761351b54d1024166484e982f08d",
+              "size": 1712400
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+unmatched.manifest",
+              "sha256": "5a5b6bbc3377909c835fd7506ad738cedab175e4af8d5519c0229302e272f9b4",
+              "size": 16616
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+unmatched.img.xz",
+              "sha256": "1e76e3e6325751d9b1939ce114dc19b3e47d41c2a6cf62acd985c9a365631081",
+              "size": 879722160
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+unmatched.img.xz.zsync",
+              "sha256": "2c8cb2b0e123962a2b33a91ecff8b6f47f371068923e63cb136beb27929cb5dc",
+              "size": 1718480
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+unmatched.manifest",
+              "sha256": "2bc8cd85ab8680d90acc46f602f297092de6e0e3861a10467db10373ad266d1b",
+              "size": 16539
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily-preinstalled:23.04:riscv64+visionfive": {
+      "arch": "riscv64+visionfive",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu-server",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20230122": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+visionfive.img.xz",
+              "sha256": "f337d91876d1a4186f6443ca112f2f911368927ddd7a56ec0f8b04a0ef38718e",
+              "size": 887415584
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+visionfive.img.xz.zsync",
+              "sha256": "2a7a8f1edf4578bebee1723569a5f16ec1c5c7686937c07fa38533ac61958cdd",
+              "size": 1733514
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230122/lunar-preinstalled-server-riscv64+visionfive.manifest",
+              "sha256": "b58a8f9e13a65b10bf47d542fd4fb2cd398f47b0834a862e0799d2113543b4bc",
+              "size": 17150
+            }
+          }
+        },
+        "20230123": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+visionfive.img.xz",
+              "sha256": "2ef9006a4b1b7603e27bd9c2782ad52e682c02348f740003864c61c6bb08034a",
+              "size": 882382672
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+visionfive.img.xz.zsync",
+              "sha256": "6ec197140b7e3fc55e3217a8685b6944805c1c22020af29535f86a9aac6f986a",
+              "size": 1723682
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/daily-preinstalled/20230123/lunar-preinstalled-server-riscv64+visionfive.manifest",
+              "sha256": "1d86c20381e64024b928ccfd1bd90c520d28aa4681d1305ed577a5598f9f8728",
+              "size": 17073
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily:16.04:amd64": {
+      "arch": "amd64",
+      "image_type": "daily",
+      "os": "ubuntu-server",
+      "release": "xenial",
+      "release_codename": "Xenial Xerus",
+      "release_title": "16.04.7 LTS",
+      "version": "16.04",
+      "versions": {
+        "20200806": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/xenial/daily/20200806/xenial-server-amd64.iso",
+              "sha256": "ad3157c8ce208fd951ed69f2fac30bda8cdf52e666ca357f83a67eb576e1fbeb",
+              "size": 948961280
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/xenial/daily/20200806/xenial-server-amd64.iso.zsync",
+              "sha256": "6b2c2a9c9cd3dfa402828ec4db3f3bcf214a1076f0b0914143ff9c690709b51e",
+              "size": 1853658
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/xenial/daily/20200806/xenial-server-amd64.list",
+              "sha256": "822528279b4381d61cfb2afd6769136bf2b8001a873d7658c51dd1be0ccd2a8a",
+              "size": 106805
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/xenial/daily/20200806/xenial-server-amd64.manifest",
+              "sha256": "fcc8fc2af6601f4919c4f49c76fb2a93fac29f0ab8f1505566d0c3be90ab684a",
+              "size": 5597
+            }
+          }
+        },
+        "20200810": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/xenial/daily/20200810/xenial-server-amd64.iso",
+              "sha256": "b23488689e16cad7a269eb2d3a3bf725d3457ee6b0868e00c8762d3816e25848",
+              "size": 922746880
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/xenial/daily/20200810/xenial-server-amd64.iso.zsync",
+              "sha256": "5a4d4dd1a5c97d4672ee4ac1754f703874a65a381208e2b70c0a04270d6d5025",
+              "size": 1802458
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/xenial/daily/20200810/xenial-server-amd64.list",
+              "sha256": "e43d9eb4308dec255164528642d0de174d6ebecdacb4ff57028c957b800f14bb",
+              "size": 101080
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/xenial/daily/20200810/xenial-server-amd64.manifest",
+              "sha256": "fcc8fc2af6601f4919c4f49c76fb2a93fac29f0ab8f1505566d0c3be90ab684a",
+              "size": 5597
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily:16.04:arm64": {
+      "arch": "arm64",
+      "image_type": "daily",
+      "os": "ubuntu-server",
+      "release": "xenial",
+      "release_codename": "Xenial Xerus",
+      "release_title": "16.04.7 LTS",
+      "version": "16.04",
+      "versions": {
+        "20200806": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/xenial/daily/20200806/xenial-server-arm64.iso",
+              "sha256": "b9d5469e773fbe8cac9826451f16e417ae47a2993311d79022c77c425ac82e2f",
+              "size": 951721984
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/xenial/daily/20200806/xenial-server-arm64.iso.zsync",
+              "sha256": "bd3cf54acef2af7917c60d7a41c6b92b16bdc55e84d7355e3b00b342ea37cad2",
+              "size": 1859050
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/xenial/daily/20200806/xenial-server-arm64.list",
+              "sha256": "b3f585b32ddd570f48d8992e553e672b6a41552b2a7986d38cae187caf097c94",
+              "size": 101007
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/xenial/daily/20200806/xenial-server-arm64.manifest",
+              "sha256": "ed3946e04899fb7b23bf16620b7d55e9a0f50528d7cab12f9d7fdfda244febb1",
+              "size": 5597
+            }
+          }
+        },
+        "20200810": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/xenial/daily/20200810/xenial-server-arm64.iso",
+              "sha256": "f2ac4f94df0cf681cfec28ae01f9009022884ee9a880936fe87ad598cd6a0b78",
+              "size": 928940032
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/xenial/daily/20200810/xenial-server-arm64.iso.zsync",
+              "sha256": "95a290c478c773daacc397f1080981cb4d17aa988781c14f3baac5c3231bec40",
+              "size": 1814554
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/xenial/daily/20200810/xenial-server-arm64.list",
+              "sha256": "708f58467d585ba5dfc7e3de430265aede7d0a53498bb7a143f9600c8202a876",
+              "size": 96754
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/xenial/daily/20200810/xenial-server-arm64.manifest",
+              "sha256": "ed3946e04899fb7b23bf16620b7d55e9a0f50528d7cab12f9d7fdfda244febb1",
+              "size": 5597
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily:20.04:amd64": {
+      "arch": "amd64",
+      "image_type": "daily",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20200723": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-amd64.iso",
+              "sha256": "60016d5682d955be515bc5332a737ac9e0f1bf1168744c031ded3b85dd879231",
+              "size": 858783744
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-amd64.iso.zsync",
+              "sha256": "540ebdb9245dec335f2f513fd5571f4f26f935ea95209d968febb2a08e30ad91",
+              "size": 1677542
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-amd64.list",
+              "sha256": "ea4566b3d6f8edfc392b9c8c00c30aeb4f4dbd591871c402f6bea0fac92b10e5",
+              "size": 105031
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-amd64.manifest",
+              "sha256": "ecd8766adf9a4c4500a964804b923d02a0028aa6d724f73d5e7e1c198f78189e",
+              "size": 5663
+            }
+          }
+        },
+        "20200731": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-amd64.iso",
+              "sha256": "f11bda2f2caed8f420802b59f382c25160b114ccc665dbac9c5046e7fceaced2",
+              "size": 855638016
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-amd64.iso.zsync",
+              "sha256": "aeb9fd6c8cbfc2711ab67efecff78c44b9328e70be0cb7b996bcb65d681c130e",
+              "size": 1671398
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-amd64.list",
+              "sha256": "7053dff56e6bb0339021fd6c66b718567c5d899091e79663b9722b8e3c540a88",
+              "size": 104525
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-amd64.manifest",
+              "sha256": "12fd5e40225ff5383f7c743a236fbfd7868f3e3df6c70dc80f0f55ad3a334b37",
+              "size": 5674
+            }
+          }
+        },
+        "20200917": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-amd64.iso",
+              "sha256": "bc1e756ec7fc643003013361c2df9dd338bf30166ca164d3b9ec1c37a99558a8",
+              "size": 866123776
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-amd64.iso.zsync",
+              "sha256": "8fce5ee7b41c0c351766ed286e8b9abe5d20ae40e2e19c06c8ea849a838e989b",
+              "size": 1691878
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-amd64.list",
+              "sha256": "b078254587ff553d18caf2a8967a7f8839017773d3a4d36a784cac0d0c799df9",
+              "size": 106672
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-amd64.manifest",
+              "sha256": "5ee7f55b6d072b5fed64730cffbf59be95a66174c5e3c0046ae9059d8e8a0e66",
+              "size": 5704
+            }
+          }
+        },
+        "20200918": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-amd64.iso",
+              "sha256": "b9e13a0a9903679190525cc99d38599fc338327b0d314f0e03636b80840a7b63",
+              "size": 866123776
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-amd64.iso.zsync",
+              "sha256": "e688b6a83eafe16f53c7fe91735530e79a0928184e93c61c9cbe325446ea0588",
+              "size": 1691878
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-amd64.list",
+              "sha256": "5de647cdc351eaf0d359c51634ad4220ee22dfd3cc9b1543c95324eec4864456",
+              "size": 106674
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-amd64.manifest",
+              "sha256": "5ee7f55b6d072b5fed64730cffbf59be95a66174c5e3c0046ae9059d8e8a0e66",
+              "size": 5704
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily:20.04:arm64": {
+      "arch": "arm64",
+      "image_type": "daily",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20200723": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-arm64.iso",
+              "sha256": "b668d1b2dee9bd0c6a99921c1972172c457d1df521a46759d5d16b238cd8fde7",
+              "size": 885583872
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-arm64.iso.zsync",
+              "sha256": "9601b45f3b075df25bc9eef1d0d69b56ace6a1a998acf2d15d9ac53984ddf7c3",
+              "size": 1729886
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-arm64.list",
+              "sha256": "2f45ce03275efa7c571a97fec929f908c8a571db827c212989361f51ce383ced",
+              "size": 99707
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-arm64.manifest",
+              "sha256": "4644568d783d9ae5f5e6dd4123d84f9fad2f6d7f71583af7ece9dd86662fa6c7",
+              "size": 5663
+            }
+          }
+        },
+        "20200731": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-arm64.iso",
+              "sha256": "5922d88e2e5de002bc3af1c2ef2c21ee6fa61132c26d6b742e1ebc366bfbbe3d",
+              "size": 882618368
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-arm64.iso.zsync",
+              "sha256": "aaa13a55e755b2c676ebd6841a5674f72fe721500316a9add9878ee3cd8716c4",
+              "size": 1724094
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-arm64.list",
+              "sha256": "3aeba15d5a0cf62c8f297dc33c58e3079057c93c9e17c2521301a82ab3c21554",
+              "size": 99188
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-arm64.manifest",
+              "sha256": "9f2cb34cc88a36cdce082c8579da4ddc12878642ae5ac3efc031a4dd85ceebf9",
+              "size": 5674
+            }
+          }
+        },
+        "20200917": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-arm64.iso",
+              "sha256": "57d990b9349062cd694b88ae31a9e074b514164d21b6706347b85fa57e57b775",
+              "size": 893407232
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-arm64.iso.zsync",
+              "sha256": "10afd467ab0b682cc0763c9269555e8f1b39ad31b58c40bc25cae5cb8b8c4003",
+              "size": 1745166
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-arm64.list",
+              "sha256": "3c8ffc8317f59ee033b5080642aa644dd469620af5b30070c16d09641b2a6be4",
+              "size": 101458
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-arm64.manifest",
+              "sha256": "1e7c6d581216d517b8fc7d0ef9e6ee11ccb3c79e456f995b4499522255304bce",
+              "size": 5704
+            }
+          }
+        },
+        "20200918": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-arm64.iso",
+              "sha256": "95f51aad82de1d7882c9408157fc0aa4b2cc0758f2d529cf0592ca6af50b0a5a",
+              "size": 893419520
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-arm64.iso.zsync",
+              "sha256": "cc3daad10d6358c289cac784e86c74a5f122f287c301eeb8e15de4605311f4cd",
+              "size": 1745190
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-arm64.list",
+              "sha256": "62b745b0cb5c602231bf538c310d67088a7a1a4f9061729e972f372ef614195e",
+              "size": 101460
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-arm64.manifest",
+              "sha256": "1e7c6d581216d517b8fc7d0ef9e6ee11ccb3c79e456f995b4499522255304bce",
+              "size": 5704
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily:20.04:ppc64el": {
+      "arch": "ppc64el",
+      "image_type": "daily",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20200723": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-ppc64el.iso",
+              "sha256": "481dcb352641baa42e24020d037c41a54fbb41b15f609c32b088cf645c241e70",
+              "size": 908937216
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-ppc64el.iso.zsync",
+              "sha256": "87fe628904df997de08a1f6d68c4bae019ee5ab6cfe23ce73187419ba92a2ce9",
+              "size": 1775506
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-ppc64el.list",
+              "sha256": "845a2e58ae8c2203c7bae9ea16162d02bb9835c1d10cab08adeb42b0acfbc280",
+              "size": 96832
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-ppc64el.manifest",
+              "sha256": "95082ebadda1a1a83a9d475a13bc67078ae6dd324fdfcb829f7ac06bf42f6d25",
+              "size": 5964
+            }
+          }
+        },
+        "20200731": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-ppc64el.iso",
+              "sha256": "481dcb352641baa42e24020d037c41a54fbb41b15f609c32b088cf645c241e70",
+              "size": 908937216
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-ppc64el.iso.zsync",
+              "sha256": "87fe628904df997de08a1f6d68c4bae019ee5ab6cfe23ce73187419ba92a2ce9",
+              "size": 1775506
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-ppc64el.list",
+              "sha256": "845a2e58ae8c2203c7bae9ea16162d02bb9835c1d10cab08adeb42b0acfbc280",
+              "size": 96832
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-ppc64el.manifest",
+              "sha256": "95082ebadda1a1a83a9d475a13bc67078ae6dd324fdfcb829f7ac06bf42f6d25",
+              "size": 5964
+            }
+          }
+        },
+        "20200917": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-ppc64el.iso",
+              "sha256": "76f8ba3bf16085320f9e231350088e864a79e233e577266c8a0365756d5a4c76",
+              "size": 917051392
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-ppc64el.iso.zsync",
+              "sha256": "5508d7aaa1d499e9d9c7efe7afa032cfd4d7c9fb14baeb4a604ff2a48ef14d52",
+              "size": 1791354
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-ppc64el.list",
+              "sha256": "9cd15fe4ceee0355439c26d05f4d1f9b5d4de2c06d536f1109061d72e07524cc",
+              "size": 98331
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-ppc64el.manifest",
+              "sha256": "4272a800ebf2e5613ab2b1dfce4ee234604bd90f6eaefd2685095cf71952b35f",
+              "size": 6005
+            }
+          }
+        },
+        "20200918": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-ppc64el.iso",
+              "sha256": "17c04ff20cea35347e39339be4c73e1747b86253d024b3aad8552329d6f56dd9",
+              "size": 917065728
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-ppc64el.iso.zsync",
+              "sha256": "08aca6f576dfeedf3dbc53ec323bc81c3ee85ad38cef980104735ab3f5c2d24b",
+              "size": 1791378
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-ppc64el.list",
+              "sha256": "5089914b615ad45812ee05a952baf6345248a2c9093b0f5d7099fe3826471135",
+              "size": 98333
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-ppc64el.manifest",
+              "sha256": "4272a800ebf2e5613ab2b1dfce4ee234604bd90f6eaefd2685095cf71952b35f",
+              "size": 6005
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu-server:daily:20.04:s390x": {
+      "arch": "s390x",
+      "image_type": "daily",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20200723": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-s390x.iso",
+              "sha256": "910b8bf9d7b6640f6556c3c2f039c931b60f4f4606bf4b072e32e24d1cb78b89",
+              "size": 584167424
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-s390x.iso.zsync",
+              "sha256": "714fdf219c70ecbefe5cc9b0d7bedd459f5c83ae443dfc9c304256afe72b1138",
+              "size": 1141182
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-s390x.list",
+              "sha256": "cb18146cb9266163b52b2848a7927ec234bfed70893cdba3c825a23f3ca36699",
+              "size": 91974
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200723/focal-legacy-server-s390x.manifest",
+              "sha256": "1a34a1a04c5165fa868e55515f8a4dcd3433ba00bbc98ccdc88c3150e4328805",
+              "size": 5663
+            }
+          }
+        },
+        "20200731": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-s390x.iso",
+              "sha256": "910b8bf9d7b6640f6556c3c2f039c931b60f4f4606bf4b072e32e24d1cb78b89",
+              "size": 584167424
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-s390x.iso.zsync",
+              "sha256": "714fdf219c70ecbefe5cc9b0d7bedd459f5c83ae443dfc9c304256afe72b1138",
+              "size": 1141182
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-s390x.list",
+              "sha256": "cb18146cb9266163b52b2848a7927ec234bfed70893cdba3c825a23f3ca36699",
+              "size": 91974
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200731/focal-legacy-server-s390x.manifest",
+              "sha256": "1a34a1a04c5165fa868e55515f8a4dcd3433ba00bbc98ccdc88c3150e4328805",
+              "size": 5663
+            }
+          }
+        },
+        "20200917": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-s390x.iso",
+              "sha256": "784dd3494089d566d57538fd8d2305c562c4bf9346e088d208ae6a2ca9a9957a",
+              "size": 592769024
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-s390x.iso.zsync",
+              "sha256": "5bada328ea26582dbe01bb794a6e6e5043066bdcc6e8ac0a75627cdba8ff78fd",
+              "size": 1157982
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-s390x.list",
+              "sha256": "b9133e88e0d99bab3941a88d06ce86cf6afcb159145d0e922d71810b1ccf6b4d",
+              "size": 93888
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200917/focal-legacy-server-s390x.manifest",
+              "sha256": "57fc8ef4f81b06c82e003a4b2ed54a5786cea2fe7f0e9d04777b5250ab35e7fd",
+              "size": 5704
+            }
+          }
+        },
+        "20200918": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-s390x.iso",
+              "sha256": "80c67d07e5b2f8825d5fd66b84a049717d9592b9fd7749bc771ad8f0952df336",
+              "size": 592758784
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-s390x.iso.zsync",
+              "sha256": "9a1989f02140885e67a591cb7096e08303cfae70316bafe45b33b972b8eca8fd",
+              "size": 1157966
+            },
+            "list": {
+              "ftype": "list",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-s390x.list",
+              "sha256": "91a2a294a310bb4d07e09757dfac7d7fb2dc20eed594bd4287240056a397855a",
+              "size": 93890
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "ubuntu-server/focal/daily/20200918/focal-legacy-server-s390x.manifest",
+              "sha256": "57fc8ef4f81b06c82e003a4b2ed54a5786cea2fe7f0e9d04777b5250ab35e7fd",
+              "size": 5704
+            }
+          }
+        }
+      }
+    }
+  },
+  "updated": "Mon, 23 Jan 2023 22:55:01 +0000"
+}

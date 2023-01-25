@@ -1,0 +1,138 @@
+#!/bin/sh
+
+PREREQ=""
+
+prereqs()
+{
+       echo "$PREREQ"
+}
+
+case $1 in
+# get pre-requisites
+prereqs)
+       prereqs
+       exit 0
+       ;;
+esac
+
+. /scripts/casper-functions
+. /scripts/casper-helpers
+
+mountpoint=/cdrom
+
+iso_chooser_step1() {
+    # download JSON of simplestreams for showing the list of ISOs we might
+    # chain-boot to, hand that off to the menu, look what the choice was,
+    # use the requested ISO size to figure out if we have the memory or not,
+    # and kexec to reserve that memory
+
+    chvt 2  # the chvts work around messages bleeding into the agetty
+    /usr/sbin/agetty --skip-login \
+        --login-program /usr/lib/mini-iso-tools/iso-menu-session \
+        tty2 linux
+    chvt 1
+
+    if [ ! -f /out.vars ] ; then
+        echo "ISO menu failed, debug shell"
+        /bin/sh
+    fi
+
+    . /out.vars
+
+    dev=$(blkid --match-token LABEL=ISOIMAGE | cut -d: -f1)
+
+    modprobe isofs
+    mount -o ro "$dev" "${mountpoint}"
+
+    configure_networking
+
+    echo "Loading $MEDIA_LABEL ..."
+
+    cmdline=iso-url=$MEDIA_URL
+    cmdline="$cmdline iso-size=$MEDIA_SIZE"
+    if [ "$VALIDATE_CHECKSUM" = "1" ]; then
+        cmdline="$cmdline iso-256sum=$MEDIA_256SUM"
+    fi
+
+    cmdline="$cmdline iso-chooser-step2"
+
+    memmap_size="$(/usr/lib/mini-iso-tools/get_memmap_directive $MEDIA_SIZE)"
+    if [ -z "$memmap_size" -o "$?" -ne "0" ] ; then
+        echo "failed to determine size reservation for memmap, debug shell"
+        /bin/sh
+    fi
+    cmdline="$cmdline memmap=$memmap_size"
+
+    cmdline="$cmdline nokaslr"
+    cmdline="$cmdline ---"
+
+    kexec \
+        --command-line="$cmdline" \
+        --load "$mountpoint/casper/vmlinuz" \
+        --initrd="$mountpoint/casper/initrd"
+    kexec --exec
+}
+
+iso_chooser_step2() {
+    # Download the real ISO to the reserved memory region, and kexec to that
+
+    configure_networking
+
+    target="/dev/pmem0"
+
+    if [ ! -e $target ] ; then
+        echo "Failed to find $target, debug shell"
+        /bin/sh
+    fi
+
+    echo "Downloading $URL ..."
+    wget "$URL" -O "$target"
+
+    if [ -n "$MEDIA_256SUM" -a "$VALIDATE_CHECKSUM" = "1" ]; then
+        echo "Checksum verification ..."
+        if ! /usr/lib/mini-iso-tools/checksum-device \
+                $target $MEDIA_SIZE $MEDIA_256SUM; then
+            echo "ISO checksum verification failure, debug shell"
+            /bin/sh
+        fi
+        echo "ISO checksum pass"
+    else
+        echo "Skipping checksum validation"
+    fi
+
+    modprobe isofs
+    mount -o ro "${target}" "${mountpoint}"
+
+    if [ -z "$MEMMAP" ] ; then
+        panic "memmap directive not found"
+    fi
+
+    cmdline="live-media=$target"
+    cmdline="$cmdline $MEMMAP"
+    cmdline="$cmdline nokaslr"
+    cmdline="$cmdline ---"
+
+    kexec \
+        --command-line="$cmdline" \
+        --load "$mountpoint/casper/vmlinuz" \
+        --initrd="$mountpoint/casper/initrd"
+    kexec --exec
+}
+
+export VALIDATE_CHECKSUM=1
+
+for x in $(cat /proc/cmdline); do
+    case $x in
+        iso-chooser-*)  export MENU_STEP=$x;;
+        iso-size=*)     export MEDIA_SIZE="${x#iso-size=}";;
+        iso-256sum=*)   export MEDIA_256SUM="${x#iso-256sum=}";;
+        fsck.mode=skip) export VALIDATE_CHECKSUM=0;;
+        memmap=*)       export MEMMAP="$x";;
+        *);;
+    esac
+done
+
+case "$MENU_STEP" in
+    iso-chooser-menu)  iso_chooser_step1;;
+    iso-chooser-step2) iso_chooser_step2;;
+esac

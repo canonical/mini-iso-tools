@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# checksum the first N bytes of a device
+# compare against expected result and return pass / fail
+# usage: checksum-device filepath size_of_filepath expected_sum
+
+set -eu
+
+infile=$1
+infile_size=$2
+expected=$3
+
+actual=$(dd "if=$infile" iflag=count_bytes "count=$infile_size" \
+         | sha256sum | cut -d' ' -f1)
+[ "$actual" = "$expected" ]
