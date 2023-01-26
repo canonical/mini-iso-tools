@@ -1,0 +1,20 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  dpkg-buildpackage:
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false
+      matrix:
+        image:
+          - ubuntu-daily:jammy
+          - ubuntu-daily:lunar
+    steps:
+    - uses: actions/checkout@v2
+    - name: run
+      run: >
+        sudo
+        ./scripts/test-in-lxd.sh ${{ matrix.image }}
+        "dpkg-buildpackage -b -uc"
