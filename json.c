@@ -48,20 +48,18 @@ choices_t *read_iso_choices(char *filename)
 {
     json_object *root = json_object_from_file(filename);
     if(!root) return NULL;
-
     json_object *product = get(get(root, "products"),
             "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:23.04:amd64");
     if(!product) return NULL;
-
-    json_object *codename = get(product, "release_codename");
-    if(!codename) return NULL;
-    json_object *title = get(product, "release_title");
-    if(!title) return NULL;
-    json_object *recent = find_obj_of_biggest_key(get(product, "versions"));
-    if(!recent) return NULL;
-    json_object *iso = get(get(recent, "items"), "iso");
+    json_object *newest = find_obj_of_biggest_key(get(product, "versions"));
+    if(!newest) return NULL;
+    json_object *iso = get(get(newest, "items"), "iso");
     if(!iso) return NULL;
 
+    json_object *title = get(product, "release_title");
+    if(!title) return NULL;
+    json_object *codename = get(product, "release_codename");
+    if(!codename) return NULL;
     json_object *path = get(iso, "path");
     if(!path) return NULL;
     json_object *sha256 = get(iso, "sha256");
