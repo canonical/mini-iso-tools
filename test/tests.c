@@ -85,6 +85,13 @@ static void eq_bad(void **state)
     assert_false(eq("a", "b"));
 }
 
+static void eq_NULL(void **state)
+{
+    assert_null(eq(NULL, "a"));
+    assert_null(eq("a", NULL));
+    assert_null(eq(NULL, NULL));
+}
+
 static void lt_good(void **state)
 {
     assert_true(lt("a", "b"));
@@ -133,13 +140,6 @@ static void str_good(void **state)
 static void str_NULL(void **state)
 {
     assert_null(str(NULL));
-}
-
-static void eq_NULL(void **state)
-{
-    assert_null(eq(NULL, "a"));
-    assert_null(eq("a", NULL));
-    assert_null(eq(NULL, NULL));
 }
 
 int main(void)
