@@ -17,6 +17,7 @@
  * <http://www.gnu.org/licenses/>.
  */
 
+#include <stdbool.h>
 #include <string.h>
 
 #include <json-c/json.h>
@@ -42,6 +43,16 @@ json_object *find_obj_of_biggest_key(json_object *obj)
 json_object *get(json_object *obj, char *key)
 {
     return json_object_object_get(obj, key);
+}
+
+const char *str(json_object *obj)
+{
+    return json_object_get_string(obj);
+}
+
+bool eq(const char *a, const char *b)
+{
+    return strcmp(a, b) == 0;
 }
 
 choices_t *read_iso_choices(char *filename)
@@ -74,12 +85,9 @@ choices_t *read_iso_choices(char *filename)
             strdup("874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed"),
             1642631168);
     choices->values[1] = iso_data_create(
-            saprintf("Ubuntu Server %s (%s)",
-                    json_object_get_string(title),
-                    json_object_get_string(codename)),
-            saprintf("https://cdimage.ubuntu.com/%s",
-                    json_object_get_string(path)),
-            strdup(json_object_get_string(sha256)),
+            saprintf("Ubuntu Server %s (%s)", str(title), str(codename)),
+            saprintf("https://cdimage.ubuntu.com/%s", str(path)),
+            strdup(str(sha256)),
             json_object_get_int(size));
 
     json_object_put(root);
