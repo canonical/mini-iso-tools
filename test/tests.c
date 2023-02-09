@@ -49,6 +49,44 @@ static void newest_product_basic(void **state)
     assert_string_equal("a", find_newest_product_key(root));
 }
 
+static void newest_product_first(void **state)
+{
+    json_object *root = json_tokener_parse("{"
+        "'b': {"
+            "'arch': 'amd64',"
+            "'os': 'ubuntu-server',"
+            "'image_type': 'daily-live',"
+            "'version': '2'"
+        "},"
+        "'a': {"
+            "'arch': 'amd64',"
+            "'os': 'ubuntu-server',"
+            "'image_type': 'daily-live',"
+            "'version': '1'"
+        "}"
+    "}");
+    assert_string_equal("b", find_newest_product_key(root));
+}
+
+static void newest_product_second(void **state)
+{
+    json_object *root = json_tokener_parse("{"
+        "'b': {"
+            "'arch': 'amd64',"
+            "'os': 'ubuntu-server',"
+            "'image_type': 'daily-live',"
+            "'version': '1'"
+        "},"
+        "'a': {"
+            "'arch': 'amd64',"
+            "'os': 'ubuntu-server',"
+            "'image_type': 'daily-live',"
+            "'version': '2'"
+        "}"
+    "}");
+    assert_string_equal("a", find_newest_product_key(root));
+}
+
 static void read_NULL(void **state)
 {
     assert_null(read_iso_choices(NULL));
@@ -159,6 +197,8 @@ int main(void)
 
         cmocka_unit_test(newest_product_NULL),
         cmocka_unit_test(newest_product_basic),
+        cmocka_unit_test(newest_product_first),
+        cmocka_unit_test(newest_product_second),
 
         cmocka_unit_test(read_NULL),
         cmocka_unit_test(read_not_exist),
