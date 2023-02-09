@@ -101,6 +101,9 @@ const char *find_newest_product_key(json_object *products)
             /* printf("skip %s because os\n", key); */
             continue;
         }
+        if(!eq(str(get(val, "image_type")), "daily-live")) {
+            continue;
+        }
         const char *version = str(get(val, "version"));
         if(!cmp || ubuntu_version_lt(cmp_version, version)) {
             /* printf("drop %s in favor of %s\n", cmp, key); */
