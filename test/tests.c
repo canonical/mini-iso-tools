@@ -97,17 +97,6 @@ static void lt_bad(void **state)
     assert_false(lt("a", "a"));
 }
 
-static void vercmp_simple(void **state)
-{
-    assert_true(ubuntu_version_lt("20.04", "22.04"));
-}
-
-static void vercmp_pointrel(void **state)
-{
-    assert_true(ubuntu_version_lt("20.04.1", "22.04"));
-    assert_true(ubuntu_version_lt("20.04", "22.04.1"));
-}
-
 int main(void)
 {
     const struct CMUnitTest tests[] = {
@@ -124,9 +113,6 @@ int main(void)
         cmocka_unit_test(eq_bad),
         cmocka_unit_test(lt_good),
         cmocka_unit_test(lt_bad),
-
-        cmocka_unit_test(vercmp_simple),
-        cmocka_unit_test(vercmp_pointrel),
     };
     return cmocka_run_group_tests(tests, NULL, NULL);
 }

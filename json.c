@@ -20,7 +20,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
-#include <sys/param.h>
 
 #include <json-c/json.h>
 
@@ -44,11 +43,6 @@ bool eq(const char *a, const char *b)
 bool lt(const char *a, const char *b)
 {
     return strcmp(a, b) < 0;
-}
-
-bool ubuntu_version_lt(const char *a, const char *b)
-{
-    return lt(a, b);
 }
 
 json_object *find_obj_of_biggest_key(json_object *obj)
