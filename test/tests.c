@@ -17,8 +17,7 @@ static void find_largest_NULL(void **state)
 
 static void find_largest_simple(void **state)
 {
-    json_object *root = json_object_from_file(
-            "test/find-largest-simple.json");
+    json_object *root = json_tokener_parse("{'a': 1, 'b': 2, 'c': 3}");
     assert_non_null(root);
     json_object *largest = find_obj_of_biggest_key(root);
     assert_non_null(largest);
@@ -27,8 +26,7 @@ static void find_largest_simple(void **state)
 
 static void find_largest_reversed(void **state)
 {
-    json_object *root = json_object_from_file(
-            "test/find-largest-reversed.json");
+    json_object *root = json_tokener_parse("{'c': 3, 'b': 2, 'a': 1}");
     assert_non_null(root);
     json_object *largest = find_obj_of_biggest_key(root);
     assert_non_null(largest);
