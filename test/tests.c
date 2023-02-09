@@ -95,6 +95,12 @@ static void lt_bad(void **state)
     assert_false(lt("a", "a"));
 }
 
+static void str_good(void **state)
+{
+    json_object *root = json_tokener_parse("{'key', 'value'}");
+    assert_string_equal("value", str(get(root, "key")));
+}
+
 int main(void)
 {
     const struct CMUnitTest tests[] = {
@@ -111,6 +117,9 @@ int main(void)
         cmocka_unit_test(eq_bad),
         cmocka_unit_test(lt_good),
         cmocka_unit_test(lt_bad),
+
+        cmocka_unit_test(str_good),
+        cmocka_unit_test(str_NULL),
     };
     return cmocka_run_group_tests(tests, NULL, NULL);
 }
