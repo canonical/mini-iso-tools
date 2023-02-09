@@ -43,12 +43,13 @@ const char *str(json_object *obj)
 
 bool eq(const char *a, const char *b)
 {
-    if(!a || !b) return NULL;
+    if(!a || !b) return false;
     return strcmp(a, b) == 0;
 }
 
 bool lt(const char *a, const char *b)
 {
+    if(!a || !b) return false;
     return strcmp(a, b) < 0;
 }
 

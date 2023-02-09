@@ -20,6 +20,9 @@
 #pragma once
 
 #include <stdbool.h>
+
+#include <json-c/json.h>
+
 #include "common.h"
 
 choices_t *read_iso_choices(char *filename);
