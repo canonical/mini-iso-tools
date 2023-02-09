@@ -46,9 +46,13 @@ static void newest_product_basic(void **state)
             "'version': '1'"
         "}"
     "}");
-    char *key = NULL;
-    assert_non_null(find_newest_product(root));
+    const char *key = NULL;
+    json_object *obj_a = find_newest_product(root, &key);
     assert_string_equal("a", key);
+
+    assert_int_equal(obj_a, get(root, "a"));
+
+    assert_int_equal(obj_a, find_newest_product(root, NULL));
 }
 
 static void newest_product_first(void **state)
@@ -67,9 +71,9 @@ static void newest_product_first(void **state)
             "'version': '1'"
         "}"
     "}");
-    char *key = NULL;
-    assert_non_null(find_newest_product(root));
-    assert_string_equal("a", key);
+    const char *key = NULL;
+    assert_non_null(find_newest_product(root, &key));
+    assert_string_equal("b", key);
 }
 
 static void newest_product_second(void **state)
@@ -88,7 +92,9 @@ static void newest_product_second(void **state)
             "'version': '2'"
         "}"
     "}");
-    assert_string_equal("a", find_newest_product(root));
+    const char *key = NULL;
+    assert_non_null(find_newest_product(root, &key));
+    assert_string_equal("a", key);
 }
 
 static void read_NULL(void **state)

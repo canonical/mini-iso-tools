@@ -28,7 +28,7 @@
 choices_t *read_iso_choices(char *filename);
 
 json_object *find_obj_of_biggest_key(json_object *obj);
-json_object *find_newest_product(json_object *products, char **ret_key);
+json_object *find_newest_product(json_object *products, const char **ret_key);
 
 json_object *get(json_object *obj, const char *key);
 const char *str(json_object *obj);

@@ -70,7 +70,7 @@ json_object *find_obj_of_biggest_key(json_object *obj)
     return ret;
 }
 
-json_object *find_newest_product(json_object *products, char **ret_key)
+json_object *find_newest_product(json_object *products, const char **ret_key)
 {
     if(!products) return NULL;
 
@@ -97,7 +97,7 @@ json_object *find_newest_product(json_object *products, char **ret_key)
         }
     }
     if(ret_key) *ret_key = cmp;
-    return val;
+    return ret;
 }
 
 choices_t *read_iso_choices(char *filename)
