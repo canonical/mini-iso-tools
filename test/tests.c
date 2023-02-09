@@ -10,23 +10,28 @@
 
 static void find_largest_NULL(void **state)
 {
-    assert_null(find_obj_of_biggest_key(NULL));
+    assert_null(find_largest_key(NULL, NULL));
 }
 
 static void find_largest_simple(void **state)
 {
     json_object *root = json_tokener_parse("{'a': 1, 'b': 2, 'c': 3}");
     assert_non_null(root);
-    json_object *largest = find_obj_of_biggest_key(root);
+    const char *key = NULL;
+    json_object *largest = find_largest_key(root, &key);
+    assert_string_equal("c", key);
     assert_non_null(largest);
     assert_int_equal(3, json_object_get_int(largest));
+    assert_int_equal(largest, find_largest_key(root, NULL));
 }
 
 static void find_largest_reversed(void **state)
 {
     json_object *root = json_tokener_parse("{'c': 3, 'b': 2, 'a': 1}");
     assert_non_null(root);
-    json_object *largest = find_obj_of_biggest_key(root);
+    const char *key = NULL;
+    json_object *largest = find_largest_key(root, &key);
+    assert_string_equal("c", key);
     assert_non_null(largest);
     assert_int_equal(3, json_object_get_int(largest));
 }

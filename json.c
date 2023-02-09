@@ -54,7 +54,7 @@ bool lt(const char *a, const char *b)
     return strcmp(a, b) < 0;
 }
 
-json_object *find_obj_of_biggest_key(json_object *obj)
+json_object *find_largest_key(json_object *obj, const char **ret_key)
 {
     if(!obj) return NULL;
 
@@ -67,9 +67,13 @@ json_object *find_obj_of_biggest_key(json_object *obj)
             ret = val;
         }
     }
+
+    if(ret_key) *ret_key = cmp;
     return ret;
 }
 
+/* return the object, and optionally the key, of the product matching these
+ * constraints with the largest version. */
 json_object *find_newest_product(json_object *products, const char **ret_key)
 {
     if(!products) return NULL;
@@ -96,6 +100,7 @@ json_object *find_newest_product(json_object *products, const char **ret_key)
             continue;
         }
     }
+
     if(ret_key) *ret_key = cmp;
     return ret;
 }
@@ -106,7 +111,7 @@ choices_t *read_iso_choices(char *filename)
     if(!root) return NULL;
     json_object *product = find_newest_product(get(root, "products"), NULL);
     if(!product) return NULL;
-    json_object *newest = find_obj_of_biggest_key(get(product, "versions"));
+    json_object *newest = find_largest_key(get(product, "versions"), NULL);
     if(!newest) return NULL;
     json_object *iso = get(get(newest, "items"), "iso");
     if(!iso) return NULL;
