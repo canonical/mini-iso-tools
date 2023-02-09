@@ -38,7 +38,7 @@ static void find_largest_reversed(void **state)
 
 static void newest_product_NULL(void **state)
 {
-    assert_null(find_newest_product(NULL, NULL));
+    assert_null(find_newest_product(NULL, NULL, NULL, NULL, NULL));
 }
 
 static void newest_product_basic(void **state)
@@ -52,12 +52,14 @@ static void newest_product_basic(void **state)
         "}"
     "}");
     const char *key = NULL;
-    json_object *obj_a = find_newest_product(root, &key);
+    json_object *obj_a = find_newest_product(root, &key,
+            "amd64", "ubuntu-server", "daily-live");
     assert_string_equal("a", key);
 
     assert_int_equal(obj_a, get(root, "a"));
 
-    assert_int_equal(obj_a, find_newest_product(root, NULL));
+    assert_int_equal(obj_a, find_newest_product(root, NULL,
+            "amd64", "ubuntu-server", "daily-live"));
 }
 
 static void newest_product_first(void **state)
@@ -77,7 +79,8 @@ static void newest_product_first(void **state)
         "}"
     "}");
     const char *key = NULL;
-    assert_non_null(find_newest_product(root, &key));
+    assert_non_null(find_newest_product(root, &key,
+            "amd64", "ubuntu-server", "daily-live"));
     assert_string_equal("b", key);
 }
 
@@ -98,50 +101,51 @@ static void newest_product_second(void **state)
         "}"
     "}");
     const char *key = NULL;
-    assert_non_null(find_newest_product(root, &key));
+    assert_non_null(find_newest_product(root, &key,
+            "amd64", "ubuntu-server", "daily-live"));
     assert_string_equal("a", key);
 }
 
 static void read_NULL(void **state)
 {
-    assert_null(read_iso_choices(NULL));
+    assert_null(get_newest_iso(NULL));
 }
 
 static void read_not_exist(void **state)
 {
-    assert_null(read_iso_choices("/not/exist"));
+    assert_null(get_newest_iso("/not/exist"));
 }
 
 static void read_empty_obj(void **state)
 {
-    assert_null(read_iso_choices("test/emtpy-obj.json"));
+    assert_null(get_newest_iso("test/emtpy-obj.json"));
 }
 
 static void read_ubuntu_server(void **state)
 {
-    choices_t *choices = read_iso_choices("test/ubuntu-server.json");
-    assert_non_null(choices);
-    assert_int_equal(2, choices->len);
-
-    iso_data_t *first = choices->values[0];
-    assert_string_equal("Ubuntu Server 22.10 (Kinetic Kudu)", first->label);
-    assert_string_equal(
-            "https://releases.ubuntu.com/kinetic/ubuntu-22.10-live-server-amd64.iso",
-            first->url);
-    assert_string_equal(
-            "874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed",
-            first->sha256sum);
-    assert_int_equal(1642631168, first->size);
-
-    iso_data_t *second = choices->values[1];
-    assert_string_equal("Ubuntu Server 23.04 (Lunar Lobster)", second->label);
+    iso_data_t *iso_data = get_newest_iso("test/ubuntu-server.json");
+    assert_string_equal("Ubuntu Server 23.04 (Lunar Lobster)", iso_data->label);
     assert_string_equal(
             "https://cdimage.ubuntu.com/ubuntu-server/daily-live/20230122/lunar-live-server-amd64.iso",
-            second->url);
+            iso_data->url);
     assert_string_equal(
             "b67e566f6b7ff5d314173a2b55bb413cf4ab2b1b94c59f1ff8b65b862c1d7de7",
-            second->sha256sum);
-    assert_int_equal(1762381824, second->size);
+            iso_data->sha256sum);
+    assert_int_equal(1762381824, iso_data->size);
+}
+
+static void read_ubuntu_server_releases(void **state)
+{
+    skip();
+    iso_data_t *iso_data = get_newest_iso("test/com.ubuntu.releases:ubuntu-server.json");
+    assert_string_equal("Ubuntu Server 22.10 (Kinetic Kudu)", iso_data->label);
+    assert_string_equal(
+            "https://releases.ubuntu.com/kinetic/ubuntu-22.10-live-server-amd64.iso",
+            iso_data->url);
+    assert_string_equal(
+            "874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed",
+            iso_data->sha256sum);
+    assert_int_equal(1762381824, iso_data->size);
 }
 
 static void eq_good(void **state)
@@ -219,6 +223,7 @@ int main(void)
         cmocka_unit_test(read_not_exist),
         cmocka_unit_test(read_empty_obj),
         cmocka_unit_test(read_ubuntu_server),
+        cmocka_unit_test(read_ubuntu_server_releases),
 
         cmocka_unit_test(eq_NULL),
         cmocka_unit_test(eq_good),

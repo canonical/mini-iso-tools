@@ -26,9 +26,12 @@
 #include "common.h"
 
 choices_t *read_iso_choices(char *filename);
+iso_data_t *get_newest_iso(char *filename);
 
 json_object *find_largest_key(json_object *obj, const char **ret_key);
-json_object *find_newest_product(json_object *products, const char **ret_key);
+json_object *find_newest_product(json_object *products, const char **ret_key,
+                                 const char *arch, const char *os,
+                                 const char *image_type);
 
 json_object *get(json_object *obj, const char *key);
 const char *str(json_object *obj);

@@ -74,7 +74,9 @@ json_object *find_largest_key(json_object *obj, const char **ret_key)
 
 /* return the object, and optionally the key, of the product matching these
  * constraints with the largest version. */
-json_object *find_newest_product(json_object *products, const char **ret_key)
+json_object *find_newest_product(json_object *products, const char **ret_key,
+                                 const char *arch, const char *os,
+                                 const char *image_type)
 {
     if(!products) return NULL;
 
@@ -83,13 +85,13 @@ json_object *find_newest_product(json_object *products, const char **ret_key)
     json_object *ret = NULL;
 
     json_object_object_foreach(products, key, val) {
-        if(!eq(str(get(val, "arch")), "amd64")) {
+        if(!eq(str(get(val, "arch")), arch)) {
             continue;
         }
-        if(!eq(str(get(val, "os")), "ubuntu-server")) {
+        if(!eq(str(get(val, "os")), os)) {
             continue;
         }
-        if(!eq(str(get(val, "image_type")), "daily-live")) {
+        if(!eq(str(get(val, "image_type")), image_type)) {
             continue;
         }
         const char *version = str(get(val, "version"));
@@ -105,11 +107,12 @@ json_object *find_newest_product(json_object *products, const char **ret_key)
     return ret;
 }
 
-choices_t *read_iso_choices(char *filename)
+iso_data_t *get_newest_iso(char *filename)
 {
     json_object *root = json_object_from_file(filename);
     if(!root) return NULL;
-    json_object *product = find_newest_product(get(root, "products"), NULL);
+    json_object *product = find_newest_product(get(root, "products"), NULL,
+            "amd64", "ubuntu-server", "daily-live");
     if(!product) return NULL;
     json_object *newest = find_largest_key(get(product, "versions"), NULL);
     if(!newest) return NULL;
@@ -127,18 +130,24 @@ choices_t *read_iso_choices(char *filename)
     json_object *size = get(iso, "size");
     if(!size) return NULL;
 
-    choices_t *choices = choices_create(2);
-    choices->values[0] = iso_data_create(
-            strdup("Ubuntu Server 22.10 (Kinetic Kudu)"),
-            strdup("https://releases.ubuntu.com/kinetic/ubuntu-22.10-live-server-amd64.iso"),
-            strdup("874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed"),
-            1642631168);
-    choices->values[1] = iso_data_create(
+    iso_data_t *ret = iso_data_create(
             saprintf("Ubuntu Server %s (%s)", str(title), str(codename)),
             saprintf("https://cdimage.ubuntu.com/%s", str(path)),
             strdup(str(sha256)),
             json_object_get_int(size));
 
     json_object_put(root);
+    return ret;
+}
+
+choices_t *read_iso_choices(char *filename)
+{
+    choices_t *choices = choices_create(2);
+    choices->values[0] = iso_data_create(
+            strdup("Ubuntu Server 22.10 (Kinetic Kudu)"),
+            strdup("https://releases.ubuntu.com/kinetic/ubuntu-22.10-live-server-amd64.iso"),
+            strdup("874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed"),
+            1642631168);
+    choices->values[1] = get_newest_iso(filename);
     return choices;
 }
