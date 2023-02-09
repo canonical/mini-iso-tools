@@ -115,18 +115,10 @@ static void get_good(void **state)
     assert_non_null(get(root, "key"));
 }
 
-static void get_obj_NULL(void **state)
-{
-    assert_null(get(NULL, "key"));
-}
-
 static void get_NULL(void **state)
 {
     assert_null(get(NULL, NULL));
-}
-
-static void get_key_NULL(void **state)
-{
+    assert_null(get(NULL, "key"));
     json_object *root = json_tokener_parse("{'key': 'value'}");
     assert_null(get(root, NULL));
 }
@@ -149,24 +141,25 @@ int main(void)
         cmocka_unit_test(find_largest_simple),
         cmocka_unit_test(find_largest_reversed),
 
+        /* cmocka_unit_test(largest_product_NULL), */
+        /* cmocka_unit_test(largest_product_basic), */
+
         cmocka_unit_test(read_NULL),
         cmocka_unit_test(read_not_exist),
         cmocka_unit_test(read_empty_obj),
         cmocka_unit_test(read_ubuntu_server),
 
+        cmocka_unit_test(eq_NULL),
         cmocka_unit_test(eq_good),
         cmocka_unit_test(eq_bad),
-        cmocka_unit_test(eq_NULL),
+        cmocka_unit_test(lt_NULL),
         cmocka_unit_test(lt_good),
         cmocka_unit_test(lt_bad),
-        cmocka_unit_test(lt_NULL),
 
-        cmocka_unit_test(get_good),
         cmocka_unit_test(get_NULL),
-        cmocka_unit_test(get_obj_NULL),
-        cmocka_unit_test(get_key_NULL),
-        cmocka_unit_test(str_good),
+        cmocka_unit_test(get_good),
         cmocka_unit_test(str_NULL),
+        cmocka_unit_test(str_good),
     };
     return cmocka_run_group_tests(tests, NULL, NULL);
 }
