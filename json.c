@@ -19,12 +19,13 @@
 
 #include <stdbool.h>
 #include <string.h>
+#include <sys/param.h>
 
 #include <json-c/json.h>
 
 #include "json.h"
 
-json_object *get(json_object *obj, char *key)
+json_object *get(json_object *obj, const char *key)
 {
     return json_object_object_get(obj, key);
 }
@@ -44,6 +45,13 @@ bool lt(const char *a, const char *b)
     return strcmp(a, b) < 0;
 }
 
+bool ubuntu_version_lt(const char *a, const char *b)
+{
+    /* strcmp but 22.04.2 < 22.10 */
+    size_t len = MAX(strlen(a), strlen(b));
+    return strncmp(a, b, len) < 0;
+}
+
 json_object *find_obj_of_biggest_key(json_object *obj)
 {
     if(!obj) return NULL;
@@ -60,7 +68,7 @@ json_object *find_obj_of_biggest_key(json_object *obj)
     return ret;
 }
 
-json_object *find_newest_product(json_object *products)
+const char *find_newest_product_key(json_object *products)
 {
     /*
      * assuming https://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
@@ -76,12 +84,11 @@ json_object *find_newest_product(json_object *products)
      * os==ubuntu-server
      *
      * input object is the products object
-     * returns the child object of the selected product
+     * returns the selected product key
      */
     if(!products) return NULL;
 
-    char *cmp = NULL;
-    json_object *ret = NULL;
+    const char *cmp = NULL;
 
     json_object_object_foreach(products, key, val) {
         if(!eq(str(get(val, "arch")), "amd64")) {
@@ -90,20 +97,21 @@ json_object *find_newest_product(json_object *products)
         if(!eq(str(get(val, "os")), "ubuntu-server")) {
             continue;
         }
-        if(!cmp || strcmp(cmp, key) < 0) {
+        const char *version = str(get(val, "version"));
+        if(!cmp || ubuntu_version_lt(cmp, version)) {
             cmp = key;
-            ret = val;
         }
     }
-    return ret;
+    return cmp;
 }
 
 choices_t *read_iso_choices(char *filename)
 {
     json_object *root = json_object_from_file(filename);
     if(!root) return NULL;
-    json_object *product = get(get(root, "products"),
-            "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:23.04:amd64");
+    json_object *products = get(root, "products");
+    const char *product_key = find_newest_product_key(products);
+    json_object *product = get(products, product_key);
     if(!product) return NULL;
     json_object *newest = find_obj_of_biggest_key(get(product, "versions"));
     if(!newest) return NULL;
