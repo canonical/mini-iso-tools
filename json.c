@@ -24,22 +24,6 @@
 
 #include "json.h"
 
-json_object *find_obj_of_biggest_key(json_object *obj)
-{
-    if(!obj) return NULL;
-
-    char *cmp = NULL;
-    json_object *ret = NULL;
-
-    json_object_object_foreach(obj, key, val) {
-        if(!cmp || strcmp(cmp, key) < 0) {
-            cmp = key;
-            ret = val;
-        }
-    }
-    return ret;
-}
-
 json_object *get(json_object *obj, char *key)
 {
     return json_object_object_get(obj, key);
@@ -53,6 +37,65 @@ const char *str(json_object *obj)
 bool eq(const char *a, const char *b)
 {
     return strcmp(a, b) == 0;
+}
+
+bool lt(const char *a, const char *b)
+{
+    return strcmp(a, b) < 0;
+}
+
+json_object *find_obj_of_biggest_key(json_object *obj)
+{
+    if(!obj) return NULL;
+
+    char *cmp = NULL;
+    json_object *ret = NULL;
+
+    json_object_object_foreach(obj, key, val) {
+        if(!cmp || lt(cmp, key)) {
+            cmp = key;
+            ret = val;
+        }
+    }
+    return ret;
+}
+
+json_object *find_newest_product(json_object *products)
+{
+    /*
+     * assuming https://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
+     * structure is
+     * {
+     *   products
+     *     product id like com.ubuntu.cdimage.daily:ubuntu-server:daily-live:20.04:amd64
+     *       arch: amd64
+     *       os: ubuntu-server
+     *       version: 23.04
+     * }
+     * select the product key with the largest version, matching arch,
+     * os==ubuntu-server
+     *
+     * input object is the products object
+     * returns the child object of the selected product
+     */
+    if(!products) return NULL;
+
+    char *cmp = NULL;
+    json_object *ret = NULL;
+
+    json_object_object_foreach(products, key, val) {
+        if(!eq(str(get(val, "arch")), "amd64")) {
+            continue;
+        }
+        if(!eq(str(get(val, "os")), "ubuntu-server")) {
+            continue;
+        }
+        if(!cmp || strcmp(cmp, key) < 0) {
+            cmp = key;
+            ret = val;
+        }
+    }
+    return ret;
 }
 
 choices_t *read_iso_choices(char *filename)
