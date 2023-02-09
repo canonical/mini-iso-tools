@@ -48,9 +48,7 @@ bool lt(const char *a, const char *b)
 
 bool ubuntu_version_lt(const char *a, const char *b)
 {
-    /* strcmp but 22.04.2 < 22.10 */
-    size_t len = MAX(strlen(a), strlen(b));
-    return strncmp(a, b, len) < 0;
+    return lt(a, b);
 }
 
 json_object *find_obj_of_biggest_key(json_object *obj)
@@ -87,7 +85,7 @@ const char *find_newest_product_key(json_object *products)
             continue;
         }
         const char *version = str(get(val, "version"));
-        if(!cmp || ubuntu_version_lt(cmp_version, version)) {
+        if(!cmp || lt(cmp_version, version)) {
             cmp = key;
             cmp_version = version;
             continue;
