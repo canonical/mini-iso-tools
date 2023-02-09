@@ -21,6 +21,7 @@
  *  - absolutely everything is error checked
  *  - absolutely nobody is allowed to assume pointers are non-NULL
  *  - anything receiving an unexpected NULL may also return NULL */
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
@@ -69,12 +70,13 @@ json_object *find_obj_of_biggest_key(json_object *obj)
     return ret;
 }
 
-const char *find_newest_product_key(json_object *products)
+json_object *find_newest_product(json_object *products, char **ret_key)
 {
     if(!products) return NULL;
 
     const char *cmp = NULL;
     const char *cmp_version = NULL;
+    json_object *ret = NULL;
 
     json_object_object_foreach(products, key, val) {
         if(!eq(str(get(val, "arch")), "amd64")) {
@@ -90,19 +92,19 @@ const char *find_newest_product_key(json_object *products)
         if(!cmp || lt(cmp_version, version)) {
             cmp = key;
             cmp_version = version;
+            ret = val;
             continue;
         }
     }
-    return cmp;
+    if(ret_key) *ret_key = cmp;
+    return val;
 }
 
 choices_t *read_iso_choices(char *filename)
 {
     json_object *root = json_object_from_file(filename);
     if(!root) return NULL;
-    json_object *products = get(root, "products");
-    const char *product_key = find_newest_product_key(products);
-    json_object *product = get(products, product_key);
+    json_object *product = find_newest_product(get(root, "products"), NULL);
     if(!product) return NULL;
     json_object *newest = find_obj_of_biggest_key(get(product, "versions"));
     if(!newest) return NULL;

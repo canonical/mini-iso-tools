@@ -33,7 +33,7 @@ static void find_largest_reversed(void **state)
 
 static void newest_product_NULL(void **state)
 {
-    assert_null(find_newest_product_key(NULL));
+    assert_null(find_newest_product(NULL, NULL));
 }
 
 static void newest_product_basic(void **state)
@@ -46,7 +46,9 @@ static void newest_product_basic(void **state)
             "'version': '1'"
         "}"
     "}");
-    assert_string_equal("a", find_newest_product_key(root));
+    char *key = NULL;
+    assert_non_null(find_newest_product(root));
+    assert_string_equal("a", key);
 }
 
 static void newest_product_first(void **state)
@@ -65,7 +67,9 @@ static void newest_product_first(void **state)
             "'version': '1'"
         "}"
     "}");
-    assert_string_equal("b", find_newest_product_key(root));
+    char *key = NULL;
+    assert_non_null(find_newest_product(root));
+    assert_string_equal("a", key);
 }
 
 static void newest_product_second(void **state)
@@ -84,7 +88,7 @@ static void newest_product_second(void **state)
             "'version': '2'"
         "}"
     "}");
-    assert_string_equal("a", find_newest_product_key(root));
+    assert_string_equal("a", find_newest_product(root));
 }
 
 static void read_NULL(void **state)
