@@ -108,22 +108,24 @@ static void newest_product_second(void **state)
 
 static void read_NULL(void **state)
 {
-    assert_null(get_newest_iso(NULL));
+    assert_null(get_newest_iso(NULL, NULL, NULL, NULL, NULL));
 }
 
 static void read_not_exist(void **state)
 {
-    assert_null(get_newest_iso("/not/exist"));
+    assert_null(get_newest_iso("/not/exist", NULL, NULL, NULL, NULL));
 }
 
 static void read_empty_obj(void **state)
 {
-    assert_null(get_newest_iso("test/emtpy-obj.json"));
+    assert_null(get_newest_iso("test/emtpy-obj.json", NULL, NULL, NULL, NULL));
 }
 
 static void read_ubuntu_server(void **state)
 {
-    iso_data_t *iso_data = get_newest_iso("test/ubuntu-server.json");
+    iso_data_t *iso_data = get_newest_iso("test/ubuntu-server.json",
+            "amd64", "ubuntu-server", "daily-live",
+            "https://cdimage.ubuntu.com");
     assert_string_equal("Ubuntu Server 23.04 (Lunar Lobster)", iso_data->label);
     assert_string_equal(
             "https://cdimage.ubuntu.com/ubuntu-server/daily-live/20230122/lunar-live-server-amd64.iso",
@@ -136,8 +138,9 @@ static void read_ubuntu_server(void **state)
 
 static void read_ubuntu_server_releases(void **state)
 {
-    skip();
-    iso_data_t *iso_data = get_newest_iso("test/com.ubuntu.releases:ubuntu-server.json");
+    iso_data_t *iso_data = get_newest_iso("test/com.ubuntu.releases:ubuntu-server.json",
+            "amd64", "ubuntu-server", "live-server",
+            "https://releases.ubuntu.com");
     assert_string_equal("Ubuntu Server 22.10 (Kinetic Kudu)", iso_data->label);
     assert_string_equal(
             "https://releases.ubuntu.com/kinetic/ubuntu-22.10-live-server-amd64.iso",
@@ -145,7 +148,7 @@ static void read_ubuntu_server_releases(void **state)
     assert_string_equal(
             "874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed",
             iso_data->sha256sum);
-    assert_int_equal(1762381824, iso_data->size);
+    assert_int_equal(1642631168, iso_data->size);
 }
 
 static void eq_good(void **state)

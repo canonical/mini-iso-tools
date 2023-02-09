@@ -107,12 +107,15 @@ json_object *find_newest_product(json_object *products, const char **ret_key,
     return ret;
 }
 
-iso_data_t *get_newest_iso(char *filename)
+iso_data_t *get_newest_iso(char *filename,
+                           const char *arch, const char *os,
+                           const char *image_type,
+                           const char *urlbase)
 {
     json_object *root = json_object_from_file(filename);
     if(!root) return NULL;
     json_object *product = find_newest_product(get(root, "products"), NULL,
-            "amd64", "ubuntu-server", "daily-live");
+            arch, os, image_type);
     if(!product) return NULL;
     json_object *newest = find_largest_key(get(product, "versions"), NULL);
     if(!newest) return NULL;
@@ -132,7 +135,7 @@ iso_data_t *get_newest_iso(char *filename)
 
     iso_data_t *ret = iso_data_create(
             saprintf("Ubuntu Server %s (%s)", str(title), str(codename)),
-            saprintf("https://cdimage.ubuntu.com/%s", str(path)),
+            saprintf("%s/%s", urlbase, str(path)),
             strdup(str(sha256)),
             json_object_get_int(size));
 
@@ -148,6 +151,8 @@ choices_t *read_iso_choices(char *filename)
             strdup("https://releases.ubuntu.com/kinetic/ubuntu-22.10-live-server-amd64.iso"),
             strdup("874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed"),
             1642631168);
-    choices->values[1] = get_newest_iso(filename);
+    choices->values[1] = get_newest_iso(filename,
+            "amd64", "ubuntu-server", "daily-live",
+            "https://cdimage.ubuntu.com");
     return choices;
 }
