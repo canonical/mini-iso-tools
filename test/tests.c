@@ -52,7 +52,6 @@ static void read_empty_obj(void **state)
 
 static void read_ubuntu_server(void **state)
 {
-    /* skip(); */
     choices_t *choices = read_iso_choices("test/ubuntu-server.json");
     assert_non_null(choices);
     assert_int_equal(2, choices->len);

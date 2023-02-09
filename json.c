@@ -71,22 +71,6 @@ json_object *find_obj_of_biggest_key(json_object *obj)
 
 const char *find_newest_product_key(json_object *products)
 {
-    /*
-     * assuming https://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
-     * structure is
-     * {
-     *   products
-     *     product id like com.ubuntu.cdimage.daily:ubuntu-server:daily-live:20.04:amd64
-     *       arch: amd64
-     *       os: ubuntu-server
-     *       version: 23.04
-     * }
-     * select the product key with the largest version, matching arch,
-     * os==ubuntu-server
-     *
-     * input object is the products object
-     * returns the selected product key
-     */
     if(!products) return NULL;
 
     const char *cmp = NULL;
@@ -94,11 +78,9 @@ const char *find_newest_product_key(json_object *products)
 
     json_object_object_foreach(products, key, val) {
         if(!eq(str(get(val, "arch")), "amd64")) {
-            /* printf("skip %s because arch\n", key); */
             continue;
         }
         if(!eq(str(get(val, "os")), "ubuntu-server")) {
-            /* printf("skip %s because os\n", key); */
             continue;
         }
         if(!eq(str(get(val, "image_type")), "daily-live")) {
@@ -106,12 +88,10 @@ const char *find_newest_product_key(json_object *products)
         }
         const char *version = str(get(val, "version"));
         if(!cmp || ubuntu_version_lt(cmp_version, version)) {
-            /* printf("drop %s in favor of %s\n", cmp, key); */
             cmp = key;
             cmp_version = version;
             continue;
         }
-        /* printf("skip %s - end of line\n", key); */
     }
     return cmp;
 }
