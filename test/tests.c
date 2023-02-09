@@ -38,8 +38,15 @@ static void newest_product_NULL(void **state)
 
 static void newest_product_basic(void **state)
 {
-    /* json_object *root = json_tokener_parse("{'c': 3, 'b': 2, 'a': 1}"); */
-    assert_null(find_newest_product_key(NULL));
+    json_object *root = json_tokener_parse("{"
+        "'a': {"
+            "'arch': 'amd64',"
+            "'os': 'ubuntu-server',"
+            "'image_type': 'daily-live',"
+            "'version': '1'"
+        "}"
+    "}");
+    assert_string_equal("a", find_newest_product_key(root));
 }
 
 static void read_NULL(void **state)
