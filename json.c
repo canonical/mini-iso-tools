@@ -17,6 +17,10 @@
  * <http://www.gnu.org/licenses/>.
  */
 
+/* principles of the JSON layer:
+ *  - absolutely everything is error checked
+ *  - absolutely nobody is allowed to assume pointers are non-NULL
+ *  - anything receiving an unexpected NULL may also return NULL */
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
@@ -27,16 +31,19 @@
 
 json_object *get(json_object *obj, const char *key)
 {
+    if(!obj || !key) return NULL;
     return json_object_object_get(obj, key);
 }
 
 const char *str(json_object *obj)
 {
+    if(!obj) return NULL;
     return json_object_get_string(obj);
 }
 
 bool eq(const char *a, const char *b)
 {
+    if(!a || !b) return NULL;
     return strcmp(a, b) == 0;
 }
 

@@ -95,10 +95,44 @@ static void lt_bad(void **state)
     assert_false(lt("a", "a"));
 }
 
+static void get_good(void **state)
+{
+    json_object *root = json_tokener_parse("{'key': 'value'}");
+    assert_non_null(get(root, "key"));
+}
+
+static void get_obj_NULL(void **state)
+{
+    assert_null(get(NULL, "key"));
+}
+
+static void get_NULL(void **state)
+{
+    assert_null(get(NULL, NULL));
+}
+
+static void get_key_NULL(void **state)
+{
+    json_object *root = json_tokener_parse("{'key': 'value'}");
+    assert_null(get(root, NULL));
+}
+
 static void str_good(void **state)
 {
-    json_object *root = json_tokener_parse("{'key', 'value'}");
+    json_object *root = json_tokener_parse("{'key': 'value'}");
     assert_string_equal("value", str(get(root, "key")));
+}
+
+static void str_NULL(void **state)
+{
+    assert_null(str(NULL));
+}
+
+static void eq_NULL(void **state)
+{
+    assert_null(eq(NULL, "a"));
+    assert_null(eq("a", NULL));
+    assert_null(eq(NULL, NULL));
 }
 
 int main(void)
@@ -115,9 +149,14 @@ int main(void)
 
         cmocka_unit_test(eq_good),
         cmocka_unit_test(eq_bad),
+        cmocka_unit_test(eq_NULL),
         cmocka_unit_test(lt_good),
         cmocka_unit_test(lt_bad),
 
+        cmocka_unit_test(get_good),
+        cmocka_unit_test(get_NULL),
+        cmocka_unit_test(get_obj_NULL),
+        cmocka_unit_test(get_key_NULL),
         cmocka_unit_test(str_good),
         cmocka_unit_test(str_NULL),
     };

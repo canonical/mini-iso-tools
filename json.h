@@ -24,6 +24,8 @@
 
 choices_t *read_iso_choices(char *filename);
 
+json_object *get(json_object *obj, const char *key);
+const char *str(json_object *obj);
 bool eq(const char *a, const char *b);
 bool lt(const char *a, const char *b);
 bool ubuntu_version_lt(const char *a, const char *b);
