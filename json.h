@@ -19,6 +19,11 @@
 
 #pragma once
 
+#include <stdbool.h>
 #include "common.h"
 
 choices_t *read_iso_choices(char *filename);
+
+bool eq(const char *a, const char *b);
+bool lt(const char *a, const char *b);
+bool ubuntu_version_lt(const char *a, const char *b);

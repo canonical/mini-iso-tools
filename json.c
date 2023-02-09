@@ -17,6 +17,7 @@
  * <http://www.gnu.org/licenses/>.
  */
 
+#include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
 #include <sys/param.h>
@@ -89,18 +90,25 @@ const char *find_newest_product_key(json_object *products)
     if(!products) return NULL;
 
     const char *cmp = NULL;
+    const char *cmp_version = NULL;
 
     json_object_object_foreach(products, key, val) {
         if(!eq(str(get(val, "arch")), "amd64")) {
+            /* printf("skip %s because arch\n", key); */
             continue;
         }
         if(!eq(str(get(val, "os")), "ubuntu-server")) {
+            /* printf("skip %s because os\n", key); */
             continue;
         }
         const char *version = str(get(val, "version"));
-        if(!cmp || ubuntu_version_lt(cmp, version)) {
+        if(!cmp || ubuntu_version_lt(cmp_version, version)) {
+            /* printf("drop %s in favor of %s\n", cmp, key); */
             cmp = key;
+            cmp_version = version;
+            continue;
         }
+        /* printf("skip %s - end of line\n", key); */
     }
     return cmp;
 }
