@@ -27,6 +27,9 @@
 
 choices_t *read_iso_choices(char *filename);
 
+const char *find_newest_product_key(json_object *products);
+json_object *find_obj_of_biggest_key(json_object *obj);
+
 json_object *get(json_object *obj, const char *key);
 const char *str(json_object *obj);
 bool eq(const char *a, const char *b);

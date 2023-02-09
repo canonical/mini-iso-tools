@@ -8,8 +8,6 @@
 
 #include "json.h"
 
-json_object *find_obj_of_biggest_key(json_object *obj);
-
 static void find_largest_NULL(void **state)
 {
     assert_null(find_obj_of_biggest_key(NULL));
@@ -31,6 +29,17 @@ static void find_largest_reversed(void **state)
     json_object *largest = find_obj_of_biggest_key(root);
     assert_non_null(largest);
     assert_int_equal(3, json_object_get_int(largest));
+}
+
+static void newest_product_NULL(void **state)
+{
+    assert_null(find_newest_product_key(NULL));
+}
+
+static void newest_product_basic(void **state)
+{
+    json_object *root = json_tokener_parse("{'c': 3, 'b': 2, 'a': 1}");
+    assert_null(find_newest_product_key(NULL));
 }
 
 static void read_NULL(void **state)
@@ -141,8 +150,8 @@ int main(void)
         cmocka_unit_test(find_largest_simple),
         cmocka_unit_test(find_largest_reversed),
 
-        /* cmocka_unit_test(largest_product_NULL), */
-        /* cmocka_unit_test(largest_product_basic), */
+        cmocka_unit_test(newest_product_NULL),
+        cmocka_unit_test(newest_product_basic),
 
         cmocka_unit_test(read_NULL),
         cmocka_unit_test(read_not_exist),
