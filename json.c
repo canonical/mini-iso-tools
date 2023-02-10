@@ -115,6 +115,21 @@ iso_data_t *get_newest_iso(const char *filename,
 {
     json_object *root = json_object_from_file(filename);
     if(!root) return NULL;
+
+    /*
+     * content_id could be used to choose release vs cdimage, desktop vs server
+     * behaviors
+     * com.ubuntu.cdimage.daily:ubuntu
+     * com.ubuntu.cdimage.daily:ubuntu-server
+     * com.ubuntu.releases:ubuntu
+     * com.ubuntu.releases:ubuntu-server
+     *
+     * split on colon
+     *   com.ubuntu.cdimage.daily -> cdimage -> image_type
+     *   com.ubuntu.releases -> releases -> image_type
+     *   ubuntu -> desktop -> os=ubuntu
+     *   ubuntu-server -> ubuntu-server -> os=ubuntu-server
+     */
     json_object *product = find_newest_product(get(root, "products"), NULL,
             arch, os, image_type);
     if(!product) return NULL;
