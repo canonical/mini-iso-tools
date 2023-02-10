@@ -166,6 +166,21 @@ static void read_ubuntu_desktop_cdimage(void **state)
     assert_int_equal(5877311488, iso_data->size);
 }
 
+static void read_ubuntu_desktop_releases(void **state)
+{
+    iso_data_t *iso_data = get_newest_iso("test/com.ubuntu.releases:ubuntu.json",
+            "amd64", "ubuntu", "desktop",
+            "https://releases.ubuntu.com");
+    assert_string_equal("Ubuntu Server 22.10 (Kinetic Kudu)", iso_data->label);
+    assert_string_equal(
+            "https://releases.ubuntu.com/kinetic/ubuntu-22.10-desktop-amd64.iso",
+            iso_data->url);
+    assert_string_equal(
+            "b98f13cd86839e70cb7757d46840230496b3febea309dd73bd5f81383474e47b",
+            iso_data->sha256sum);
+    assert_int_equal(4071903232, iso_data->size);
+}
+
 static void eq_good(void **state)
 {
     assert_true(eq("a", "a"));
@@ -243,6 +258,7 @@ int main(void)
         cmocka_unit_test(read_ubuntu_server_cdimage),
         cmocka_unit_test(read_ubuntu_server_releases),
         cmocka_unit_test(read_ubuntu_desktop_cdimage),
+        cmocka_unit_test(read_ubuntu_desktop_releases),
 
         cmocka_unit_test(eq_NULL),
         cmocka_unit_test(eq_good),

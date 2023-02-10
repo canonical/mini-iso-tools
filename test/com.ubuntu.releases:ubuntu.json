@@ -1,0 +1,320 @@
+{
+  "content_id": "com.ubuntu.releases:ubuntu",
+  "datatype": "image-downloads",
+  "format": "products:1.0",
+  "products": {
+    "com.ubuntu.releases:ubuntu:desktop:14.04:amd64": {
+      "arch": "amd64",
+      "image_type": "desktop",
+      "os": "ubuntu",
+      "release": "trusty",
+      "release_codename": "Trusty Tahr",
+      "release_title": "14.04.6 LTS",
+      "version": "14.04",
+      "versions": {
+        "14.04.6": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "trusty/ubuntu-14.04.6-desktop-amd64.iso",
+              "sha256": "bcc02554c37d438545658be7964e1bc05bdb11289ae16bfbf94626b80d42656f",
+              "size": 1157627904
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "trusty/ubuntu-14.04.6-desktop-amd64.iso.zsync",
+              "sha256": "68f13aca3df535ab589784ea20b6035e1186a90ac20674ef301073d1b8412279",
+              "size": 2261229
+            },
+            "list": {
+              "ftype": "list",
+              "path": "trusty/ubuntu-14.04.6-desktop-amd64.list",
+              "sha256": "2aa3b0ba6dac8ac38a4ec03e3636e5ea17a8f2c9beb5f2f993580c01c294c08b",
+              "size": 4654
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "trusty/ubuntu-14.04.6-desktop-amd64.manifest",
+              "sha256": "3e56ab3c33f8ab7eff2b3ec7c5ac24c9cb5b432b6d38ef1168a4cf3a27ffedda",
+              "size": 61879
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.releases:ubuntu:desktop:14.04:i386": {
+      "arch": "i386",
+      "image_type": "desktop",
+      "os": "ubuntu",
+      "release": "trusty",
+      "release_codename": "Trusty Tahr",
+      "release_title": "14.04.6 LTS",
+      "version": "14.04",
+      "versions": {
+        "14.04.6": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "trusty/ubuntu-14.04.6-desktop-i386.iso",
+              "sha256": "0a704ba33285558a76a88ef79dcf7fbaf1455c4889ab69939875ccc21bf3696d",
+              "size": 1170964480
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "trusty/ubuntu-14.04.6-desktop-i386.iso.zsync",
+              "sha256": "af314913d22454f6002f176872fdbb2ca7cf182982e898247acee68aed37a6e0",
+              "size": 2287275
+            },
+            "list": {
+              "ftype": "list",
+              "path": "trusty/ubuntu-14.04.6-desktop-i386.list",
+              "sha256": "d9891f960eef778c19080cfee3487902d440e9e978a5ca58bbfea64412bba83e",
+              "size": 3903
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "trusty/ubuntu-14.04.6-desktop-i386.manifest",
+              "sha256": "b21a1651f97615b8c122694f586d4a48430454b1e2ffaaec6f113111dcf790a2",
+              "size": 61491
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.releases:ubuntu:desktop:16.04:amd64": {
+      "arch": "amd64",
+      "image_type": "desktop",
+      "os": "ubuntu",
+      "release": "xenial",
+      "release_codename": "Xenial Xerus",
+      "release_title": "16.04.7 LTS",
+      "version": "16.04",
+      "versions": {
+        "16.04.7": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "xenial/ubuntu-16.04.7-desktop-amd64.iso",
+              "sha256": "8ba7e2687fb8a2152504475e92e489aace543059fd4ba7ffe10111c42394853b",
+              "size": 1697906688
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "xenial/ubuntu-16.04.7-desktop-amd64.iso.zsync",
+              "sha256": "59bedfe53a7820245ef142bec73b65f2aa4989aa60a562e7e97c7a8de464aa5c",
+              "size": 3316461
+            },
+            "list": {
+              "ftype": "list",
+              "path": "xenial/ubuntu-16.04.7-desktop-amd64.list",
+              "sha256": "e301b76e62cce105bdac3e287525bf6ab484beeecda68dcb4607d6e11a865e4c",
+              "size": 4439
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "xenial/ubuntu-16.04.7-desktop-amd64.manifest",
+              "sha256": "9d2041ead8119c9c9133e900a9e47f40bb3b5931131a81abd27ea6e9da8c2d82",
+              "size": 69941
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.releases:ubuntu:desktop:16.04:i386": {
+      "arch": "i386",
+      "image_type": "desktop",
+      "os": "ubuntu",
+      "release": "xenial",
+      "release_codename": "Xenial Xerus",
+      "release_title": "16.04.7 LTS",
+      "version": "16.04",
+      "versions": {
+        "16.04.6": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "xenial/ubuntu-16.04.6-desktop-i386.iso",
+              "sha256": "eecb9c8160cdb08adf0c2f17daa1d403f5a55f14a856a5973f32f267eb9db039",
+              "size": 1677721600
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "xenial/ubuntu-16.04.6-desktop-i386.iso.zsync",
+              "sha256": "e33aa1fafa295899c46bf6c8ac997a0f21b9741505e0271f41fe20b9bb7cd16b",
+              "size": 3277035
+            },
+            "list": {
+              "ftype": "list",
+              "path": "xenial/ubuntu-16.04.6-desktop-i386.list",
+              "sha256": "3621832b1a602ce7868c92003da20f59b19895f49b9811f0c9fc813ec6f2b2e5",
+              "size": 3865
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "xenial/ubuntu-16.04.6-desktop-i386.manifest",
+              "sha256": "440b08a273cc6412c8557801abcf8d69631468450106e92e867762af4109d485",
+              "size": 68588
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.releases:ubuntu:desktop:18.04:amd64": {
+      "arch": "amd64",
+      "image_type": "desktop",
+      "os": "ubuntu",
+      "release": "bionic",
+      "release_codename": "Bionic Beaver",
+      "release_title": "18.04.6 LTS",
+      "version": "18.04",
+      "versions": {
+        "18.04.6": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "bionic/ubuntu-18.04.6-desktop-amd64.iso",
+              "sha256": "f730be589aa1ba923ebe6eca573fa66d09ba14c4c104da2c329df652d42aff11",
+              "size": 2514124800
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "bionic/ubuntu-18.04.6-desktop-amd64.iso.zsync",
+              "sha256": "8311ea0d9f1af343078524307cff349e2588df0e94a2ac773de9efd059a855d1",
+              "size": 4910637
+            },
+            "list": {
+              "ftype": "list",
+              "path": "bionic/ubuntu-18.04.6-desktop-amd64.list",
+              "sha256": "1e49e66eab67d8ef81d2062c6f278a97b43b00914d5e953bee704f348016a7d6",
+              "size": 7984
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "bionic/ubuntu-18.04.6-desktop-amd64.manifest",
+              "sha256": "6d9a069320a775f4a10c61b886c2b6864fa7f34b5fd6596bdb282993f02bd894",
+              "size": 60775
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.releases:ubuntu:desktop:20.04:amd64": {
+      "arch": "amd64",
+      "image_type": "desktop",
+      "os": "ubuntu",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20.04.5": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "focal/ubuntu-20.04.5-desktop-amd64.iso",
+              "sha256": "2980570ea889f3467a04df15c8421ef1dc80ecef7bb37243da97f5714cf3f8ef",
+              "size": 3864182784
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "focal/ubuntu-20.04.5-desktop-amd64.iso.zsync",
+              "sha256": "d94fef02e4708e043184bd7c0f7d1b4e0508daabfbc1249ed43c89e465144c46",
+              "size": 7547469
+            },
+            "list": {
+              "ftype": "list",
+              "path": "focal/ubuntu-20.04.5-desktop-amd64.list",
+              "sha256": "58bb1921619077d6496c5f3df73079c940f333fed40b9b5148817b743b094008",
+              "size": 35624
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "focal/ubuntu-20.04.5-desktop-amd64.manifest",
+              "sha256": "6ee380993a94cd510b3d1d047b6fec348288985d5b4380606b02732f5137259f",
+              "size": 60195
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.releases:ubuntu:desktop:22.04:amd64": {
+      "arch": "amd64",
+      "image_type": "desktop",
+      "os": "ubuntu",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "22.04.1": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "jammy/ubuntu-22.04.1-desktop-amd64.iso",
+              "sha256": "c396e956a9f52c418397867d1ea5c0cf1a99a49dcf648b086d2fb762330cc88d",
+              "size": 3826831360
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "jammy/ubuntu-22.04.1-desktop-amd64.iso.zsync",
+              "sha256": "2089807157c1455c89026d85fc4105b02928045f4da8284a2a246f0bf23f6e3c",
+              "size": 7474517
+            },
+            "list": {
+              "ftype": "list",
+              "path": "jammy/ubuntu-22.04.1-desktop-amd64.list",
+              "sha256": "f82709977f07426d2706571b5628f3a57985f29f0e99b8d8fc047eb7a0723259",
+              "size": 20503
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/ubuntu-22.04.1-desktop-amd64.manifest",
+              "sha256": "b63b7916f415391c441babcd48511f8eaf54e30f76bfa04028231edabeef69c5",
+              "size": 59000
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.releases:ubuntu:desktop:22.10:amd64": {
+      "arch": "amd64",
+      "image_type": "desktop",
+      "os": "ubuntu",
+      "release": "kinetic",
+      "release_codename": "Kinetic Kudu",
+      "release_title": "22.10",
+      "version": "22.10",
+      "versions": {
+        "22.10": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "kinetic/ubuntu-22.10-desktop-amd64.iso",
+              "sha256": "b98f13cd86839e70cb7757d46840230496b3febea309dd73bd5f81383474e47b",
+              "size": 4071903232
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "kinetic/ubuntu-22.10-desktop-amd64.iso.zsync",
+              "sha256": "f7732897565e12bbd8b58e571ab2cf4205b4562f8ff44cc4c36e02f9fabb3be8",
+              "size": 7953169
+            },
+            "list": {
+              "ftype": "list",
+              "path": "kinetic/ubuntu-22.10-desktop-amd64.list",
+              "sha256": "126491f501232ea4f2de03a72f98f2e0917ccee72f9c65ae046f01ac04adf189",
+              "size": 17300
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "kinetic/ubuntu-22.10-desktop-amd64.manifest",
+              "sha256": "b757faf52868b4b19b9d6f29cf6329a7603bae314e0ae8e71c78e71ed4130142",
+              "size": 56820
+            }
+          }
+        }
+      }
+    }
+  },
+  "updated": "Thu, 20 Oct 2022 16:23:58 +0000"
+}
