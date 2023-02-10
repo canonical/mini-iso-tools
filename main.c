@@ -57,13 +57,16 @@ int back_green = COLOR_GREEN;
 
 noreturn void usage(char *prog)
 {
-    fprintf(stderr, "usage: %s --input path --output path\n", prog);
+    fprintf(stderr,
+            "usage: %s --cdimage path --releases path --output path\n",
+            prog);
     exit(1);
 }
 
 typedef struct _args_t
 {
-    char *infile;
+    char *cdimage;
+    char *releases;
     char *outfile;
 } args_t;
 
@@ -73,8 +76,11 @@ args_t *args_create(int argc, char **argv)
     args_t *args = calloc(sizeof(args_t), 1);
 
     while(cur < argc) {
-        if(!strcmp(argv[cur], "--input") && cur + 1 < argc) {
-            args->infile = strdup(argv[cur + 1]);
+        if(!strcmp(argv[cur], "--cdimage") && cur + 1 < argc) {
+            args->cdimage = strdup(argv[cur + 1]);
+            cur += 2;
+        } else if(!strcmp(argv[cur], "--releases") && cur + 1 < argc) {
+            args->releases = strdup(argv[cur + 1]);
             cur += 2;
         } else if(!strcmp(argv[cur], "--output") && cur + 1 < argc) {
             args->outfile = strdup(argv[cur + 1]);
@@ -83,7 +89,7 @@ args_t *args_create(int argc, char **argv)
             usage(argv[0]);
         }
     }
-    if(!args->infile || !args->outfile) {
+    if(!args->cdimage || !args->releases || !args->outfile) {
         usage(argv[0]);
     }
 
@@ -94,7 +100,8 @@ void args_free(args_t *args)
 {
     if(!args) return;
 
-    free(args->infile);
+    free(args->cdimage);
+    free(args->releases);
     free(args->outfile);
     free(args);
 }
@@ -285,7 +292,7 @@ int main(int argc, char **argv)
         back_green = 28;
     }
 
-    choices_t *iso_info = read_iso_choices(args->infile);
+    choices_t *iso_info = read_iso_choices(args->cdimage, args->releases);
     if(!iso_info) {
         syslog(LOG_ERR, "failed to read JSON data");
         return 1;

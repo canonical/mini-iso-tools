@@ -25,7 +25,7 @@
 
 #include "common.h"
 
-choices_t *read_iso_choices(char *filename);
+choices_t *read_iso_choices(char *filename_cdimage, char *filename_releases);
 iso_data_t *get_newest_iso(char *filename,
                            const char *arch, const char *os,
                            const char *image_type, const char *urlbase);

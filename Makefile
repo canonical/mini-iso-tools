@@ -1,7 +1,8 @@
 
 BIN:=iso-chooser-menu
 
-URL:=https://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
+URL_CDIMAGE:=https://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
+URL_RELEASES:=https://releases.ubuntu.com/streams/v1/com.ubuntu.releases:ubuntu-server.json
 
 CFLAGS+=-Wall -Werror -Wfatal-errors -std=c11 -I.
 
@@ -26,8 +27,11 @@ TEST_LDFLAGS:=$(LDFLAGS) $(shell pkg-config --libs cmocka)
 .PHONY: default new
 default new: clean build
 
-ubuntu-server.json:
-	wget "$(URL)" -O $@
+ubuntu-server-cdimage.json:
+	wget "$(URL_CDIMAGE)" -O $@
+
+ubuntu-server-releases.json:
+	wget "$(URL_RELEASES)" -O $@
 
 .PHONY: clean
 clean:
@@ -35,7 +39,7 @@ clean:
 
 .PHONY: distclean
 distclean: clean
-	rm -f ubuntu-server.json
+	rm -f ubuntu-server-cdimage.json ubuntu-server-releases.json
 
 .PHONY: build
 build: $(BIN)
@@ -44,8 +48,11 @@ $(BIN): $(OBJS)
 	$(CC) -o $(BIN) $^ $(CFLAGS) $(LDFLAGS)
 
 .PHONY: run
-run: $(BIN) ubuntu-server.json
-	./$(BIN) --input "ubuntu-server.json" --output "out.vars"
+run: $(BIN) ubuntu-server-cdimage.json ubuntu-server-releases.json
+	./$(BIN) \
+		--cdimage "ubuntu-server-cdimage.json" \
+		--releases "ubuntu-server-releases.json" \
+		--output "out.vars"
 
 .PHONY: test
 test: test/runtests

@@ -143,15 +143,13 @@ iso_data_t *get_newest_iso(char *filename,
     return ret;
 }
 
-choices_t *read_iso_choices(char *filename)
+choices_t *read_iso_choices(char *filename_cdimage, char *filename_releases)
 {
     choices_t *choices = choices_create(2);
-    choices->values[0] = iso_data_create(
-            strdup("Ubuntu Server 22.10 (Kinetic Kudu)"),
-            strdup("https://releases.ubuntu.com/kinetic/ubuntu-22.10-live-server-amd64.iso"),
-            strdup("874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed"),
-            1642631168);
-    choices->values[1] = get_newest_iso(filename,
+    choices->values[0] = get_newest_iso(filename_releases,
+            "amd64", "ubuntu-server", "live-server",
+            "https://releases.ubuntu.com");
+    choices->values[1] = get_newest_iso(filename_cdimage,
             "amd64", "ubuntu-server", "daily-live",
             "https://cdimage.ubuntu.com");
     return choices;
