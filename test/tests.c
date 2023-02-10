@@ -142,7 +142,6 @@ static void _test_isodata(
     assert_int_equal(expected_size, iso_data->size);
 }
 
-
 static void read_ubuntu_server_cdimage(void **state)
 {
     _test_isodata(
