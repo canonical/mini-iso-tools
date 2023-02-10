@@ -121,9 +121,9 @@ static void read_empty_obj(void **state)
     assert_null(get_newest_iso("test/emtpy-obj.json", NULL, NULL, NULL, NULL));
 }
 
-static void read_ubuntu_server(void **state)
+static void read_ubuntu_server_cdimage(void **state)
 {
-    iso_data_t *iso_data = get_newest_iso("test/ubuntu-server.json",
+    iso_data_t *iso_data = get_newest_iso("test/com.ubuntu.cdimage.daily:ubuntu-server.json",
             "amd64", "ubuntu-server", "daily-live",
             "https://cdimage.ubuntu.com");
     assert_string_equal("Ubuntu Server 23.04 (Lunar Lobster)", iso_data->label);
@@ -225,7 +225,7 @@ int main(void)
         cmocka_unit_test(read_NULL),
         cmocka_unit_test(read_not_exist),
         cmocka_unit_test(read_empty_obj),
-        cmocka_unit_test(read_ubuntu_server),
+        cmocka_unit_test(read_ubuntu_server_cdimage),
         cmocka_unit_test(read_ubuntu_server_releases),
 
         cmocka_unit_test(eq_NULL),
