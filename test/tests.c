@@ -108,24 +108,25 @@ static void newest_product_second(void **state)
 
 static void read_NULL(void **state)
 {
-    assert_null(get_newest_iso(NULL, NULL, NULL, NULL, NULL));
+    assert_null(get_newest_iso(NULL, NULL, NULL, NULL, NULL, NULL));
 }
 
 static void read_not_exist(void **state)
 {
-    assert_null(get_newest_iso("/not/exist", NULL, NULL, NULL, NULL));
+    assert_null(get_newest_iso("/not/exist", NULL, NULL, NULL, NULL, NULL));
 }
 
 static void read_empty_obj(void **state)
 {
-    assert_null(get_newest_iso("test/emtpy-obj.json", NULL, NULL, NULL, NULL));
+    assert_null(get_newest_iso("test/emtpy-obj.json", NULL, NULL, NULL, NULL, NULL));
 }
 
 static void read_ubuntu_server_cdimage(void **state)
 {
     iso_data_t *iso_data = get_newest_iso("test/com.ubuntu.cdimage.daily:ubuntu-server.json",
             "amd64", "ubuntu-server", "daily-live",
-            "https://cdimage.ubuntu.com");
+            "https://cdimage.ubuntu.com",
+            "Ubuntu Server");
     assert_string_equal("Ubuntu Server 23.04 (Lunar Lobster)", iso_data->label);
     assert_string_equal(
             "https://cdimage.ubuntu.com/ubuntu-server/daily-live/20230122/lunar-live-server-amd64.iso",
@@ -140,7 +141,8 @@ static void read_ubuntu_server_releases(void **state)
 {
     iso_data_t *iso_data = get_newest_iso("test/com.ubuntu.releases:ubuntu-server.json",
             "amd64", "ubuntu-server", "live-server",
-            "https://releases.ubuntu.com");
+            "https://releases.ubuntu.com",
+            "Ubuntu Server");
     assert_string_equal("Ubuntu Server 22.10 (Kinetic Kudu)", iso_data->label);
     assert_string_equal(
             "https://releases.ubuntu.com/kinetic/ubuntu-22.10-live-server-amd64.iso",
@@ -155,8 +157,9 @@ static void read_ubuntu_desktop_cdimage(void **state)
 {
     iso_data_t *iso_data = get_newest_iso("test/com.ubuntu.cdimage.daily:ubuntu.json",
             "amd64", "ubuntu", "daily-live",
-            "https://cdimage.ubuntu.com");
-    assert_string_equal("Ubuntu Server 23.04 (Lunar Lobster)", iso_data->label);
+            "https://cdimage.ubuntu.com",
+            "Ubuntu");
+    assert_string_equal("Ubuntu 23.04 (Lunar Lobster)", iso_data->label);
     assert_string_equal(
             "https://cdimage.ubuntu.com/daily-live/20230209/lunar-desktop-amd64.iso",
             iso_data->url);
@@ -170,8 +173,9 @@ static void read_ubuntu_desktop_releases(void **state)
 {
     iso_data_t *iso_data = get_newest_iso("test/com.ubuntu.releases:ubuntu.json",
             "amd64", "ubuntu", "desktop",
-            "https://releases.ubuntu.com");
-    assert_string_equal("Ubuntu Server 22.10 (Kinetic Kudu)", iso_data->label);
+            "https://releases.ubuntu.com",
+            "Ubuntu");
+    assert_string_equal("Ubuntu 22.10 (Kinetic Kudu)", iso_data->label);
     assert_string_equal(
             "https://releases.ubuntu.com/kinetic/ubuntu-22.10-desktop-amd64.iso",
             iso_data->url);

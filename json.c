@@ -110,7 +110,8 @@ json_object *find_newest_product(json_object *products, const char **ret_key,
 iso_data_t *get_newest_iso(char *filename,
                            const char *arch, const char *os,
                            const char *image_type,
-                           const char *urlbase)
+                           const char *urlbase,
+                           const char *descriptor)
 {
     json_object *root = json_object_from_file(filename);
     if(!root) return NULL;
@@ -134,7 +135,7 @@ iso_data_t *get_newest_iso(char *filename,
     if(!size) return NULL;
 
     iso_data_t *ret = iso_data_create(
-            saprintf("Ubuntu Server %s (%s)", str(title), str(codename)),
+            saprintf("%s %s (%s)", descriptor, str(title), str(codename)),
             saprintf("%s/%s", urlbase, str(path)),
             strdup(str(sha256)),
             json_object_get_int64(size));
@@ -148,9 +149,9 @@ choices_t *read_iso_choices(char *filename_cdimage, char *filename_releases)
     choices_t *choices = choices_create(2);
     choices->values[0] = get_newest_iso(filename_releases,
             "amd64", "ubuntu-server", "live-server",
-            "https://releases.ubuntu.com");
+            "https://releases.ubuntu.com", "Ubuntu Server");
     choices->values[1] = get_newest_iso(filename_cdimage,
             "amd64", "ubuntu-server", "daily-live",
-            "https://cdimage.ubuntu.com");
+            "https://cdimage.ubuntu.com", "Ubuntu");
     return choices;
 }

@@ -28,7 +28,8 @@
 choices_t *read_iso_choices(char *filename_cdimage, char *filename_releases);
 iso_data_t *get_newest_iso(char *filename,
                            const char *arch, const char *os,
-                           const char *image_type, const char *urlbase);
+                           const char *image_type, const char *urlbase,
+                           const char *descriptor);
 
 json_object *find_largest_key(json_object *obj, const char **ret_key);
 json_object *find_newest_product(json_object *products, const char **ret_key,
