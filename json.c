@@ -137,7 +137,7 @@ iso_data_t *get_newest_iso(char *filename,
             saprintf("Ubuntu Server %s (%s)", str(title), str(codename)),
             saprintf("%s/%s", urlbase, str(path)),
             strdup(str(sha256)),
-            json_object_get_int(size));
+            json_object_get_int64(size));
 
     json_object_put(root);
     return ret;

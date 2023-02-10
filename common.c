@@ -37,7 +37,8 @@ char *saprintf(char *fmt, ...)
 /* create the iso_data_t structure.  Caller allocates a free()able string, and
  * a later call to iso_data_free() will release both the iso_data_t and the
  * strings supplied here. */
-iso_data_t *iso_data_create(char *label, char *url, char *sha256sum, int size)
+iso_data_t *iso_data_create(char *label, char *url, char *sha256sum,
+                            int64_t size)
 {
     iso_data_t *ret = calloc(sizeof(iso_data_t), 1);
     if(!ret) return NULL;

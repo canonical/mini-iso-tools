@@ -151,6 +151,21 @@ static void read_ubuntu_server_releases(void **state)
     assert_int_equal(1642631168, iso_data->size);
 }
 
+static void read_ubuntu_desktop_cdimage(void **state)
+{
+    iso_data_t *iso_data = get_newest_iso("test/com.ubuntu.cdimage.daily:ubuntu.json",
+            "amd64", "ubuntu", "daily-live",
+            "https://cdimage.ubuntu.com");
+    assert_string_equal("Ubuntu Server 23.04 (Lunar Lobster)", iso_data->label);
+    assert_string_equal(
+            "https://cdimage.ubuntu.com/daily-live/20230209/lunar-desktop-amd64.iso",
+            iso_data->url);
+    assert_string_equal(
+            "2d2a0e0894fa8c98cc564223bf41d6bf2dd9d27449ac4b30f7d42edfeb77de67",
+            iso_data->sha256sum);
+    assert_int_equal(5877311488, iso_data->size);
+}
+
 static void eq_good(void **state)
 {
     assert_true(eq("a", "a"));
@@ -227,6 +242,7 @@ int main(void)
         cmocka_unit_test(read_empty_obj),
         cmocka_unit_test(read_ubuntu_server_cdimage),
         cmocka_unit_test(read_ubuntu_server_releases),
+        cmocka_unit_test(read_ubuntu_desktop_cdimage),
 
         cmocka_unit_test(eq_NULL),
         cmocka_unit_test(eq_good),
