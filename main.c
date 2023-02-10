@@ -212,7 +212,7 @@ void write_output(char *fname, iso_data_t *iso_data)
     fprintf(f, "MEDIA_URL=\"%s\"\n", iso_data->url);
     fprintf(f, "MEDIA_LABEL=\"%s\"\n", iso_data->label);
     fprintf(f, "MEDIA_256SUM=\"%s\"\n", iso_data->sha256sum);
-    fprintf(f, "MEDIA_SIZE=\"%d\"\n", iso_data->size);
+    fprintf(f, "MEDIA_SIZE=\"%" PRId64 "\"\n", iso_data->size);
     fclose(f);
 }
 
@@ -227,7 +227,7 @@ void choice_handle_event(args_t *args, choices_t *choices, choice_event evt)
         case SELECT:
             iso_data_t *cur = choices->values[choices->cur];
             write_output(args->outfile, cur);
-            syslog(LOG_DEBUG, "selected:%s %s %d",
+            syslog(LOG_DEBUG, "selected:%s %s %" PRId64,
                    cur->label, cur->url, cur->size);
             break;
         case INCREASE:
