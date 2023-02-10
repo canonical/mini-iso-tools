@@ -107,7 +107,7 @@ json_object *find_newest_product(json_object *products, const char **ret_key,
     return ret;
 }
 
-iso_data_t *get_newest_iso(char *filename,
+iso_data_t *get_newest_iso(const char *filename,
                            const char *arch, const char *os,
                            const char *image_type,
                            const char *urlbase,
