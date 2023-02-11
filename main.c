@@ -50,71 +50,30 @@
 #include <sys/param.h>
 #include <sys/stat.h>
 
+#include "args.h"
 #include "json.h"
 
 int ubuntu_orange = COLOR_RED;
 int text_white = COLOR_WHITE;
 int back_green = COLOR_GREEN;
 
-noreturn void usage(char *prog)
-{
-    fprintf(stderr,
-            "usage: <output path> <input json> [<input json> ...]\n",
-            prog);
-    exit(1);
-}
-
-typedef struct _args_t
-{
-    char *outfile;
-    char **infiles;
-} args_t;
-
-bool file_exists(const char *path)
-{
-    struct stat statbuf = {};
-    return stat(path, &statbuf) == 0
-}
-
-args_t *args_create(int argc, char **argv)
-{
-    args_t *args = calloc(sizeof(args_t), 1);
-
-    int cur = 1;
-    args->outfile = argv[cur++];
-    if(!file_exists(args->outfile)) {
-        usage(argv[0]);
-    }
-
-    int num_infiles = argc - cur;
-    args->infiles = calloc(sizeof(char *), num_infiles);
-    if(!argc->infiles) {
-        syslog(LOG_ERR, "fatal: alloc failure");
-        exit(1);
-    }
-
-    for(int i = 0; i < num_infiles; i++) {
-        args->infiles[i] = argv[cur++];
-        if(!file_exists(args->infiles[i])) {
-            usage(argv[0]);
-        }
-    }
-
-    return args;
-}
-
-void args_free(args_t *args)
-{
-    if(!args) return;
-    free(args->infiles);
-    free(args);
-}
-
 typedef enum {
     DECREASE=-1,
     SELECT=0,
     INCREASE=1,
 } choice_event;
+
+choices_t *read_iso_choices(args_t *args)
+{
+    choices_t *choices = choices_create(args->num_infiles);
+    for(int i = 0; i < args->num_infiles; i++) {
+        choices->values[i] = get_newest_iso(args->infiles[i],
+                "amd64", "ubuntu-server", "live-server",
+                "https://releases.ubuntu.com", "Ubuntu Server");
+        // FIXME criteria wrong for others input files
+    }
+    return choices;
+}
 
 int horizontal_center(int len)
 {
@@ -296,7 +255,7 @@ int main(int argc, char **argv)
         back_green = 28;
     }
 
-    choices_t *iso_info = read_iso_choices(args->cdimage, args->releases);
+    choices_t *iso_info = read_iso_choices(args);
     if(!iso_info) {
         syslog(LOG_ERR, "failed to read JSON data");
         return 1;

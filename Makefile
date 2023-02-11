@@ -49,10 +49,7 @@ $(BIN): $(OBJS)
 
 .PHONY: run
 run: $(BIN) ubuntu-server-cdimage.json ubuntu-server-releases.json
-	./$(BIN) \
-		--cdimage "ubuntu-server-cdimage.json" \
-		--releases "ubuntu-server-releases.json" \
-		--output "out.vars"
+	./$(BIN) "out.vars" $^
 
 .PHONY: test
 test: test/runtests

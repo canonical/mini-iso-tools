@@ -158,15 +158,3 @@ iso_data_t *get_newest_iso(const char *filename,
     json_object_put(root);
     return ret;
 }
-
-choices_t *read_iso_choices(char *filename_cdimage, char *filename_releases)
-{
-    choices_t *choices = choices_create(2);
-    choices->values[0] = get_newest_iso(filename_releases,
-            "amd64", "ubuntu-server", "live-server",
-            "https://releases.ubuntu.com", "Ubuntu Server");
-    choices->values[1] = get_newest_iso(filename_cdimage,
-            "amd64", "ubuntu-server", "daily-live",
-            "https://cdimage.ubuntu.com", "Ubuntu");
-    return choices;
-}
