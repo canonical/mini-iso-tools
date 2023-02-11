@@ -75,11 +75,7 @@ choices_t *read_iso_choices(args_t *args)
 {
     choices_t *choices = choices_create(args->num_infiles);
     for(int i = 0; i < args->num_infiles; i++) {
-        choices->values[i] = get_newest_iso(args->infiles[i],
-                "amd64", "ubuntu-server", "daily-live",
-                "https://cdimage.ubuntu.com",
-                "Ubuntu Server");
-        // FIXME criteria wrong for others input files
+        choices->values[i] = get_newest_iso(args->infiles[i], "amd64");
     }
     return choices;
 }

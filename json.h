@@ -36,10 +36,7 @@ typedef struct _criteria_t
 
 criteria_t *criteria_for_content_id(const char *content_id);
 
-iso_data_t *get_newest_iso(const char *filename,
-                           const char *arch, const char *os,
-                           const char *image_type, const char *urlbase,
-                           const char *descriptor);
+iso_data_t *get_newest_iso(const char *filename, const char *arch);
 
 json_object *find_largest_key(json_object *obj, const char **ret_key);
 json_object *find_newest_product(json_object *products, const char **ret_key,

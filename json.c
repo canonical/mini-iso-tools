@@ -150,11 +150,7 @@ criteria_t *criteria_for_content_id(const char *content_id)
     return NULL;
 }
 
-iso_data_t *get_newest_iso(const char *filename,
-                           const char *arch, const char *os,
-                           const char *image_type,
-                           const char *urlbase,
-                           const char *descriptor)
+iso_data_t *get_newest_iso(const char *filename, const char *arch)
 {
     json_object *root = json_object_from_file(filename);
     if(!root) return NULL;

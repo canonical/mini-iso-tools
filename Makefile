@@ -48,9 +48,8 @@ $(BIN): $(OBJS)
 	$(CC) -o $(BIN) $^ $(CFLAGS) $(LDFLAGS)
 
 .PHONY: run
-# run: $(BIN) ubuntu-server-cdimage.json ubuntu-server-releases.json
-run: $(BIN) ubuntu-server-cdimage.json
-	./$(BIN) "out.vars" ubuntu-server-cdimage.json
+run: $(BIN) ubuntu-server-cdimage.json ubuntu-server-releases.json
+	./$(BIN) "out.vars" ubuntu-server-cdimage.json ubuntu-server-releases.json
 
 debug: $(BIN) ubuntu-server-cdimage.json
 	gdb --args ./$(BIN) "out.vars" ubuntu-server-cdimage.json
