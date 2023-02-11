@@ -30,6 +30,49 @@
 
 #include "json.h"
 
+criteria_t content_id_to_criteria[] = {
+    {
+        "com.ubuntu.cdimage.daily:ubuntu",
+        "ubuntu",
+        "daily-live",
+        "https://cdimage.ubuntu.com",
+        "Ubuntu Desktop",
+    },
+    {
+        "com.ubuntu.cdimage.daily:ubuntu-server",
+        "ubuntu-server",
+        "daily-live",
+        "https://cdimage.ubuntu.com",
+        "Ubuntu Server",
+    },
+    {
+        "com.ubuntu.releases:ubuntu",
+        "ubuntu",
+        "desktop",
+        "https://releases.ubuntu.com",
+        "Ubuntu Desktop",
+    },
+    {
+        "com.ubuntu.releases:ubuntu-server",
+        "ubuntu-server",
+        "live-server",
+        "https://releases.ubuntu.com",
+        "Ubuntu Server",
+    },
+    {} /* must be last */
+};
+
+criteria_t *criteria_for_content_id(const char *content_id)
+{
+    if(!content_id) return NULL;
+    for(int i = 0; content_id_to_criteria[i].content_id; i++) {
+        if(eq(content_id, content_id_to_criteria[i].content_id)) {
+            return &content_id_to_criteria[i];
+        }
+    }
+    return NULL;
+}
+
 json_object *get(json_object *obj, const char *key)
 {
     if(!obj || !key) return NULL;
@@ -105,49 +148,6 @@ json_object *find_newest_product(json_object *products, const char **ret_key,
 
     if(ret_key) *ret_key = cmp;
     return ret;
-}
-
-criteria_t content_id_to_criteria[] = {
-    {
-        "com.ubuntu.cdimage.daily:ubuntu",
-        "ubuntu",
-        "daily-live",
-        "https://cdimage.ubuntu.com",
-        "Ubuntu",
-    },
-    {
-        "com.ubuntu.cdimage.daily:ubuntu-server",
-        "ubuntu-server",
-        "daily-live",
-        "https://cdimage.ubuntu.com",
-        "Ubuntu Server",
-    },
-    {
-        "com.ubuntu.releases:ubuntu",
-        "ubuntu",
-        "desktop",
-        "https://releases.ubuntu.com",
-        "Ubuntu",
-    },
-    {
-        "com.ubuntu.releases:ubuntu-server",
-        "ubuntu-server",
-        "live-server",
-        "https://releases.ubuntu.com",
-        "Ubuntu Server",
-    },
-    {} /* must be last */
-};
-
-criteria_t *criteria_for_content_id(const char *content_id)
-{
-    if(!content_id) return NULL;
-    for(int i = 0; content_id_to_criteria[i].content_id; i++) {
-        if(eq(content_id, content_id_to_criteria[i].content_id)) {
-            return &content_id_to_criteria[i];
-        }
-    }
-    return NULL;
 }
 
 iso_data_t *get_newest_iso(const char *filename, const char *arch)
