@@ -49,7 +49,7 @@ $(BIN): $(OBJS)
 
 .PHONY: run
 run: $(BIN) ubuntu-server-cdimage.json ubuntu-server-releases.json
-	./$(BIN) "out.vars" ubuntu-server-cdimage.json ubuntu-server-releases.json
+	./$(BIN) "out.vars" test/data/com*json
 
 debug: $(BIN) ubuntu-server-cdimage.json
 	gdb --args ./$(BIN) "out.vars" ubuntu-server-cdimage.json
