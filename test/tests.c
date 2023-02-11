@@ -118,7 +118,8 @@ static void read_not_exist(void **state)
 
 static void read_empty_obj(void **state)
 {
-    assert_null(get_newest_iso("test/emtpy-obj.json", NULL, NULL, NULL, NULL, NULL));
+    assert_null(get_newest_iso("test/data/emtpy-obj.json",
+                NULL, NULL, NULL, NULL, NULL));
 }
 
 static void _test_isodata(
@@ -145,7 +146,7 @@ static void _test_isodata(
 static void read_ubuntu_server_cdimage(void **state)
 {
     _test_isodata(
-            "test/com.ubuntu.cdimage.daily:ubuntu-server.json",
+            "test/data/com.ubuntu.cdimage.daily:ubuntu-server.json",
             "amd64", "ubuntu-server", "daily-live",
             "https://cdimage.ubuntu.com",
             "Ubuntu Server",
@@ -158,7 +159,7 @@ static void read_ubuntu_server_cdimage(void **state)
 static void read_ubuntu_server_releases(void **state)
 {
     _test_isodata(
-            "test/com.ubuntu.releases:ubuntu-server.json",
+            "test/data/com.ubuntu.releases:ubuntu-server.json",
             "amd64", "ubuntu-server", "live-server",
             "https://releases.ubuntu.com",
             "Ubuntu Server",
@@ -171,7 +172,7 @@ static void read_ubuntu_server_releases(void **state)
 static void read_ubuntu_desktop_cdimage(void **state)
 {
     _test_isodata(
-            "test/com.ubuntu.cdimage.daily:ubuntu.json",
+            "test/data/com.ubuntu.cdimage.daily:ubuntu.json",
             "amd64", "ubuntu", "daily-live",
             "https://cdimage.ubuntu.com",
             "Ubuntu",
@@ -184,7 +185,7 @@ static void read_ubuntu_desktop_cdimage(void **state)
 static void read_ubuntu_desktop_releases(void **state)
 {
     _test_isodata(
-            "test/com.ubuntu.releases:ubuntu.json",
+            "test/data/com.ubuntu.releases:ubuntu.json",
             "amd64", "ubuntu", "desktop",
             "https://releases.ubuntu.com",
             "Ubuntu",
