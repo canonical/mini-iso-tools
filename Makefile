@@ -19,7 +19,7 @@ SRCS:=$(wildcard *.c)
 OBJS:=$(SRCS:.c=.o)
 
 TEST_SRCS:=$(wildcard test/*.c)
-TEST_OBJS:=$(TEST_SRCS:.c=.o)
+TEST_PRGS:=$(TEST_SRCS:.c=.test)
 
 TEST_CFLAGS:=$(CFLAGS) $(shell pkg-config --cflags cmocka)
 TEST_LDFLAGS:=$(LDFLAGS) $(shell pkg-config --libs cmocka)
@@ -35,7 +35,7 @@ ubuntu-server-releases.json:
 
 .PHONY: clean
 clean:
-	rm -f $(BIN) $(OBJS) $(TEST_OBJS) test/runtests out.vars
+	rm -f $(BIN) $(OBJS) $(TEST_PRGS) out.vars
 
 .PHONY: distclean
 distclean: clean
@@ -48,13 +48,20 @@ $(BIN): $(OBJS)
 	$(CC) -o $(BIN) $^ $(CFLAGS) $(LDFLAGS)
 
 .PHONY: run
-run: $(BIN) ubuntu-server-cdimage.json ubuntu-server-releases.json
-	./$(BIN) "out.vars" $^
+# run: $(BIN) ubuntu-server-cdimage.json ubuntu-server-releases.json
+run: $(BIN) ubuntu-server-cdimage.json
+	./$(BIN) "out.vars" ubuntu-server-cdimage.json
+
+debug: $(BIN) ubuntu-server-cdimage.json
+	gdb --args ./$(BIN) "out.vars" ubuntu-server-cdimage.json
 
 .PHONY: test
-test: test/runtests
+test: clean $(OBJS) $(TEST_PRGS)
 
-.PHONY: runtests
-test/runtests: json.o common.o $(TEST_OBJS)
-	$(CC) -o $@ $^ $(TEST_CFLAGS) $(TEST_LDFLAGS)
+test/test_json.test: test/test_json.c
+	$(CC) -o $@ $^ $(TEST_CFLAGS) $(TEST_LDFLAGS) json.o common.o
+	./$@
+
+test/test_args.test: test/test_args.c
+	$(CC) -o $@ $^ $(TEST_CFLAGS) $(TEST_LDFLAGS) args.o common.o
 	./$@

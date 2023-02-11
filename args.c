@@ -27,14 +27,6 @@
 
 #include <sys/stat.h>
 
-noreturn void usage(char *prog)
-{
-    fprintf(stderr,
-            "usage: %s <output path> <input json> [<input json> ...]\n",
-            prog);
-    exit(1);
-}
-
 bool file_exists(const char *path)
 {
     struct stat statbuf = {};
@@ -45,14 +37,30 @@ bool file_exists(const char *path)
     return true;
 }
 
+void args_free(args_t *args)
+{
+    if(!args) return;
+    free(args->infiles);
+    free(args);
+}
+
 args_t *args_create(int argc, char **argv)
 {
     args_t *args = calloc(sizeof(args_t), 1);
+    if(!args) {
+        syslog(LOG_ERR, "fatal: alloc failure");
+        exit(1);
+    }
 
     int cur = 1;
     args->outfile = argv[cur++];
 
     args->num_infiles = argc - cur;
+    if(args->num_infiles < 1) {
+        args_free(args);
+        return NULL;
+    }
+
     args->infiles = calloc(sizeof(char *), args->num_infiles);
     if(!args->infiles) {
         syslog(LOG_ERR, "fatal: alloc failure");
@@ -62,16 +70,10 @@ args_t *args_create(int argc, char **argv)
     for(int i = 0; i < args->num_infiles; i++) {
         args->infiles[i] = argv[cur++];
         if(!file_exists(args->infiles[i])) {
-            usage(argv[0]);
+            args_free(args);
+            return NULL;
         }
     }
 
     return args;
-}
-
-void args_free(args_t *args)
-{
-    if(!args) return;
-    free(args->infiles);
-    free(args);
 }

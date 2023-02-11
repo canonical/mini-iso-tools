@@ -3,4 +3,5 @@ iso-chooser-menu
 out.vars
 /*.json
 test/runtests
+test/*.test
 /.tags
