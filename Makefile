@@ -1,9 +1,6 @@
 
 BIN:=iso-chooser-menu
 
-URL_CDIMAGE:=https://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
-URL_RELEASES:=https://releases.ubuntu.com/streams/v1/com.ubuntu.releases:ubuntu-server.json
-
 CFLAGS+=-Wall -Werror -Wfatal-errors -std=c11 -I.
 
 # CFLAGS+=-g -O0
@@ -27,19 +24,12 @@ TEST_LDFLAGS:=$(LDFLAGS) $(shell pkg-config --libs cmocka)
 .PHONY: default new
 default new: clean build
 
-ubuntu-server-cdimage.json:
-	wget "$(URL_CDIMAGE)" -O $@
-
-ubuntu-server-releases.json:
-	wget "$(URL_RELEASES)" -O $@
-
 .PHONY: clean
 clean:
 	rm -f $(BIN) $(OBJS) $(TEST_PRGS) out.vars
 
 .PHONY: distclean
 distclean: clean
-	rm -f ubuntu-server-cdimage.json ubuntu-server-releases.json
 
 .PHONY: build
 build: $(BIN)
