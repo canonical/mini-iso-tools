@@ -108,10 +108,34 @@ json_object *find_newest_product(json_object *products, const char **ret_key,
 }
 
 criteria_t content_id_to_criteria[] = {
-    {"com.ubuntu.cdimage.daily:ubuntu", "ubuntu", "daily-live"},
-    {"com.ubuntu.cdimage.daily:ubuntu-server", "ubuntu-server", "daily-live"},
-    {"com.ubuntu.releases:ubuntu", "ubuntu", "desktop"},
-    {"com.ubuntu.releases:ubuntu-server", "ubuntu-server", "live-server"},
+    {
+        "com.ubuntu.cdimage.daily:ubuntu",
+        "ubuntu",
+        "daily-live",
+        "https://cdimage.ubuntu.com",
+        "Ubuntu",
+    },
+    {
+        "com.ubuntu.cdimage.daily:ubuntu-server",
+        "ubuntu-server",
+        "daily-live",
+        "https://cdimage.ubuntu.com",
+        "Ubuntu Server",
+    },
+    {
+        "com.ubuntu.releases:ubuntu",
+        "ubuntu",
+        "desktop",
+        "https://releases.ubuntu.com",
+        "Ubuntu",
+    },
+    {
+        "com.ubuntu.releases:ubuntu-server",
+        "ubuntu-server",
+        "live-server",
+        "https://releases.ubuntu.com",
+        "Ubuntu Server",
+    },
     {} /* must be last */
 };
 
