@@ -254,6 +254,21 @@ static void str_NULL(void **state)
     assert_null(str(NULL));
 }
 
+static void criteria_for_content_id_NULL(void **state)
+{
+    assert_null(criteria_for_content_id(NULL));
+}
+
+static void criteria_for_content_id_server_cdimage(void **state)
+{
+    criteria_t *criteria = criteria_for_content_id(
+            "com.ubuntu.cdimage.daily:ubuntu-server");
+    assert_non_null(criteria);
+    assert_string_equal(
+            "com.ubuntu.cdimage.daily:ubuntu-server",
+            criteria->content_id);
+}
+
 int main(void)
 {
     const struct CMUnitTest tests[] = {
@@ -285,6 +300,9 @@ int main(void)
         cmocka_unit_test(get_good),
         cmocka_unit_test(str_NULL),
         cmocka_unit_test(str_good),
+
+        cmocka_unit_test(criteria_for_content_id_NULL),
+        cmocka_unit_test(criteria_for_content_id_server_cdimage),
     };
     return cmocka_run_group_tests(tests, NULL, NULL);
 }

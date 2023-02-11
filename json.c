@@ -107,6 +107,21 @@ json_object *find_newest_product(json_object *products, const char **ret_key,
     return ret;
 }
 
+criteria_t contentid_to_criteria[] = {
+    /* { "com.ubuntu.cdimage.daily:ubuntu", } */
+    {"com.ubuntu.cdimage.daily:ubuntu-server", "ubuntu-server", "daily-live"},
+            /* "amd64", "ubuntu-server", "daily-live", */
+            /* "https://cdimage.ubuntu.com", */
+     /* * com.ubuntu.releases:ubuntu */
+     /* * com.ubuntu.releases:ubuntu-server */
+};
+
+criteria_t *criteria_for_content_id(const char *content_id)
+{
+    if(!content_id) return NULL;
+    return &contentid_to_criteria[0];
+}
+
 iso_data_t *get_newest_iso(const char *filename,
                            const char *arch, const char *os,
                            const char *image_type,

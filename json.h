@@ -25,6 +25,15 @@
 
 #include "common.h"
 
+typedef struct _criteria_t
+{
+    const char *content_id;
+    const char *os;
+    const char *image_type;
+} criteria_t;
+
+criteria_t *criteria_for_content_id(const char *content_id);
+
 iso_data_t *get_newest_iso(const char *filename,
                            const char *arch, const char *os,
                            const char *image_type, const char *urlbase,
