@@ -27,10 +27,20 @@
 
 typedef struct _criteria_t
 {
+    /* simplestream JSON has at the top level a content_id, which allows table
+     * lookup of other necessary info */
     const char *content_id;
+
+    /* os and image_type are both needed to uniquely locate the interesting
+     * products */
     const char *os;
     const char *image_type;
+
+    /* urlbase is the scheme and host information that needs to be
+     * combined with the product path to obtain the full URL */
     const char *urlbase;
+    /* descriptor is friendly description of the product,
+     * such as "Ubuntu Server" */
     const char *descriptor;
 } criteria_t;
 

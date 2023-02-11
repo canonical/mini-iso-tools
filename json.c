@@ -159,20 +159,6 @@ iso_data_t *get_newest_iso(const char *filename, const char *arch)
     criteria_t *criteria = criteria_for_content_id(content_id);
     if(!criteria) return NULL;
 
-    /*
-     * content_id could be used to choose release vs cdimage, desktop vs server
-     * behaviors
-     * com.ubuntu.cdimage.daily:ubuntu
-     * com.ubuntu.cdimage.daily:ubuntu-server
-     * com.ubuntu.releases:ubuntu
-     * com.ubuntu.releases:ubuntu-server
-     *
-     * split on colon
-     *   com.ubuntu.cdimage.daily -> cdimage -> image_type
-     *   com.ubuntu.releases -> releases -> image_type
-     *   ubuntu -> desktop -> os=ubuntu
-     *   ubuntu-server -> ubuntu-server -> os=ubuntu-server
-     */
     json_object *product = find_newest_product(get(root, "products"), NULL,
             arch, criteria->os, criteria->image_type);
     if(!product) return NULL;
