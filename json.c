@@ -159,6 +159,10 @@ iso_data_t *get_newest_iso(const char *filename,
     json_object *root = json_object_from_file(filename);
     if(!root) return NULL;
 
+    const char *content_id = str(get(root, "content_id"));
+    criteria_t *criteria = criteria_for_content_id(content_id);
+    if(!criteria) return NULL;
+
     /*
      * content_id could be used to choose release vs cdimage, desktop vs server
      * behaviors
@@ -174,7 +178,7 @@ iso_data_t *get_newest_iso(const char *filename,
      *   ubuntu-server -> ubuntu-server -> os=ubuntu-server
      */
     json_object *product = find_newest_product(get(root, "products"), NULL,
-            arch, os, image_type);
+            arch, criteria->os, criteria->image_type);
     if(!product) return NULL;
     json_object *newest = find_largest_key(get(product, "versions"), NULL);
     if(!newest) return NULL;
@@ -193,8 +197,9 @@ iso_data_t *get_newest_iso(const char *filename,
     if(!size) return NULL;
 
     iso_data_t *ret = iso_data_create(
-            saprintf("%s %s (%s)", descriptor, str(title), str(codename)),
-            saprintf("%s/%s", urlbase, str(path)),
+            saprintf("%s %s (%s)",
+                     criteria->descriptor, str(title), str(codename)),
+            saprintf("%s/%s", criteria->urlbase, str(path)),
             strdup(str(sha256)),
             json_object_get_int64(size));
 

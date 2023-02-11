@@ -118,7 +118,7 @@ static void read_not_exist(void **state)
 
 static void read_empty_obj(void **state)
 {
-    assert_null(get_newest_iso("test/data/emtpy-obj.json",
+    assert_null(get_newest_iso("test/data/empty-obj.json",
                 NULL, NULL, NULL, NULL, NULL));
 }
 
