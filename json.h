@@ -30,6 +30,7 @@ typedef struct _criteria_t
     const char *content_id;
     const char *os;
     const char *image_type;
+    /* FIXME urlbase, descriptor */
 } criteria_t;
 
 criteria_t *criteria_for_content_id(const char *content_id);

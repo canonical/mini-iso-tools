@@ -272,6 +272,8 @@ static void criteria_for_content_id_server_cdimage(void **state)
     assert_string_equal(
             "com.ubuntu.cdimage.daily:ubuntu-server",
             criteria->content_id);
+    assert_string_equal("ubuntu-server", criteria->os);
+    assert_string_equal("daily-live", criteria->image_type);
 }
 
 int main(void)
