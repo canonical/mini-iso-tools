@@ -25,7 +25,7 @@
  * The menu is styled to have an appearance that is as close to Subiquity as
  * possible.
  *
- * Input is a file similar to
+ * Input is a file or files similar to
  * http://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
  *
  * The chosen ISO is output in a format friendly for the /bin/sh source
@@ -49,6 +49,7 @@
 #include <stdnoreturn.h>
 #include <sys/param.h>
 
+#include "args.h"
 #include "json.h"
 
 int ubuntu_orange = COLOR_RED;
@@ -57,46 +58,10 @@ int back_green = COLOR_GREEN;
 
 noreturn void usage(char *prog)
 {
-    fprintf(stderr, "usage: %s --input path --output path\n", prog);
+    fprintf(stderr,
+            "usage: %s <output path> <input json> [<input json> ...]\n",
+            prog);
     exit(1);
-}
-
-typedef struct _args_t
-{
-    char *infile;
-    char *outfile;
-} args_t;
-
-args_t *args_create(int argc, char **argv)
-{
-    int cur = 1;
-    args_t *args = calloc(sizeof(args_t), 1);
-
-    while(cur < argc) {
-        if(!strcmp(argv[cur], "--input") && cur + 1 < argc) {
-            args->infile = strdup(argv[cur + 1]);
-            cur += 2;
-        } else if(!strcmp(argv[cur], "--output") && cur + 1 < argc) {
-            args->outfile = strdup(argv[cur + 1]);
-            cur += 2;
-        } else {
-            usage(argv[0]);
-        }
-    }
-    if(!args->infile || !args->outfile) {
-        usage(argv[0]);
-    }
-
-    return args;
-}
-
-void args_free(args_t *args)
-{
-    if(!args) return;
-
-    free(args->infile);
-    free(args->outfile);
-    free(args);
 }
 
 typedef enum {
@@ -285,7 +250,7 @@ int main(int argc, char **argv)
         back_green = 28;
     }
 
-    choices_t *iso_info = read_iso_choices(args->infile);
+    choices_t *iso_info = read_iso_choices(args->infiles[0]);
     if(!iso_info) {
         syslog(LOG_ERR, "failed to read JSON data");
         return 1;
