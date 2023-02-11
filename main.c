@@ -25,7 +25,7 @@
  * The menu is styled to have an appearance that is as close to Subiquity as
  * possible.
  *
- * Input is a file similar to
+ * Input is a file or files similar to
  * http://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
  *
  * The chosen ISO is output in a format friendly for the /bin/sh source
@@ -48,6 +48,7 @@
 #include <syslog.h>
 #include <stdnoreturn.h>
 #include <sys/param.h>
+#include <sys/stat.h>
 
 #include "json.h"
 
@@ -58,39 +59,45 @@ int back_green = COLOR_GREEN;
 noreturn void usage(char *prog)
 {
     fprintf(stderr,
-            "usage: %s --cdimage path --releases path --output path\n",
+            "usage: <output path> <input json> [<input json> ...]\n",
             prog);
     exit(1);
 }
 
 typedef struct _args_t
 {
-    char *cdimage;
-    char *releases;
     char *outfile;
+    char **infiles;
 } args_t;
+
+bool file_exists(const char *path)
+{
+    struct stat statbuf = {};
+    return stat(path, &statbuf) == 0
+}
 
 args_t *args_create(int argc, char **argv)
 {
-    int cur = 1;
     args_t *args = calloc(sizeof(args_t), 1);
 
-    while(cur < argc) {
-        if(!strcmp(argv[cur], "--cdimage") && cur + 1 < argc) {
-            args->cdimage = strdup(argv[cur + 1]);
-            cur += 2;
-        } else if(!strcmp(argv[cur], "--releases") && cur + 1 < argc) {
-            args->releases = strdup(argv[cur + 1]);
-            cur += 2;
-        } else if(!strcmp(argv[cur], "--output") && cur + 1 < argc) {
-            args->outfile = strdup(argv[cur + 1]);
-            cur += 2;
-        } else {
+    int cur = 1;
+    args->outfile = argv[cur++];
+    if(!file_exists(args->outfile)) {
+        usage(argv[0]);
+    }
+
+    int num_infiles = argc - cur;
+    args->infiles = calloc(sizeof(char *), num_infiles);
+    if(!argc->infiles) {
+        syslog(LOG_ERR, "fatal: alloc failure");
+        exit(1);
+    }
+
+    for(int i = 0; i < num_infiles; i++) {
+        args->infiles[i] = argv[cur++];
+        if(!file_exists(args->infiles[i])) {
             usage(argv[0]);
         }
-    }
-    if(!args->cdimage || !args->releases || !args->outfile) {
-        usage(argv[0]);
     }
 
     return args;
@@ -99,10 +106,7 @@ args_t *args_create(int argc, char **argv)
 void args_free(args_t *args)
 {
     if(!args) return;
-
-    free(args->cdimage);
-    free(args->releases);
-    free(args->outfile);
+    free(args->infiles);
     free(args);
 }
 
