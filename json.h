@@ -19,6 +19,15 @@
 
 #pragma once
 
+#include <stdbool.h>
+
+#include <json-c/json.h>
+
 #include "common.h"
+
+json_object *get(json_object *obj, const char *key);
+const char *str(json_object *obj);
+bool eq(const char *a, const char *b);
+bool lt(const char *a, const char *b);
 
 choices_t *read_iso_choices(char *filename);

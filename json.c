@@ -23,6 +23,31 @@
 
 #include "json.h"
 
+json_object *get(json_object *obj, const char *key)
+{
+    if(!obj || !key) return NULL;
+    return json_object_object_get(obj, key);
+}
+
+const char *str(json_object *obj)
+{
+    if(!obj) return NULL;
+    return json_object_get_string(obj);
+}
+
+bool eq(const char *a, const char *b)
+{
+    if(!a || !b) return false;
+    return strcmp(a, b) == 0;
+}
+
+bool lt(const char *a, const char *b)
+{
+    if(!a || !b) return false;
+    return strcmp(a, b) < 0;
+}
+
+
 char *find_largest_subkey(json_object *obj)
 {
     char *ret = NULL;
