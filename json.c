@@ -53,7 +53,7 @@ char *find_largest_subkey(json_object *obj)
     char *ret = NULL;
     json_object_object_foreach(obj, key, val) {
         (void)val;
-        if(!ret || strcmp(ret, key) < 0) {
+        if(!ret || lt(ret, key)) {
             ret = key;
         }
     }
@@ -65,36 +65,35 @@ choices_t *read_iso_choices(char *filename)
     json_object *root = json_object_from_file(filename);
     if(!root) return NULL;
 
-    json_object *products = json_object_object_get(root, "products");
+    json_object *products = get(root, "products");
     if(!products) return NULL;
 
-    json_object *product = json_object_object_get(products,
+    json_object *product = get(products,
             "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:23.04:amd64");
     if(!product) return NULL;
 
-    json_object *codename = json_object_object_get(
-            product, "release_codename");
+    json_object *codename = get(product, "release_codename");
     if(!codename) return NULL;
-    json_object *title = json_object_object_get(product, "release_title");
+    json_object *title = get(product, "release_title");
     if(!title) return NULL;
 
-    json_object *versions = json_object_object_get(product, "versions");
+    json_object *versions = get(product, "versions");
     if(!versions) return NULL;
 
     char *recent = find_largest_subkey(versions);
     if(!recent) return NULL;
-    json_object *date = json_object_object_get(versions, recent);
+    json_object *date = get(versions, recent);
     if(!date) return NULL;
-    json_object *items = json_object_object_get(date, "items");
+    json_object *items = get(date, "items");
     if(!items) return NULL;
-    json_object *iso = json_object_object_get(items, "iso");
+    json_object *iso = get(items, "iso");
     if(!iso) return NULL;
 
-    json_object *path = json_object_object_get(iso, "path");
+    json_object *path = get(iso, "path");
     if(!path) return NULL;
-    json_object *size = json_object_object_get(iso, "size");
+    json_object *size = get(iso, "size");
     if(!size) return NULL;
-    json_object *sha256 = json_object_object_get(iso, "sha256");
+    json_object *sha256 = get(iso, "sha256");
     if(!sha256) return NULL;
 
     choices_t *choices = choices_create(2);
@@ -104,12 +103,9 @@ choices_t *read_iso_choices(char *filename)
             strdup("874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed"),
             1642631168);
     choices->values[1] = iso_data_create(
-            saprintf("Ubuntu Server %s (%s)",
-                    json_object_get_string(title),
-                    json_object_get_string(codename)),
-            saprintf("https://cdimage.ubuntu.com/%s",
-                    json_object_get_string(path)),
-            strdup(json_object_get_string(sha256)),
+            saprintf("Ubuntu Server %s (%s)", str(title), str(codename)),
+            saprintf("https://cdimage.ubuntu.com/%s", str(path)),
+            strdup(str(sha256)),
             json_object_get_int(size));
 
     json_object_put(root);
