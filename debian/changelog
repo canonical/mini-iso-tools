@@ -1,3 +1,11 @@
+mini-iso-tools (0.2.0) lunar; urgency=medium
+
+  * Update the menu to accept an arbitrary number of simplestream files as
+    input.  Accepts desktop and server cases of releases and cdimage files.
+  * Have menu show Server and Desktop latest ISOs on cdimage and releases.
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Mon, 13 Feb 2023 13:53:50 -0700
+
 mini-iso-tools (0.1.1) lunar; urgency=medium
 
   * Fix license - using GPL3.
