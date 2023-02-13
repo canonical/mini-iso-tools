@@ -1,8 +1,6 @@
 
 BIN:=iso-chooser-menu
 
-URL:=https://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
-
 CFLAGS+=-Wall -Werror -Wfatal-errors -std=c11 -I.
 
 # CFLAGS+=-g -O0
@@ -29,16 +27,12 @@ TEST_LDFLAGS:=$(LDFLAGS) $(shell pkg-config --libs cmocka)
 .PHONY: default new
 default new: clean build
 
-ubuntu-server.json:
-	wget "$(URL)" -O $@
-
 .PHONY: clean
 clean:
 	rm -f $(BIN) $(OBJS) $(TEST_PRGS) out.vars
 
 .PHONY: distclean
 distclean: clean
-	rm -f ubuntu-server.json
 
 .PHONY: build
 build: $(BIN)
@@ -47,8 +41,8 @@ $(BIN): $(OBJS)
 	$(CC) -o $(BIN) $^ $(CFLAGS) $(LDFLAGS)
 
 .PHONY: run
-run: $(BIN) ubuntu-server.json
-	./$(BIN) "out.vars" ubuntu-server.json
+run: $(BIN)
+	./$(BIN) "out.vars" test/data/com*json
 
 .PHONY: test
 test: $(OBJS) $(TEST_PRGS)

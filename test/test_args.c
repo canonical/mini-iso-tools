@@ -15,7 +15,7 @@ static void args_no_infiles(void **state)
 
 static void args_one_infile(void **state)
 {
-    char *argv[] = {"program", "outfile", "test/empty-obj.json", NULL};
+    char *argv[] = {"program", "outfile", "test/data/empty-obj.json", NULL};
     args_t *args = args_create(3, argv);
     assert_non_null(args);
     assert_int_equal(1, args->num_infiles);
@@ -28,8 +28,8 @@ static void args_two_infiles(void **state)
     char *argv[] = {
         "program",
         "outfile",
-        "test/empty-obj.json",
-        "test/ubuntu-server.json",
+        "test/data/com.ubuntu.releases:ubuntu.json",
+        "test/data/com.ubuntu.cdimage.daily:ubuntu-server.json",
         NULL
     };
     args_t *args = args_create(4, argv);

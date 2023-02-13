@@ -110,20 +110,18 @@ char *find_largest_subkey(json_object *obj);
 
 static void find_largest_simple(void **state)
 {
-    json_object *root = json_object_from_file(
-            "test/find-largest-simple.json");
+    json_object *root = json_tokener_parse("{'a': 1, 'b': 2, 'c': 3}");
     assert_non_null(root);
     char *actual = find_largest_subkey(root);
-    assert_string_equal("3", actual);
+    assert_string_equal("c", actual);
 }
 
 static void find_largest_reversed(void **state)
 {
-    json_object *root = json_object_from_file(
-            "test/find-largest-reversed.json");
+    json_object *root = json_tokener_parse("{'c': 3, 'b': 2, 'a': 1}");
     assert_non_null(root);
     char *actual = find_largest_subkey(root);
-    assert_string_equal("3", actual);
+    assert_string_equal("c", actual);
 }
 
 static void read_NULL(void **state)
@@ -143,7 +141,7 @@ static void read_empty_obj(void **state)
 
 static void read_ubuntu_server(void **state)
 {
-    choices_t *choices = read_iso_choices("test/ubuntu-server.json");
+    choices_t *choices = read_iso_choices("test/data/com.ubuntu.cdimage.daily:ubuntu-server.json");
     assert_int_equal(2, choices->len);
 
     iso_data_t *first = choices->values[0];
