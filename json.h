@@ -31,3 +31,28 @@ bool eq(const char *a, const char *b);
 bool lt(const char *a, const char *b);
 
 choices_t *read_iso_choices(char *filename);
+
+/* The criteria is a mapping from a content_id to the information we need to
+ * retrieve, and show info about, a given ISO. Simple stream JSON contains a
+ * content_id on the top level object, which is then used to determine which
+ * ISOs we should look for. */
+typedef struct _criteria_t
+{
+    /* simplestream JSON has at the top level a content_id, which allows table
+     * lookup of other necessary info */
+    const char *content_id;
+
+    /* os and image_type are both needed to uniquely locate the interesting
+     * products */
+    const char *os;
+    const char *image_type;
+
+    /* urlbase is the scheme and host information that needs to be
+     * combined with the product path to obtain the full URL */
+    const char *urlbase;
+    /* descriptor is friendly description of the product,
+     * such as "Ubuntu Server" */
+    const char *descriptor;
+} criteria_t;
+
+criteria_t *criteria_for_content_id(const char *content_id);

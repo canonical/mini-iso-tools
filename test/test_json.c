@@ -67,6 +67,45 @@ static void str_NULL(void **state)
     assert_null(str(NULL));
 }
 
+static void criteria_for_content_id_NULL(void **state)
+{
+    assert_null(criteria_for_content_id(NULL));
+}
+
+static void criteria_for_content_id_invalid(void **state)
+{
+    assert_null(criteria_for_content_id("invalid"));
+}
+
+static void criteria_for_content_id_server_cdimage(void **state)
+{
+    criteria_t *criteria = criteria_for_content_id(
+            "com.ubuntu.cdimage.daily:ubuntu-server");
+    assert_non_null(criteria);
+    assert_string_equal(
+            "com.ubuntu.cdimage.daily:ubuntu-server",
+            criteria->content_id);
+    assert_string_equal("ubuntu-server", criteria->os);
+    assert_string_equal("daily-live", criteria->image_type);
+    assert_string_equal("https://cdimage.ubuntu.com", criteria->urlbase);
+    assert_string_equal("Ubuntu Server", criteria->descriptor);
+}
+
+extern criteria_t content_id_to_criteria[];
+
+static void criteria_all_initialized(void **state)
+{
+    for(int i = 0; ; i++) {
+        criteria_t *cur = &content_id_to_criteria[i];
+        if(!cur->content_id) break;
+
+        assert_non_null(cur->os);
+        assert_non_null(cur->image_type);
+        assert_non_null(cur->urlbase);
+        assert_non_null(cur->descriptor);
+    }
+}
+
 char *find_largest_subkey(json_object *obj);
 
 static void find_largest_simple(void **state)
@@ -150,6 +189,11 @@ int main(void)
         cmocka_unit_test(get_good),
         cmocka_unit_test(str_NULL),
         cmocka_unit_test(str_good),
+
+        cmocka_unit_test(criteria_for_content_id_NULL),
+        cmocka_unit_test(criteria_for_content_id_invalid),
+        cmocka_unit_test(criteria_for_content_id_server_cdimage),
+        cmocka_unit_test(criteria_all_initialized),
     };
     return cmocka_run_group_tests(tests, NULL, NULL);
 }

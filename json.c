@@ -23,6 +23,49 @@
 
 #include "json.h"
 
+criteria_t content_id_to_criteria[] = {
+    {
+        .content_id = "com.ubuntu.cdimage.daily:ubuntu",
+        .os = "ubuntu",
+        .image_type = "daily-live",
+        .urlbase = "https://cdimage.ubuntu.com",
+        .descriptor = "Ubuntu Desktop",
+    },
+    {
+        .content_id = "com.ubuntu.cdimage.daily:ubuntu-server",
+        .os = "ubuntu-server",
+        .image_type = "daily-live",
+        .urlbase = "https://cdimage.ubuntu.com",
+        .descriptor = "Ubuntu Server",
+    },
+    {
+        .content_id = "com.ubuntu.releases:ubuntu",
+        .os = "ubuntu",
+        .image_type = "desktop",
+        .urlbase = "https://releases.ubuntu.com",
+        .descriptor = "Ubuntu Desktop",
+    },
+    {
+        .content_id = "com.ubuntu.releases:ubuntu-server",
+        .os = "ubuntu-server",
+        .image_type = "live-server",
+        .urlbase = "https://releases.ubuntu.com",
+        .descriptor = "Ubuntu Server",
+    },
+    {} /* must be last */
+};
+
+criteria_t *criteria_for_content_id(const char *content_id)
+{
+    if(!content_id) return NULL;
+    for(int i = 0; content_id_to_criteria[i].content_id; i++) {
+        if(eq(content_id, content_id_to_criteria[i].content_id)) {
+            return &content_id_to_criteria[i];
+        }
+    }
+    return NULL;
+}
+
 json_object *get(json_object *obj, const char *key)
 {
     if(!obj || !key) return NULL;
