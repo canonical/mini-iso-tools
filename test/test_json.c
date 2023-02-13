@@ -8,6 +8,104 @@
 
 #include "json.h"
 
+static void find_largest_NULL(void **state)
+{
+    assert_null(find_largest_key(NULL, NULL));
+}
+
+static void find_largest_simple(void **state)
+{
+    json_object *root = json_tokener_parse("{'a': 1, 'b': 2, 'c': 3}");
+    assert_non_null(root);
+    const char *key = NULL;
+    json_object *largest = find_largest_key(root, &key);
+    assert_string_equal("c", key);
+    assert_non_null(largest);
+    assert_int_equal(3, json_object_get_int(largest));
+    assert_int_equal(largest, find_largest_key(root, NULL));
+}
+
+static void find_largest_reversed(void **state)
+{
+    json_object *root = json_tokener_parse("{'c': 3, 'b': 2, 'a': 1}");
+    assert_non_null(root);
+    const char *key = NULL;
+    json_object *largest = find_largest_key(root, &key);
+    assert_string_equal("c", key);
+    assert_non_null(largest);
+    assert_int_equal(3, json_object_get_int(largest));
+}
+
+static void newest_product_NULL(void **state)
+{
+    assert_null(find_newest_product(NULL, NULL, NULL, NULL, NULL));
+}
+
+static void newest_product_basic(void **state)
+{
+    json_object *root = json_tokener_parse("{"
+        "'a': {"
+            "'arch': 'amd64',"
+            "'os': 'ubuntu-server',"
+            "'image_type': 'daily-live',"
+            "'version': '1'"
+        "}"
+    "}");
+    const char *key = NULL;
+    json_object *obj_a = find_newest_product(root, &key,
+            "amd64", "ubuntu-server", "daily-live");
+    assert_string_equal("a", key);
+
+    assert_int_equal(obj_a, get(root, "a"));
+
+    assert_int_equal(obj_a, find_newest_product(root, NULL,
+            "amd64", "ubuntu-server", "daily-live"));
+}
+
+static void newest_product_first(void **state)
+{
+    json_object *root = json_tokener_parse("{"
+        "'b': {"
+            "'arch': 'amd64',"
+            "'os': 'ubuntu-server',"
+            "'image_type': 'daily-live',"
+            "'version': '2'"
+        "},"
+        "'a': {"
+            "'arch': 'amd64',"
+            "'os': 'ubuntu-server',"
+            "'image_type': 'daily-live',"
+            "'version': '1'"
+        "}"
+    "}");
+    const char *key = NULL;
+    assert_non_null(find_newest_product(root, &key,
+            "amd64", "ubuntu-server", "daily-live"));
+    assert_string_equal("b", key);
+}
+
+static void newest_product_second(void **state)
+{
+    json_object *root = json_tokener_parse("{"
+        "'b': {"
+            "'arch': 'amd64',"
+            "'os': 'ubuntu-server',"
+            "'image_type': 'daily-live',"
+            "'version': '1'"
+        "},"
+        "'a': {"
+            "'arch': 'amd64',"
+            "'os': 'ubuntu-server',"
+            "'image_type': 'daily-live',"
+            "'version': '2'"
+        "}"
+    "}");
+    const char *key = NULL;
+    assert_non_null(find_newest_product(root, &key,
+            "amd64", "ubuntu-server", "daily-live"));
+    assert_string_equal("a", key);
+}
+
 static void eq_good(void **state)
 {
     assert_true(eq("a", "a"));
@@ -106,75 +204,99 @@ static void criteria_all_initialized(void **state)
     }
 }
 
-char *find_largest_subkey(json_object *obj);
-
-static void find_largest_simple(void **state)
-{
-    json_object *root = json_tokener_parse("{'a': 1, 'b': 2, 'c': 3}");
-    assert_non_null(root);
-    char *actual = find_largest_subkey(root);
-    assert_string_equal("c", actual);
-}
-
-static void find_largest_reversed(void **state)
-{
-    json_object *root = json_tokener_parse("{'c': 3, 'b': 2, 'a': 1}");
-    assert_non_null(root);
-    char *actual = find_largest_subkey(root);
-    assert_string_equal("c", actual);
-}
-
 static void read_NULL(void **state)
 {
-    assert_null(read_iso_choices(NULL));
+    assert_null(get_newest_iso(NULL, NULL));
 }
 
 static void read_not_exist(void **state)
 {
-    assert_null(read_iso_choices("/not/exist"));
+    assert_null(get_newest_iso("/not/exist", NULL));
 }
 
 static void read_empty_obj(void **state)
 {
-    assert_null(read_iso_choices("test/emtpy-obj.json"));
+    assert_null(get_newest_iso("test/data/empty-obj.json", NULL));
 }
 
-static void read_ubuntu_server(void **state)
+static void _test_isodata(
+        const char *filename,
+        const char *arch,
+        const char *expected_label,
+        const char *expected_url,
+        const char *expected_sha256sum,
+        int64_t expected_size)
 {
-    choices_t *choices = read_iso_choices("test/data/com.ubuntu.cdimage.daily:ubuntu-server.json");
-    assert_int_equal(2, choices->len);
+    iso_data_t *iso_data = get_newest_iso(filename, arch);
+    assert_string_equal(expected_label, iso_data->label);
+    assert_string_equal(expected_url, iso_data->url);
+    assert_string_equal(expected_sha256sum, iso_data->sha256sum);
+    assert_int_equal(expected_size, iso_data->size);
+}
 
-    iso_data_t *first = choices->values[0];
-    assert_string_equal("Ubuntu Server 22.10 (Kinetic Kudu)", first->label);
-    assert_string_equal(
-            "https://releases.ubuntu.com/kinetic/ubuntu-22.10-live-server-amd64.iso",
-            first->url);
-    assert_string_equal(
-            "874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed",
-            first->sha256sum);
-    assert_int_equal(1642631168, first->size);
-
-    iso_data_t *second = choices->values[1];
-    assert_string_equal("Ubuntu Server 23.04 (Lunar Lobster)", second->label);
-    assert_string_equal(
+static void read_ubuntu_server_cdimage(void **state)
+{
+    _test_isodata(
+            "test/data/com.ubuntu.cdimage.daily:ubuntu-server.json",
+            "amd64",
+            "Ubuntu Server 23.04 (Lunar Lobster)",
             "https://cdimage.ubuntu.com/ubuntu-server/daily-live/20230122/lunar-live-server-amd64.iso",
-            second->url);
-    assert_string_equal(
             "b67e566f6b7ff5d314173a2b55bb413cf4ab2b1b94c59f1ff8b65b862c1d7de7",
-            second->sha256sum);
-    assert_int_equal(1762381824, second->size);
+            1762381824);
+}
+
+static void read_ubuntu_server_releases(void **state)
+{
+    _test_isodata(
+            "test/data/com.ubuntu.releases:ubuntu-server.json",
+            "amd64",
+            "Ubuntu Server 22.10 (Kinetic Kudu)",
+            "https://releases.ubuntu.com/kinetic/ubuntu-22.10-live-server-amd64.iso",
+            "874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed",
+            1642631168);
+}
+
+static void read_ubuntu_desktop_cdimage(void **state)
+{
+    _test_isodata(
+            "test/data/com.ubuntu.cdimage.daily:ubuntu.json",
+            "amd64",
+            "Ubuntu Desktop 23.04 (Lunar Lobster)",
+            "https://cdimage.ubuntu.com/daily-live/20230209/lunar-desktop-amd64.iso",
+            "2d2a0e0894fa8c98cc564223bf41d6bf2dd9d27449ac4b30f7d42edfeb77de67",
+            5877311488);
+}
+
+static void read_ubuntu_desktop_releases(void **state)
+{
+    _test_isodata(
+            "test/data/com.ubuntu.releases:ubuntu.json",
+            "amd64",
+            "Ubuntu Desktop 22.10 (Kinetic Kudu)",
+            "https://releases.ubuntu.com/kinetic/ubuntu-22.10-desktop-amd64.iso",
+            "b98f13cd86839e70cb7757d46840230496b3febea309dd73bd5f81383474e47b",
+            4071903232);
 }
 
 int main(void)
 {
     const struct CMUnitTest tests[] = {
+        cmocka_unit_test(find_largest_NULL),
         cmocka_unit_test(find_largest_simple),
         cmocka_unit_test(find_largest_reversed),
+
+        cmocka_unit_test(newest_product_NULL),
+        cmocka_unit_test(newest_product_basic),
+        cmocka_unit_test(newest_product_first),
+        cmocka_unit_test(newest_product_second),
 
         cmocka_unit_test(read_NULL),
         cmocka_unit_test(read_not_exist),
         cmocka_unit_test(read_empty_obj),
-        cmocka_unit_test(read_ubuntu_server),
+        cmocka_unit_test(read_ubuntu_server_cdimage),
+        cmocka_unit_test(read_ubuntu_server_releases),
+        cmocka_unit_test(read_ubuntu_desktop_cdimage),
+        cmocka_unit_test(read_ubuntu_desktop_releases),
 
         cmocka_unit_test(eq_NULL),
         cmocka_unit_test(eq_good),

@@ -70,6 +70,15 @@ typedef enum {
     INCREASE=1,
 } choice_event;
 
+choices_t *read_iso_choices(args_t *args)
+{
+    choices_t *choices = choices_create(args->num_infiles);
+    for(int i = 0; i < args->num_infiles; i++) {
+        choices->values[i] = get_newest_iso(args->infiles[i], ARCH);
+    }
+    return choices;
+}
+
 int horizontal_center(int len)
 {
     return (COLS - len) / 2;
@@ -209,7 +218,15 @@ void exit_cb(void)
 int main(int argc, char **argv)
 {
     args_t *args = args_create(argc, argv);
+    if(!args) usage(argv[0]);
+
     setlocale(LC_ALL, "C.UTF-8");
+
+    choices_t *iso_info = read_iso_choices(args);
+    if(!iso_info) {
+        syslog(LOG_ERR, "failed to read JSON data");
+        return 1;
+    }
 
     if(!initscr()) {
         syslog(LOG_ERR, "initscr failure");
@@ -248,12 +265,6 @@ int main(int argc, char **argv)
         ubuntu_orange = 202;  /* not really but kinda close */
         text_white = 231;
         back_green = 28;
-    }
-
-    choices_t *iso_info = read_iso_choices(args->infiles[0]);
-    if(!iso_info) {
-        syslog(LOG_ERR, "failed to read JSON data");
-        return 1;
     }
 
     bool continuing = true;
