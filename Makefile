@@ -14,6 +14,9 @@ LDFLAGS+=$(shell pkg-config --libs ncursesw)
 # CFLAGS+=$(shell pkg-config --cflags json-c)
 LDFLAGS+=$(shell pkg-config --libs json-c)
 
+DEB_BUILD_ARCH=$(shell dpkg-architecture -q DEB_BUILD_ARCH)
+CFLAGS+=-D'ARCH="$(DEB_BUILD_ARCH)"'
+
 SRCS:=$(wildcard *.c)
 OBJS:=$(SRCS:.c=.o)
 
