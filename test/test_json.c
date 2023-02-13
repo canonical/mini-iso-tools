@@ -8,6 +8,65 @@
 
 #include "json.h"
 
+static void eq_good(void **state)
+{
+    assert_true(eq("a", "a"));
+}
+
+static void eq_bad(void **state)
+{
+    assert_false(eq("a", "b"));
+}
+
+static void eq_NULL(void **state)
+{
+    assert_null(eq(NULL, "a"));
+    assert_null(eq("a", NULL));
+    assert_null(eq(NULL, NULL));
+}
+
+static void lt_good(void **state)
+{
+    assert_true(lt("a", "b"));
+}
+
+static void lt_bad(void **state)
+{
+    assert_false(lt("a", "a"));
+}
+
+static void lt_NULL(void **state)
+{
+    assert_false(lt(NULL, "a"));
+    assert_false(lt("a", NULL));
+    assert_false(lt(NULL, NULL));
+}
+
+static void get_good(void **state)
+{
+    json_object *root = json_tokener_parse("{'key': 'value'}");
+    assert_non_null(get(root, "key"));
+}
+
+static void get_NULL(void **state)
+{
+    assert_null(get(NULL, NULL));
+    assert_null(get(NULL, "key"));
+    json_object *root = json_tokener_parse("{'key': 'value'}");
+    assert_null(get(root, NULL));
+}
+
+static void str_good(void **state)
+{
+    json_object *root = json_tokener_parse("{'key': 'value'}");
+    assert_string_equal("value", str(get(root, "key")));
+}
+
+static void str_NULL(void **state)
+{
+    assert_null(str(NULL));
+}
+
 char *find_largest_subkey(json_object *obj);
 
 static void find_largest_simple(void **state)
@@ -79,6 +138,18 @@ int main(void)
         cmocka_unit_test(read_not_exist),
         cmocka_unit_test(read_empty_obj),
         cmocka_unit_test(read_ubuntu_server),
+
+        cmocka_unit_test(eq_NULL),
+        cmocka_unit_test(eq_good),
+        cmocka_unit_test(eq_bad),
+        cmocka_unit_test(lt_NULL),
+        cmocka_unit_test(lt_good),
+        cmocka_unit_test(lt_bad),
+
+        cmocka_unit_test(get_NULL),
+        cmocka_unit_test(get_good),
+        cmocka_unit_test(str_NULL),
+        cmocka_unit_test(str_good),
     };
     return cmocka_run_group_tests(tests, NULL, NULL);
 }
