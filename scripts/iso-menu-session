@@ -17,4 +17,4 @@ for url in $urls; do
     wget -P /tmp/mini-iso-menu "$url"
 done
 
-/usr/lib/mini-iso-tools/iso-chooser-menu /out.vars /tmp/mini-iso-menu/*
+/usr/lib/mini-iso-tools/iso-chooser-menu /mini-iso-menu.vars /tmp/mini-iso-menu/*
