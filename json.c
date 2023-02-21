@@ -17,6 +17,7 @@
  * <http://www.gnu.org/licenses/>.
  */
 
+#include <stdbool.h>
 #include <string.h>
 
 #include <json-c/json.h>
@@ -90,67 +91,94 @@ bool lt(const char *a, const char *b)
     return strcmp(a, b) < 0;
 }
 
-
-char *find_largest_subkey(json_object *obj)
+json_object *find_largest_key(json_object *obj, const char **ret_key)
 {
-    char *ret = NULL;
+    if(!obj) return NULL;
+
+    char *cmp = NULL;
+    json_object *ret = NULL;
+
     json_object_object_foreach(obj, key, val) {
-        (void)val;
-        if(!ret || lt(ret, key)) {
-            ret = key;
+        if(!cmp || lt(cmp, key)) {
+            cmp = key;
+            ret = val;
         }
     }
+
+    if(ret_key) *ret_key = cmp;
     return ret;
 }
 
-choices_t *read_iso_choices(char *filename)
+/* return the object, and optionally the key, of the product matching these
+ * constraints with the largest version. */
+json_object *find_newest_product(json_object *products, const char **ret_key,
+                                 const char *arch, const char *os,
+                                 const char *image_type)
+{
+    if(!products) return NULL;
+
+    const char *cmp = NULL;
+    const char *cmp_version = NULL;
+    json_object *ret = NULL;
+
+    json_object_object_foreach(products, key, val) {
+        if(!eq(str(get(val, "arch")), arch)) {
+            continue;
+        }
+        if(!eq(str(get(val, "os")), os)) {
+            continue;
+        }
+        if(!eq(str(get(val, "image_type")), image_type)) {
+            continue;
+        }
+        const char *version = str(get(val, "version"));
+        if(!cmp || lt(cmp_version, version)) {
+            cmp = key;
+            cmp_version = version;
+            ret = val;
+            continue;
+        }
+    }
+
+    if(ret_key) *ret_key = cmp;
+    return ret;
+}
+
+iso_data_t *get_newest_iso(const char *filename, const char *arch)
 {
     json_object *root = json_object_from_file(filename);
     if(!root) return NULL;
 
-    json_object *products = get(root, "products");
-    if(!products) return NULL;
+    const char *content_id = str(get(root, "content_id"));
+    criteria_t *criteria = criteria_for_content_id(content_id);
+    if(!criteria) return NULL;
 
-    json_object *product = get(products,
-            "com.ubuntu.cdimage.daily:ubuntu-server:daily-live:23.04:amd64");
+    json_object *product = find_newest_product(get(root, "products"), NULL,
+            arch, criteria->os, criteria->image_type);
     if(!product) return NULL;
-
-    json_object *codename = get(product, "release_codename");
-    if(!codename) return NULL;
-    json_object *title = get(product, "release_title");
-    if(!title) return NULL;
-
-    json_object *versions = get(product, "versions");
-    if(!versions) return NULL;
-
-    char *recent = find_largest_subkey(versions);
-    if(!recent) return NULL;
-    json_object *date = get(versions, recent);
-    if(!date) return NULL;
-    json_object *items = get(date, "items");
-    if(!items) return NULL;
-    json_object *iso = get(items, "iso");
+    json_object *newest = find_largest_key(get(product, "versions"), NULL);
+    if(!newest) return NULL;
+    json_object *iso = get(get(newest, "items"), "iso");
     if(!iso) return NULL;
 
+    json_object *title = get(product, "release_title");
+    if(!title) return NULL;
+    json_object *codename = get(product, "release_codename");
+    if(!codename) return NULL;
     json_object *path = get(iso, "path");
     if(!path) return NULL;
-    json_object *size = get(iso, "size");
-    if(!size) return NULL;
     json_object *sha256 = get(iso, "sha256");
     if(!sha256) return NULL;
+    json_object *size = get(iso, "size");
+    if(!size) return NULL;
 
-    choices_t *choices = choices_create(2);
-    choices->values[0] = iso_data_create(
-            strdup("Ubuntu Server 22.10 (Kinetic Kudu)"),
-            strdup("https://releases.ubuntu.com/kinetic/ubuntu-22.10-live-server-amd64.iso"),
-            strdup("874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed"),
-            1642631168);
-    choices->values[1] = iso_data_create(
-            saprintf("Ubuntu Server %s (%s)", str(title), str(codename)),
-            saprintf("https://cdimage.ubuntu.com/%s", str(path)),
+    iso_data_t *ret = iso_data_create(
+            saprintf("%s %s (%s)",
+                     criteria->descriptor, str(title), str(codename)),
+            saprintf("%s/%s", criteria->urlbase, str(path)),
             strdup(str(sha256)),
-            json_object_get_int(size));
+            json_object_get_int64(size));
 
     json_object_put(root);
-    return choices;
+    return ret;
 }

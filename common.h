@@ -23,12 +23,14 @@
 
 #define UNUSED(X) __attribute__((unused(X)))
 
+#include <stdint.h>
+
 typedef struct _iso_data
 {
     char *label;
     char *url;
     char *sha256sum;
-    int size;
+    int64_t size;
 } iso_data_t;
 
 typedef struct _choices
@@ -38,7 +40,8 @@ typedef struct _choices
     iso_data_t **values;
 } choices_t;
 
-iso_data_t *iso_data_create(char *label, char *url, char *sha256sum, int size);
+iso_data_t *iso_data_create(char *label, char *url, char *sha256sum,
+                            int64_t size);
 void iso_data_free(iso_data_t *iso_data);
 
 choices_t *choices_create(int len);

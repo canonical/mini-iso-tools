@@ -32,12 +32,12 @@ iso_chooser_step1() {
         tty2 linux
     chvt 1
 
-    if [ ! -f /out.vars ] ; then
+    if [ ! -f /mini-iso-menu.vars ] ; then
         echo "ISO menu failed, debug shell"
         /bin/sh
     fi
 
-    . /out.vars
+    . /mini-iso-menu.vars
 
     dev=$(blkid --match-token LABEL=ISOIMAGE | cut -d: -f1)
 

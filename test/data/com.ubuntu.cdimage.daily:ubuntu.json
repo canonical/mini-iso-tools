@@ -1,0 +1,917 @@
+{
+  "content_id": "com.ubuntu.cdimage.daily:ubuntu",
+  "datatype": "image-downloads",
+  "format": "products:1.0",
+  "products": {
+    "com.ubuntu.cdimage.daily:ubuntu:daily-legacy:23.04:amd64": {
+      "arch": "amd64",
+      "image_type": "daily-legacy",
+      "os": "ubuntu",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20230208": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "daily-legacy/20230208/lunar-desktop-legacy-amd64.iso",
+              "sha256": "e6cb12dca1dea23af43e4f2772c2b8872c65085d03d0b3ad9c99e61f45d7be74",
+              "size": 4511651840
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "daily-legacy/20230208/lunar-desktop-legacy-amd64.iso.zsync",
+              "sha256": "0fe3f8d65ded4e2999bc748868f0f5eeafcaac64d973c89096122dba8ca33443",
+              "size": 8812057
+            },
+            "list": {
+              "ftype": "list",
+              "path": "daily-legacy/20230208/lunar-desktop-legacy-amd64.list",
+              "sha256": "cb0edb72d8e61219f3998e8db507327dde579c82cce96ff98196f25f66ed5bc6",
+              "size": 19416
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "daily-legacy/20230208/lunar-desktop-legacy-amd64.manifest",
+              "sha256": "84fa6c2c4c7a1848c4c3c85d8235ad3a4c4c14111cc9aaa4e6ee36e90c878593",
+              "size": 56542
+            }
+          }
+        },
+        "20230209": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "daily-legacy/20230209/lunar-desktop-legacy-amd64.iso",
+              "sha256": "c08d61c9ccf2ad6eb09ac870ab325c5e844ae7f580d071edf34ba55ed6b5e8d6",
+              "size": 4960366592
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "daily-legacy/20230209/lunar-desktop-legacy-amd64.iso.zsync",
+              "sha256": "e5ef190acb522c6abea7a5e8ab461607ddc9d180c85e07b7285a350281d68de6",
+              "size": 10899476
+            },
+            "list": {
+              "ftype": "list",
+              "path": "daily-legacy/20230209/lunar-desktop-legacy-amd64.list",
+              "sha256": "ed1908dc0c00e5f2157e729c76561fb9b5747c3baf2e7ad449c21d7bdf98fb64",
+              "size": 22412
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "daily-legacy/20230209/lunar-desktop-legacy-amd64.manifest",
+              "sha256": "97a5a578d953b24b5288fba1076676e109194f7e7e6648b8c5d8c083e1b90d43",
+              "size": 56542
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu:daily-live:16.04:amd64": {
+      "arch": "amd64",
+      "image_type": "daily-live",
+      "os": "ubuntu",
+      "release": "xenial",
+      "release_codename": "Xenial Xerus",
+      "release_title": "16.04.7 LTS",
+      "version": "16.04",
+      "versions": {
+        "20200806": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "xenial/daily-live/20200806/xenial-desktop-amd64.iso",
+              "sha256": "8ba7e2687fb8a2152504475e92e489aace543059fd4ba7ffe10111c42394853b",
+              "size": 1697906688
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "xenial/daily-live/20200806/xenial-desktop-amd64.iso.zsync",
+              "sha256": "8a188c5e86194aad5640c647d8eb8c1b866443a67685b3d49598f80c81b2d59f",
+              "size": 3316445
+            },
+            "list": {
+              "ftype": "list",
+              "path": "xenial/daily-live/20200806/xenial-desktop-amd64.list",
+              "sha256": "e301b76e62cce105bdac3e287525bf6ab484beeecda68dcb4607d6e11a865e4c",
+              "size": 4439
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "xenial/daily-live/20200806/xenial-desktop-amd64.manifest",
+              "sha256": "9d2041ead8119c9c9133e900a9e47f40bb3b5931131a81abd27ea6e9da8c2d82",
+              "size": 69941
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu:daily-live:20.04:amd64": {
+      "arch": "amd64",
+      "image_type": "daily-live",
+      "os": "ubuntu",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20221005.1": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "focal/daily-live/20221005.1/focal-desktop-amd64.iso",
+              "sha256": "e93be1600a8f4994fe0ac2ffe4005ec9a46f4a428bf168bbe52492c67f79dd5b",
+              "size": 3864182784
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "focal/daily-live/20221005.1/focal-desktop-amd64.iso.zsync",
+              "sha256": "8abe931a82b4016f4bcc2f4ec3afdf09ba37dea1e9bd1fe0b0ceb747f43208de",
+              "size": 7547451
+            },
+            "list": {
+              "ftype": "list",
+              "path": "focal/daily-live/20221005.1/focal-desktop-amd64.list",
+              "sha256": "b79dd1f60c1c343e96db9d6d99b1cb1459050522c14624e278db45c076ef7f64",
+              "size": 36943
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "focal/daily-live/20221005.1/focal-desktop-amd64.manifest",
+              "sha256": "783ba090aa09e9f0f46b8f8bbfe05e988541b3289d1ebe070434189282cf5bba",
+              "size": 60332
+            }
+          }
+        },
+        "20230208": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "focal/daily-live/20230208/focal-desktop-amd64.iso",
+              "sha256": "73c03aecd803964f7b74fe9f65d81811e0f3c3df1047f4f00fe0533f45fc9588",
+              "size": 4351463424
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "focal/daily-live/20230208/focal-desktop-amd64.iso.zsync",
+              "sha256": "04b1bd60b4e649e4aa1ea58c597b32cbfc4ba1e704c79e006fcd4ccab2c5ba54",
+              "size": 8499171
+            },
+            "list": {
+              "ftype": "list",
+              "path": "focal/daily-live/20230208/focal-desktop-amd64.list",
+              "sha256": "0c653f533c4a5c6a7d4f7383de36db93270208c453b4ef8f4166ffbc6d927743",
+              "size": 39920
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "focal/daily-live/20230208/focal-desktop-amd64.manifest",
+              "sha256": "dee253462e96a0a7b91053a14c7628202e9b02dca894b3330ed961f081485925",
+              "size": 60637
+            }
+          }
+        },
+        "20230209": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "focal/daily-live/20230209/focal-desktop-amd64.iso",
+              "sha256": "76ad005be8911cb339a64c33c1a8845c32ae64d5ad46dc90b099c8d6df892551",
+              "size": 4351463424
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "focal/daily-live/20230209/focal-desktop-amd64.iso.zsync",
+              "sha256": "bfef8b49cd815bde6c2e84c35ad596fe439cb99af49b8cea4fa23b3b437c1e48",
+              "size": 8499171
+            },
+            "list": {
+              "ftype": "list",
+              "path": "focal/daily-live/20230209/focal-desktop-amd64.list",
+              "sha256": "42117c3e17cfa9c65e9e9f37e13ceed12a425528dc6a9c4414dcd41fc0f87614",
+              "size": 39920
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "focal/daily-live/20230209/focal-desktop-amd64.manifest",
+              "sha256": "f8c2c607b5390c154234649189a641287a20a954765b1e07da443db9026abc8a",
+              "size": 60637
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu:daily-live:20.04:arm64": {
+      "arch": "arm64",
+      "image_type": "daily-live",
+      "os": "ubuntu",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20221005.1": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "focal/daily-live/20221005.1/focal-desktop-arm64.iso",
+              "sha256": "186e36644da2d2c30d1f898968daefe9f6e335e37cbec2557133883d6848b0a9",
+              "size": 2425761792
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "focal/daily-live/20221005.1/focal-desktop-arm64.iso.zsync",
+              "sha256": "1209facc869232647cca0f2435fcf1b3b9913fc41539d645f39038b0a492e0d1",
+              "size": 4738035
+            },
+            "list": {
+              "ftype": "list",
+              "path": "focal/daily-live/20221005.1/focal-desktop-arm64.list",
+              "sha256": "a39e924cfbc5f22e34ea5f05ad96037daf4628009a09c2ba25b4f66701889133",
+              "size": 11861
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "focal/daily-live/20221005.1/focal-desktop-arm64.manifest",
+              "sha256": "2d1fd86f7e320f95d0de3b06e3f2285c93e9c6611348a3725b718ee9808a56d4",
+              "size": 59474
+            }
+          }
+        },
+        "20230208": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "focal/daily-live/20230208/focal-desktop-arm64.iso",
+              "sha256": "8bf45a31658da56b6035db12c8aca10d67d5306e6e6720ad940bb14a71646213",
+              "size": 2470922240
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "focal/daily-live/20230208/focal-desktop-arm64.iso.zsync",
+              "sha256": "52499a796adf29ac1b7d09cb13f69be23eb36be4e5a60136d4d7f3377e18cc6b",
+              "size": 4826243
+            },
+            "list": {
+              "ftype": "list",
+              "path": "focal/daily-live/20230208/focal-desktop-arm64.list",
+              "sha256": "71059c56e45094cf02e1b843d0f51daf25ec868ae0c0c089bb015ae012b90f0d",
+              "size": 12338
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "focal/daily-live/20230208/focal-desktop-arm64.manifest",
+              "sha256": "a6ca42118585a9cc6af600e035fac6599e6eeb2b8321a2b2325c92ae0911071e",
+              "size": 59779
+            }
+          }
+        },
+        "20230209": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "focal/daily-live/20230209/focal-desktop-arm64.iso",
+              "sha256": "a195963baf4c54e8a0f1ad9acda782a90fc0e72169ff765b0b645b1167fb7486",
+              "size": 2471000064
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "focal/daily-live/20230209/focal-desktop-arm64.iso.zsync",
+              "sha256": "58047de173f710915781777814202640bbe565a6c72eb77342e9920acc1d1350",
+              "size": 4826395
+            },
+            "list": {
+              "ftype": "list",
+              "path": "focal/daily-live/20230209/focal-desktop-arm64.list",
+              "sha256": "3891d55e11c550802f66034ad38692e04dd2f0c98cf0538014a8586db0d08f39",
+              "size": 12338
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "focal/daily-live/20230209/focal-desktop-arm64.manifest",
+              "sha256": "d34cf82fe58d19d90c53efa2334e508fd9ff3786f5add71ac30e9a890c008a80",
+              "size": 59779
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu:daily-live:20.04:iot": {
+      "arch": "iot",
+      "image_type": "daily-live",
+      "os": "ubuntu",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20221005.1": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "focal/daily-live/20221005.1/focal-desktop-amd64+intel-iot.iso",
+              "sha256": "063e510a7a732c8c94e23fc727e556228b3496c51f6a771f0161cb4a17f74c96",
+              "size": 3860398080
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "focal/daily-live/20221005.1/focal-desktop-amd64+intel-iot.iso.zsync",
+              "sha256": "e42707b33bab6e45f108a030ac83bed7e44a0a650b89183d44e9c981260c6d79",
+              "size": 7540079
+            },
+            "list": {
+              "ftype": "list",
+              "path": "focal/daily-live/20221005.1/focal-desktop-amd64+intel-iot.list",
+              "sha256": "1a120b74348883e43f4a917300af3711ba800b02f9ef88cd82bb41ed16435ec5",
+              "size": 36090
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "focal/daily-live/20221005.1/focal-desktop-amd64+intel-iot.manifest",
+              "sha256": "0ec25da099e53db6ee5ad72c1b636afb21bd8aea9ea8032d101b096b0b6c436f",
+              "size": 60348
+            }
+          }
+        },
+        "20230208": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "focal/daily-live/20230208/focal-desktop-amd64+intel-iot.iso",
+              "sha256": "1d2eb45fad922e088a262e317b02b15f22b73d4d162c53c0687420ca82539ac0",
+              "size": 4351463424
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "focal/daily-live/20230208/focal-desktop-amd64+intel-iot.iso.zsync",
+              "sha256": "ee4dd8ffc3b321aa4e32e4641408a1916b6755b1c96f9e9b3858cf1e6af15e55",
+              "size": 8499191
+            },
+            "list": {
+              "ftype": "list",
+              "path": "focal/daily-live/20230208/focal-desktop-amd64+intel-iot.list",
+              "sha256": "5753feb8289f01a7c653f73d63f1460e054ff7c136409cd1ee74b99a72486681",
+              "size": 39920
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "focal/daily-live/20230208/focal-desktop-amd64+intel-iot.manifest",
+              "sha256": "06cd0ef13e628171830c62a17a20d75021fbbc25728fb5209277447843ecdd17",
+              "size": 60676
+            }
+          }
+        },
+        "20230209": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "focal/daily-live/20230209/focal-desktop-amd64+intel-iot.iso",
+              "sha256": "cdf37fd75770846addad5dccab4efaa09ae57b6bf9aa5f00d8e51c4e05f52178",
+              "size": 4351463424
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "focal/daily-live/20230209/focal-desktop-amd64+intel-iot.iso.zsync",
+              "sha256": "36b0ff4b08772987564096c37a710523482f781414017622ba2819180eac297d",
+              "size": 8499191
+            },
+            "list": {
+              "ftype": "list",
+              "path": "focal/daily-live/20230209/focal-desktop-amd64+intel-iot.list",
+              "sha256": "24e6935e5b1f02f715fc62fd3644799ee2dcbb75ef33c8fc50e317ace3b26946",
+              "size": 39920
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "focal/daily-live/20230209/focal-desktop-amd64+intel-iot.manifest",
+              "sha256": "0e07a3970cad050769bb3570df92e340ddbbeab49699d80f8fb89fa87aefbc9b",
+              "size": 60676
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu:daily-live:22.04:amd64": {
+      "arch": "amd64",
+      "image_type": "daily-live",
+      "os": "ubuntu",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20221020": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "jammy/daily-live/20221020/jammy-desktop-amd64.iso",
+              "sha256": "6c5f0efeeaa24f9264d074f0d7f5fff31d8c15498f043c8a00576a2b00c8a7b3",
+              "size": 4095082496
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "jammy/daily-live/20221020/jammy-desktop-amd64.iso.zsync",
+              "sha256": "874af0a31c060a573f5e1f1fc1d10fe29bb564ede6b2767a4c9816b7e0206f43",
+              "size": 7998427
+            },
+            "list": {
+              "ftype": "list",
+              "path": "jammy/daily-live/20221020/jammy-desktop-amd64.list",
+              "sha256": "3bd522cbf01f9d162c9ae0cb78a08bff3ac91c2ba9ae9cb1b8bd2cc052b50523",
+              "size": 20473
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/daily-live/20221020/jammy-desktop-amd64.manifest",
+              "sha256": "2104623273e26ab920bf90f27b678c87b7ea4852a45a5b052bf023c2908e3687",
+              "size": 59272
+            }
+          }
+        },
+        "20230208": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "jammy/daily-live/20230208/jammy-desktop-amd64.iso",
+              "sha256": "727f92557fe5252c5434e64a9fc4308b2fbe99314b6c3f5f05c2de4f906b39d9",
+              "size": 4942868480
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "jammy/daily-live/20230208/jammy-desktop-amd64.iso.zsync",
+              "sha256": "9cc9833ac35b57cf63a4592c4a34b936c7ff7f2c4e91e0d6ca31c154e89000d0",
+              "size": 10861014
+            },
+            "list": {
+              "ftype": "list",
+              "path": "jammy/daily-live/20230208/jammy-desktop-amd64.list",
+              "sha256": "6f735216a00f6948d466d618c7c2e74e4b830af45faac27d83579fc45d862109",
+              "size": 24330
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/daily-live/20230208/jammy-desktop-amd64.manifest",
+              "sha256": "830f0ea5f76f351f8d965f2bf73dda78657b0ca841ace81665c01cf0f1cb497b",
+              "size": 60093
+            }
+          }
+        },
+        "20230209": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "jammy/daily-live/20230209/jammy-desktop-amd64.iso",
+              "sha256": "85cea4832077a78cb205aec2a66da74f7a9b4ba2c49c6b797103b0daefcca67f",
+              "size": 4943069184
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "jammy/daily-live/20230209/jammy-desktop-amd64.iso.zsync",
+              "sha256": "822a405a5c8bb7040e5cc474156ac327e2fe924674f987255411264241511433",
+              "size": 10861455
+            },
+            "list": {
+              "ftype": "list",
+              "path": "jammy/daily-live/20230209/jammy-desktop-amd64.list",
+              "sha256": "6f735216a00f6948d466d618c7c2e74e4b830af45faac27d83579fc45d862109",
+              "size": 24330
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/daily-live/20230209/jammy-desktop-amd64.manifest",
+              "sha256": "f729ac40e6e4e3b1df0c575f5100c757f01316af2e070631183bd7f6f9e07393",
+              "size": 60102
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu:daily-live:22.04:arm64": {
+      "arch": "arm64",
+      "image_type": "daily-live",
+      "os": "ubuntu",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20221020": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "jammy/daily-live/20221020/jammy-desktop-arm64.iso",
+              "sha256": "0414fde644e526380309b6cf1dd95859c898a39f31c1c8695382e25d82905d8e",
+              "size": 3157504000
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "jammy/daily-live/20221020/jammy-desktop-arm64.iso.zsync",
+              "sha256": "a19d339316cae45398cf628fff6adc9c1b07718f318432affe588e2bc1f94d67",
+              "size": 6167219
+            },
+            "list": {
+              "ftype": "list",
+              "path": "jammy/daily-live/20221020/jammy-desktop-arm64.list",
+              "sha256": "4c7b05a913e6caa0cc0c70d7ab2e43fed9a82c18b55e4d297faa96ef303c1f0a",
+              "size": 5749
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/daily-live/20221020/jammy-desktop-arm64.manifest",
+              "sha256": "dfa9d7e3348fdfb54f20de6613582d8865821d18f0e21ccffe22d97c23d4f7a3",
+              "size": 58594
+            }
+          }
+        },
+        "20230208": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "jammy/daily-live/20230208/jammy-desktop-arm64.iso",
+              "sha256": "51ee9eaeef945aadf751cddf9b6e476e7d12df703f989a714ec9b9dc914a1ab1",
+              "size": 3745280000
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "jammy/daily-live/20230208/jammy-desktop-arm64.iso.zsync",
+              "sha256": "d4b7691c3a8d37272620128d52c10667f869b81f476cac98164b47d352ccb707",
+              "size": 7315219
+            },
+            "list": {
+              "ftype": "list",
+              "path": "jammy/daily-live/20230208/jammy-desktop-arm64.list",
+              "sha256": "1dfc48e4dae9901c9de27b8448cc1a74eea9a4a30200afdaa97a3aa84c12a229",
+              "size": 8597
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/daily-live/20230208/jammy-desktop-arm64.manifest",
+              "sha256": "ee517cc1669befb8e664881e877fe1de5a6752916b8c36fe16082b232e39179e",
+              "size": 59396
+            }
+          }
+        },
+        "20230209": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "jammy/daily-live/20230209/jammy-desktop-arm64.iso",
+              "sha256": "32acce9ecb2477b94a362226ed59d1c09164868034b9f5792277348d7978b172",
+              "size": 3745280000
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "jammy/daily-live/20230209/jammy-desktop-arm64.iso.zsync",
+              "sha256": "051bc82e127b37e53c9d6d2658a92a4b0776717c2cccb613fc80c21d0adb59c0",
+              "size": 7315219
+            },
+            "list": {
+              "ftype": "list",
+              "path": "jammy/daily-live/20230209/jammy-desktop-arm64.list",
+              "sha256": "1dfc48e4dae9901c9de27b8448cc1a74eea9a4a30200afdaa97a3aa84c12a229",
+              "size": 8597
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/daily-live/20230209/jammy-desktop-arm64.manifest",
+              "sha256": "85d02806b41dceb908e8b6cf95ca616680a88432565458448abf3e9c3a7c8d37",
+              "size": 59405
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu:daily-live:22.04:iot": {
+      "arch": "iot",
+      "image_type": "daily-live",
+      "os": "ubuntu",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20221020": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "jammy/daily-live/20221020/jammy-desktop-amd64+intel-iot.iso",
+              "sha256": "76e85a9b4469a2978e46929c4efefd649bab341cd18f5b1ad156366e68fc4935",
+              "size": 4152336384
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "jammy/daily-live/20221020/jammy-desktop-amd64+intel-iot.iso.zsync",
+              "sha256": "cea271ae9a9d942e0c61061f01d5348325dd4f253dbf1ba79510442bf6f11537",
+              "size": 8110271
+            },
+            "list": {
+              "ftype": "list",
+              "path": "jammy/daily-live/20221020/jammy-desktop-amd64+intel-iot.list",
+              "sha256": "2c081a17e504f9b16bf3a1729f8b286062c23b55e861ab66354a063c6df155de",
+              "size": 20401
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/daily-live/20221020/jammy-desktop-amd64+intel-iot.manifest",
+              "sha256": "e0b3c2f887876b16db4ee57eeb89e93c04322e9e899b537cbef62605de5ba2ab",
+              "size": 59286
+            }
+          }
+        },
+        "20230208": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "jammy/daily-live/20230208/jammy-desktop-amd64+intel-iot.iso",
+              "sha256": "0183ea14804e9852e81f0d2135983fe3011fa65b89c0bfe96f3b16eb146bb99d",
+              "size": 4876847104
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "jammy/daily-live/20230208/jammy-desktop-amd64+intel-iot.iso.zsync",
+              "sha256": "4d2b9dd2441f939e6697ed04c47998715a4de17a6712ab580541c646ae246d48",
+              "size": 10715972
+            },
+            "list": {
+              "ftype": "list",
+              "path": "jammy/daily-live/20230208/jammy-desktop-amd64+intel-iot.list",
+              "sha256": "6f735216a00f6948d466d618c7c2e74e4b830af45faac27d83579fc45d862109",
+              "size": 24330
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/daily-live/20230208/jammy-desktop-amd64+intel-iot.manifest",
+              "sha256": "c2c96e7c3e02523c602f11319aa6ec337696ee79bec0cdb4c5c1ec775ee1cfd9",
+              "size": 60048
+            }
+          }
+        },
+        "20230209": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "jammy/daily-live/20230209/jammy-desktop-amd64+intel-iot.iso",
+              "sha256": "d889affa50f0e4b3e66cb2538214fad6b76fbbfa60666df6445502d89406c874",
+              "size": 4877041664
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "jammy/daily-live/20230209/jammy-desktop-amd64+intel-iot.iso.zsync",
+              "sha256": "e886031362640e5d6f1fc46ba1354d66a65e9d0e51cc328872496a53c8659290",
+              "size": 10716395
+            },
+            "list": {
+              "ftype": "list",
+              "path": "jammy/daily-live/20230209/jammy-desktop-amd64+intel-iot.list",
+              "sha256": "6f735216a00f6948d466d618c7c2e74e4b830af45faac27d83579fc45d862109",
+              "size": 24330
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/daily-live/20230209/jammy-desktop-amd64+intel-iot.manifest",
+              "sha256": "700980d4a6a3b73676c8ca7ac2e5602a20926c66c6313a4aa029c251c208ebbc",
+              "size": 60057
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu:daily-live:23.04:amd64": {
+      "arch": "amd64",
+      "image_type": "daily-live",
+      "os": "ubuntu",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20221209": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "daily-live/20221209/lunar-desktop-amd64.iso",
+              "sha256": "aa5bcbba6042e77dece194b163891c18407b16f0d0c02427ff20151e5416ec1c",
+              "size": 4477704192
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "daily-live/20221209/lunar-desktop-amd64.iso.zsync",
+              "sha256": "b350ebf33dffc0b8c3405b70692906cb16497503e2653f706cf16ce52d816d49",
+              "size": 8745739
+            },
+            "list": {
+              "ftype": "list",
+              "path": "daily-live/20221209/lunar-desktop-amd64.list",
+              "sha256": "a111f2dec8e169238c844fc7c0e72205489ef18411c7f98365f9748d2ba4fa3e",
+              "size": 18737
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "daily-live/20221209/lunar-desktop-amd64.manifest",
+              "sha256": "ac48054cba1184c3e4b9cdfa041d59ef4235d3275cc3f3bdf6ec1212c9c49e35",
+              "size": 56683
+            }
+          }
+        },
+        "20230208": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "daily-live/20230208/lunar-desktop-amd64.iso",
+              "sha256": "43dd6e33e2bbb3da10a8132eacf2e8c427fefbbf116373b6c8ea05e77591f844",
+              "size": 5428621312
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "daily-live/20230208/lunar-desktop-amd64.iso.zsync",
+              "sha256": "526dd2e22a45c223ffd7b1d988e3269d2fdc0af46810b56c1d532d34c7900292",
+              "size": 11928342
+            },
+            "list": {
+              "ftype": "list",
+              "path": "daily-live/20230208/lunar-desktop-amd64.list",
+              "sha256": "04cf28b478846aa6601339e0237488621c9e702d1897eba5c72f6a69311c6f97",
+              "size": 22119
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "daily-live/20230208/lunar-desktop-amd64.manifest",
+              "sha256": "1ee925bca6a560e84dae5b5ee1ad66ae8f1e9b8978dc39f6c041fccd6d9594e7",
+              "size": 57131
+            }
+          }
+        },
+        "20230208.1": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "daily-live/20230208.1/lunar-desktop-amd64.iso",
+              "sha256": "f426175f41339b175e2aaac4fab7601691104b44aa4824a561ebcd23bb463886",
+              "size": 5877319680
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "daily-live/20230208.1/lunar-desktop-amd64.iso.zsync",
+              "sha256": "c8e3bb6d492e11e88d32ff9e7f0d934d4fca6fddbca3e040c2e8311ec765e3f3",
+              "size": 12914256
+            },
+            "list": {
+              "ftype": "list",
+              "path": "daily-live/20230208.1/lunar-desktop-amd64.list",
+              "sha256": "6498b82ec3129f13b0df96614ca3a4fb84a41d221f67d3cf72c21b4c9aecc861",
+              "size": 25115
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "daily-live/20230208.1/lunar-desktop-amd64.manifest",
+              "sha256": "1ee925bca6a560e84dae5b5ee1ad66ae8f1e9b8978dc39f6c041fccd6d9594e7",
+              "size": 57131
+            }
+          }
+        },
+        "20230209": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "daily-live/20230209/lunar-desktop-amd64.iso",
+              "sha256": "2d2a0e0894fa8c98cc564223bf41d6bf2dd9d27449ac4b30f7d42edfeb77de67",
+              "size": 5877311488
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "daily-live/20230209/lunar-desktop-amd64.iso.zsync",
+              "sha256": "64cd68603b823f835e77f53536580b54df8218dade1870cb4a023c5e8d68c738",
+              "size": 12914238
+            },
+            "list": {
+              "ftype": "list",
+              "path": "daily-live/20230209/lunar-desktop-amd64.list",
+              "sha256": "6498b82ec3129f13b0df96614ca3a4fb84a41d221f67d3cf72c21b4c9aecc861",
+              "size": 25115
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "daily-live/20230209/lunar-desktop-amd64.manifest",
+              "sha256": "8b188a27e2f2d2ec5cb6af1c3712921664cde8a02edc20f511388efed4d533ff",
+              "size": 57131
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu:daily-preinstalled:22.04:arm64+raspi": {
+      "arch": "arm64+raspi",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "20230208": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "jammy/daily-preinstalled/20230208/jammy-preinstalled-desktop-arm64+raspi.img.xz",
+              "sha256": "7b6637f08530788f4256eb5c96f589cb1b196e11d31bd1a49b5d7ebe71c73b1c",
+              "size": 2179959624
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "jammy/daily-preinstalled/20230208/jammy-preinstalled-desktop-arm64+raspi.img.xz.zsync",
+              "sha256": "f7bbab5a21fd520b8afb2000c53883429d0754fadca37fd7f3d7ccd6a4065fb0",
+              "size": 4257999
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/daily-preinstalled/20230208/jammy-preinstalled-desktop-arm64+raspi.manifest",
+              "sha256": "9fe351d09519cb121de1eddf41d9962005702aa2004e074c525c5b0f08d5af6e",
+              "size": 49786
+            }
+          }
+        },
+        "20230209": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "jammy/daily-preinstalled/20230209/jammy-preinstalled-desktop-arm64+raspi.img.xz",
+              "sha256": "315f06f4d09d37d60f5dd2b424ff808c25ef18ecc531092179e99eb7f5dfb23c",
+              "size": 2179950792
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "jammy/daily-preinstalled/20230209/jammy-preinstalled-desktop-arm64+raspi.img.xz.zsync",
+              "sha256": "c37a2081b67fcb4a896ae073c6ee04df8d1f3dadeeb6502e6adbf8cebdbff3d3",
+              "size": 4257983
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/daily-preinstalled/20230209/jammy-preinstalled-desktop-arm64+raspi.manifest",
+              "sha256": "c38cd13cd60c5052a070633ec8ded667ab17882980defb2914752a86b7bb448f",
+              "size": 49795
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.cdimage.daily:ubuntu:daily-preinstalled:23.04:arm64+raspi": {
+      "arch": "arm64+raspi",
+      "image_type": "daily-preinstalled",
+      "os": "ubuntu",
+      "release": "lunar",
+      "release_codename": "Lunar Lobster",
+      "release_title": "23.04",
+      "version": "23.04",
+      "versions": {
+        "20230208": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "daily-preinstalled/20230208/lunar-preinstalled-desktop-arm64+raspi.img.xz",
+              "sha256": "85bdccfc533a6beb1aa5fc888730f7b34f0e3230e81635ca23acde98387965cb",
+              "size": 2260979216
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "daily-preinstalled/20230208/lunar-preinstalled-desktop-arm64+raspi.img.xz.zsync",
+              "sha256": "1d2cefb3ff868755530670ba5509f1f254124045caf8a1ceb4575a19f56c89ea",
+              "size": 4416239
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "daily-preinstalled/20230208/lunar-preinstalled-desktop-arm64+raspi.manifest",
+              "sha256": "4e6d91253255963eef31094e93c20eb2a8878568347bc96b24903e74eb6f3c64",
+              "size": 46359
+            }
+          }
+        },
+        "20230209": {
+          "items": {
+            "img.xz": {
+              "ftype": "img.xz",
+              "path": "daily-preinstalled/20230209/lunar-preinstalled-desktop-arm64+raspi.img.xz",
+              "sha256": "344f046c1788df55cafa00f42ea09f8d69a107900b80a6792483e6b03dfe70c7",
+              "size": 2260949820
+            },
+            "img.xz.zsync": {
+              "ftype": "img.xz.zsync",
+              "path": "daily-preinstalled/20230209/lunar-preinstalled-desktop-arm64+raspi.img.xz.zsync",
+              "sha256": "1041df33b39f29db3c7fea61a48db619b97dd6a8ca5783256af2b32b4212cb1a",
+              "size": 4416183
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "daily-preinstalled/20230209/lunar-preinstalled-desktop-arm64+raspi.manifest",
+              "sha256": "ca2b95bc26b39f277e23e2a5cbdc9a1cafbed973ee11ddcd434abef4bc5b173b",
+              "size": 46359
+            }
+          }
+        }
+      }
+    }
+  },
+  "updated": "Thu, 09 Feb 2023 22:58:11 +0000"
+}

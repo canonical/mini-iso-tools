@@ -1,0 +1,320 @@
+{
+  "content_id": "com.ubuntu.releases:ubuntu-server",
+  "datatype": "image-downloads",
+  "format": "products:1.0",
+  "products": {
+    "com.ubuntu.releases:ubuntu-server:live-server:18.04:amd64": {
+      "arch": "amd64",
+      "image_type": "live-server",
+      "os": "ubuntu-server",
+      "release": "bionic",
+      "release_codename": "Bionic Beaver",
+      "release_title": "18.04.6 LTS",
+      "version": "18.04",
+      "versions": {
+        "18.04.6": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "bionic/ubuntu-18.04.6-live-server-amd64.iso",
+              "sha256": "6c647b1ab4318e8c560d5748f908e108be654bad1e165f7cf4f3c1fc43995934",
+              "size": 1016070144
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "bionic/ubuntu-18.04.6-live-server-amd64.iso.zsync",
+              "sha256": "913498684edbe2a1e1cc6127c5f94598c2cd5567bdf7551f60d8da0941f12a12",
+              "size": 1984757
+            },
+            "list": {
+              "ftype": "list",
+              "path": "bionic/ubuntu-18.04.6-live-server-amd64.list",
+              "sha256": "6bbd663034648cc11271d6b4eb102ea4f338c4295b91a59b3bb0f284111cc196",
+              "size": 10608
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "bionic/ubuntu-18.04.6-live-server-amd64.manifest",
+              "sha256": "5726a50aaa00fde28e7933c62d766b78c5df7687ba0383aa9a46b4c0fea3c297",
+              "size": 14707
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.releases:ubuntu-server:live-server:20.04:amd64": {
+      "arch": "amd64",
+      "image_type": "live-server",
+      "os": "ubuntu-server",
+      "release": "focal",
+      "release_codename": "Focal Fossa",
+      "release_title": "20.04.5 LTS",
+      "version": "20.04",
+      "versions": {
+        "20.04.5": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "focal/ubuntu-20.04.5-live-server-amd64.iso",
+              "sha256": "5035be37a7e9abbdc09f0d257f3e33416c1a0fb322ba860d42d74aa75c3468d4",
+              "size": 1406533632
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "focal/ubuntu-20.04.5-live-server-amd64.iso.zsync",
+              "sha256": "ab39594035f37b141b680a2fd1bec506aae496e60d5df2d674330b348077f4ba",
+              "size": 2747381
+            },
+            "list": {
+              "ftype": "list",
+              "path": "focal/ubuntu-20.04.5-live-server-amd64.list",
+              "sha256": "e464152594afeb63d86d1a89beb297cd058307a9c82ae2d05fc9496870d27c59",
+              "size": 10302
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "focal/ubuntu-20.04.5-live-server-amd64.manifest",
+              "sha256": "595f5a465376aca89a7f790e46dc80b669ef020a56891488a8ed41f0496e293c",
+              "size": 17369
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.releases:ubuntu-server:live-server:22.04:amd64": {
+      "arch": "amd64",
+      "image_type": "live-server",
+      "os": "ubuntu-server",
+      "release": "jammy",
+      "release_codename": "Jammy Jellyfish",
+      "release_title": "22.04.1 LTS",
+      "version": "22.04",
+      "versions": {
+        "22.04.1": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "jammy/ubuntu-22.04.1-live-server-amd64.iso",
+              "sha256": "10f19c5b2b8d6db711582e0e27f5116296c34fe4b313ba45f9b201a5007056cb",
+              "size": 1474873344
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "jammy/ubuntu-22.04.1-live-server-amd64.iso.zsync",
+              "sha256": "f860e899f0a15893a63e2fbff1219d101c1d7f67720147bc16ca0b3f36fd173e",
+              "size": 2880861
+            },
+            "list": {
+              "ftype": "list",
+              "path": "jammy/ubuntu-22.04.1-live-server-amd64.list",
+              "sha256": "b4ab75dd660a92df727b0c8fd2905182d37c7469a215ee4e9f000abf0d6bc14d",
+              "size": 6751
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/ubuntu-22.04.1-live-server-amd64.manifest",
+              "sha256": "b77ce7f712910b4d97217e5e1aa296280060513f742283a8b53b1a8f71c8acfc",
+              "size": 18013
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.releases:ubuntu-server:live-server:22.10:amd64": {
+      "arch": "amd64",
+      "image_type": "live-server",
+      "os": "ubuntu-server",
+      "release": "kinetic",
+      "release_codename": "Kinetic Kudu",
+      "release_title": "22.10",
+      "version": "22.10",
+      "versions": {
+        "22.10": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "kinetic/ubuntu-22.10-live-server-amd64.iso",
+              "sha256": "874452797430a94ca240c95d8503035aa145bd03ef7d84f9b23b78f3c5099aed",
+              "size": 1642631168
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "kinetic/ubuntu-22.10-live-server-amd64.iso.zsync",
+              "sha256": "30b9b9d392713af1608edc0791b1f2d74d8b17aa85854269d376ea8cb9c83899",
+              "size": 3208505
+            },
+            "list": {
+              "ftype": "list",
+              "path": "kinetic/ubuntu-22.10-live-server-amd64.list",
+              "sha256": "20f8ea45746a9bf8f6293eb751bedb7edbd1bf91afaecf42c3f661da98c45d56",
+              "size": 6501
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "kinetic/ubuntu-22.10-live-server-amd64.manifest",
+              "sha256": "857673d7b5607a579869fb9e291a5b35a837b7b2ce825f3df7ca3dfb7a9c7c25",
+              "size": 17453
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.releases:ubuntu-server:server:14.04:amd64": {
+      "arch": "amd64",
+      "image_type": "server",
+      "os": "ubuntu-server",
+      "release": "trusty",
+      "release_codename": "Trusty Tahr",
+      "release_title": "14.04.6 LTS",
+      "version": "14.04",
+      "versions": {
+        "14.04.6": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "trusty/ubuntu-14.04.6-server-amd64.iso",
+              "sha256": "b17d7c1e9d0321ad5810ba77b69aef43f0f29a5422b08120e6ee0576c4527c0e",
+              "size": 662700032
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "trusty/ubuntu-14.04.6-server-amd64.iso.zsync",
+              "sha256": "3552613e147657968ad90bbfd1aff0b853c1295298f844c51ce0e5e18d5e1d21",
+              "size": 1294570
+            },
+            "list": {
+              "ftype": "list",
+              "path": "trusty/ubuntu-14.04.6-server-amd64.list",
+              "sha256": "a99966be5beec7e5f6f0303786afde44646913ab0e1d112ff8d1f1e0eee5b655",
+              "size": 93961
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "trusty/ubuntu-14.04.6-server-amd64.manifest",
+              "sha256": "1e3c5902b6fd776d8dca6bb1600897a92e0347a0177d36c1d8107c8087654238",
+              "size": 5601
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.releases:ubuntu-server:server:14.04:i386": {
+      "arch": "i386",
+      "image_type": "server",
+      "os": "ubuntu-server",
+      "release": "trusty",
+      "release_codename": "Trusty Tahr",
+      "release_title": "14.04.6 LTS",
+      "version": "14.04",
+      "versions": {
+        "14.04.6": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "trusty/ubuntu-14.04.6-server-i386.iso",
+              "sha256": "c3b0e016e77e6bcfc608ab3e3d2aa33367fc83e3bf645014ecf36689fe330b80",
+              "size": 638582784
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "trusty/ubuntu-14.04.6-server-i386.iso.zsync",
+              "sha256": "a9c5f180d73ceef20f2b0f28cc463ed4941d5de25baf5b3f2e2ad5a3da10ea34",
+              "size": 1247464
+            },
+            "list": {
+              "ftype": "list",
+              "path": "trusty/ubuntu-14.04.6-server-i386.list",
+              "sha256": "aa124d65246e1f9ddc57c716efb1efacc32b8594fd074a5cc0a53915afb13b95",
+              "size": 91266
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "trusty/ubuntu-14.04.6-server-i386.manifest",
+              "sha256": "b82d8ff85460a4362c50eb8d55bbb6e6dd0aa187fcdf8c89109b05d57a35ad51",
+              "size": 5531
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.releases:ubuntu-server:server:16.04:amd64": {
+      "arch": "amd64",
+      "image_type": "server",
+      "os": "ubuntu-server",
+      "release": "xenial",
+      "release_codename": "Xenial Xerus",
+      "release_title": "16.04.7 LTS",
+      "version": "16.04",
+      "versions": {
+        "16.04.7": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "xenial/ubuntu-16.04.7-server-amd64.iso",
+              "sha256": "b23488689e16cad7a269eb2d3a3bf725d3457ee6b0868e00c8762d3816e25848",
+              "size": 922746880
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "xenial/ubuntu-16.04.7-server-amd64.iso.zsync",
+              "sha256": "484b43614fb8bb2400463f7fc675918b2c25e0918a8bd546b7d6f9ca3e39f32c",
+              "size": 1802474
+            },
+            "list": {
+              "ftype": "list",
+              "path": "xenial/ubuntu-16.04.7-server-amd64.list",
+              "sha256": "e43d9eb4308dec255164528642d0de174d6ebecdacb4ff57028c957b800f14bb",
+              "size": 101080
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "xenial/ubuntu-16.04.7-server-amd64.manifest",
+              "sha256": "fcc8fc2af6601f4919c4f49c76fb2a93fac29f0ab8f1505566d0c3be90ab684a",
+              "size": 5597
+            }
+          }
+        }
+      }
+    },
+    "com.ubuntu.releases:ubuntu-server:server:16.04:i386": {
+      "arch": "i386",
+      "image_type": "server",
+      "os": "ubuntu-server",
+      "release": "xenial",
+      "release_codename": "Xenial Xerus",
+      "release_title": "16.04.7 LTS",
+      "version": "16.04",
+      "versions": {
+        "16.04.6": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "xenial/ubuntu-16.04.6-server-i386.iso",
+              "sha256": "7509cabb2f9f6ba0a95f8454d432be2ef26679d31ce35baa626acc5321460fab",
+              "size": 877658112
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "xenial/ubuntu-16.04.6-server-i386.iso.zsync",
+              "sha256": "eb4cd53198db165301e7d2fe17ae343ceb197c67958b46918f0acf3a1c6fdcec",
+              "size": 1714408
+            },
+            "list": {
+              "ftype": "list",
+              "path": "xenial/ubuntu-16.04.6-server-i386.list",
+              "sha256": "db3ec92ad106e06d512c006a89a8a84e643eb7597c1206f331d3f9b9a83604f6",
+              "size": 98404
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "xenial/ubuntu-16.04.6-server-i386.manifest",
+              "sha256": "869ef783be50a2418be96009dab1fc2368fed3551cd37a1fbbc314a3383057f4",
+              "size": 5453
+            }
+          }
+        }
+      }
+    }
+  },
+  "updated": "Thu, 20 Oct 2022 16:23:58 +0000"
+}

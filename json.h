@@ -30,8 +30,6 @@ const char *str(json_object *obj);
 bool eq(const char *a, const char *b);
 bool lt(const char *a, const char *b);
 
-choices_t *read_iso_choices(char *filename);
-
 /* The criteria is a mapping from a content_id to the information we need to
  * retrieve, and show info about, a given ISO. Simple stream JSON contains a
  * content_id on the top level object, which is then used to determine which
@@ -56,3 +54,10 @@ typedef struct _criteria_t
 } criteria_t;
 
 criteria_t *criteria_for_content_id(const char *content_id);
+
+iso_data_t *get_newest_iso(const char *filename, const char *arch);
+
+json_object *find_largest_key(json_object *obj, const char **ret_key);
+json_object *find_newest_product(json_object *products, const char **ret_key,
+                                 const char *arch, const char *os,
+                                 const char *image_type);

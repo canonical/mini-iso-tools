@@ -5,8 +5,16 @@ set -e
 # ensures we have the unicode glyphs - half-blocks, right arrow
 /usr/bin/setfont /usr/lib/mini-iso-tools/subiquity.psf
 
-cdimage_json=/cdimage.json
-wget -O $cdimage_json \
-    https://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json
+mkdir -p /tmp/mini-iso-menu
 
-/usr/lib/mini-iso-tools/iso-chooser-menu /out.vars $cdimage_json
+urls=""
+urls="$urls https://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json"
+urls="$urls https://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu.json"
+urls="$urls https://releases.ubuntu.com/streams/v1/com.ubuntu.releases:ubuntu-server.json"
+urls="$urls https://releases.ubuntu.com/streams/v1/com.ubuntu.releases:ubuntu.json"
+
+for url in $urls; do
+    wget -P /tmp/mini-iso-menu "$url"
+done
+
+/usr/lib/mini-iso-tools/iso-chooser-menu /mini-iso-menu.vars /tmp/mini-iso-menu/*
