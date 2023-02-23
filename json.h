@@ -55,6 +55,8 @@ typedef struct _criteria_t
 
 criteria_t *criteria_for_content_id(const char *content_id);
 
+bool choices_extend_from_json(choices_t *choices, const char *filename,
+                              const char *arch);
 iso_data_t *get_newest_iso(const char *filename, const char *arch);
 
 json_object *find_largest_key(json_object *obj, const char **ret_key);

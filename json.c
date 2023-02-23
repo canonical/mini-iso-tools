@@ -19,10 +19,15 @@
 
 #include <stdbool.h>
 #include <string.h>
+#include <syslog.h>
 
 #include <json-c/json.h>
 
 #include "json.h"
+
+/* The way this mini.iso chainboots depends on PMEM kernel modules,
+ * and ISOs below 22.04.2 have kernels that don't have those modules.*/
+#define MINIMUM_UBUNTU_VERSION "22.04.2"
 
 criteria_t content_id_to_criteria[] = {
     {
@@ -144,18 +149,8 @@ json_object *find_newest_product(json_object *products, const char **ret_key,
     return ret;
 }
 
-iso_data_t *get_newest_iso(const char *filename, const char *arch)
+iso_data_t *iso_data_for_product(json_object *product, criteria_t *criteria)
 {
-    json_object *root = json_object_from_file(filename);
-    if(!root) return NULL;
-
-    const char *content_id = str(get(root, "content_id"));
-    criteria_t *criteria = criteria_for_content_id(content_id);
-    if(!criteria) return NULL;
-
-    json_object *product = find_newest_product(get(root, "products"), NULL,
-            arch, criteria->os, criteria->image_type);
-    if(!product) return NULL;
     json_object *newest = find_largest_key(get(product, "versions"), NULL);
     if(!newest) return NULL;
     json_object *iso = get(get(newest, "items"), "iso");
@@ -172,13 +167,68 @@ iso_data_t *get_newest_iso(const char *filename, const char *arch)
     json_object *size = get(iso, "size");
     if(!size) return NULL;
 
-    iso_data_t *ret = iso_data_create(
+    return iso_data_create(
             saprintf("%s %s (%s)",
                      criteria->descriptor, str(title), str(codename)),
             saprintf("%s/%s", criteria->urlbase, str(path)),
             strdup(str(sha256)),
             json_object_get_int64(size));
+}
 
+bool choices_extend_from_json(choices_t *choices, const char *filename,
+                              const char *arch)
+{
+    /* extend the choices available to include all viable isos
+     * found in this file */
+    json_object *root = json_object_from_file(filename);
+    if(!root) return false;
+
+    const char *content_id = str(get(root, "content_id"));
+    criteria_t *criteria = criteria_for_content_id(content_id);
+    if(!criteria) return false;
+
+    json_object *products = get(root, "products");
+    if(!products) return false;
+
+    json_object_object_foreach(products, product_key, product) {
+        (void)product_key;
+
+        if(!eq(str(get(product, "arch")), arch)) continue;
+        if(!eq(str(get(product, "os")), criteria->os)) continue;
+        if(!eq(str(get(product, "image_type")), criteria->image_type))
+            continue;
+        if(lt(str(get(product, "release_title")), MINIMUM_UBUNTU_VERSION))
+            continue;
+        json_object *versions = get(product, "versions");
+        if(!versions) continue;
+        json_object *newest = find_largest_key(versions, NULL);
+        if(!newest) continue;
+
+        if(!choices_append(choices, iso_data_for_product(product, criteria)))
+            return false;
+
+    }
+
+    json_object_put(root);
+    return true;
+}
+
+iso_data_t *get_newest_iso(const char *filename, const char *arch)
+{
+    json_object *root = json_object_from_file(filename);
+    if(!root) return NULL;
+
+    const char *content_id = str(get(root, "content_id"));
+    criteria_t *criteria = criteria_for_content_id(content_id);
+    if(!criteria) return NULL;
+
+    /* I want to iterate not just over newest product, but over all products
+     * above a given version */
+    json_object *product = find_newest_product(get(root, "products"), NULL,
+            arch, criteria->os, criteria->image_type);
+    if(!product) return NULL;
+
+    iso_data_t *ret = iso_data_for_product(product, criteria);
     json_object_put(root);
     return ret;
 }
