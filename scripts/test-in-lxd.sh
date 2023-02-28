@@ -50,17 +50,12 @@ fi
 
 lxc exec $TESTER -- cloud-init status --wait
 
-# Filthy build-deps list. mk-build-deps would be cleaner but it causes ~250
-# extra packages to be installed, and then we would want to remove them.
-build_deps=$(
-    sed -n -e '/Build-Depends/,/^[^ ]/p' debian/control \
-    | grep -E '^ ' | grep -v debhelper-compat | cut -d, -f1 | xargs
-)
+build_deps=$($(dirname $0)/build-depends.py)
 
 lxc exec $TESTER -- sh -ec "
     cd ~/src
     DEBIAN_FRONTEND=noninteractive apt-get update
-    DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential debhelper $build_deps
+    DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential $build_deps
     $SCRIPT"
 
 lxc stop $TESTER

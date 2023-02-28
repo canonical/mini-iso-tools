@@ -1,3 +1,9 @@
+mini-iso-tools (0.2.1) UNRELEASED; urgency=medium
+
+  * Move build system to meson
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Tue, 21 Feb 2023 17:51:32 -0700
+
 mini-iso-tools (0.2.0) lunar; urgency=medium
 
   * Update the menu to accept an arbitrary number of simplestream files as

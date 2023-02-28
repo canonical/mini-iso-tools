@@ -5,9 +5,12 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
- libcmocka-dev,
+ gcovr <!nocheck>,
+ libcmocka-dev <!nocheck>,
  libjson-c-dev,
  libncurses-dev,
+ meson,
+ ninja-build,
  pkg-config,
 Standards-Version: 4.6.1
 Homepage: https://github.com/canonical/mini-iso-tools
