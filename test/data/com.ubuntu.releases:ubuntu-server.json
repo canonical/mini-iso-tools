@@ -87,7 +87,7 @@
       "os": "ubuntu-server",
       "release": "jammy",
       "release_codename": "Jammy Jellyfish",
-      "release_title": "22.04.1 LTS",
+      "release_title": "22.04.2 LTS",
       "version": "22.04",
       "versions": {
         "22.04.1": {
@@ -115,6 +115,34 @@
               "path": "jammy/ubuntu-22.04.1-live-server-amd64.manifest",
               "sha256": "b77ce7f712910b4d97217e5e1aa296280060513f742283a8b53b1a8f71c8acfc",
               "size": 18013
+            }
+          }
+        },
+        "22.04.2": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "jammy/ubuntu-22.04.2-live-server-amd64.iso",
+              "sha256": "5e38b55d57d94ff029719342357325ed3bda38fa80054f9330dc789cd2d43931",
+              "size": 1975971840
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "jammy/ubuntu-22.04.2-live-server-amd64.iso.zsync",
+              "sha256": "fd7177c08212011b0ae372ce4472e966bc7bd6479bfb5c7af15988936be73ad3",
+              "size": 3859565
+            },
+            "list": {
+              "ftype": "list",
+              "path": "jammy/ubuntu-22.04.2-live-server-amd64.list",
+              "sha256": "f76163e050a7c5971ddbb92987c7509342accc3ebd4cf4ab6ab7260795853dca",
+              "size": 8035
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/ubuntu-22.04.2-live-server-amd64.manifest",
+              "sha256": "eca0464aa96da88bb6dd8178cc8b84319be4121233e6f41cccee11d0533e5e25",
+              "size": 18487
             }
           }
         }
@@ -316,5 +344,5 @@
       }
     }
   },
-  "updated": "Thu, 20 Oct 2022 16:23:58 +0000"
+  "updated": "Thu, 23 Feb 2023 18:01:11 +0000"
 }

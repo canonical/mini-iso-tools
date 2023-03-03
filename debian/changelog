@@ -1,6 +1,7 @@
 mini-iso-tools (0.2.1) UNRELEASED; urgency=medium
 
   * Move build system to meson
+  * Only show the release ISOs for now
 
  -- Dan Bungert <daniel.bungert@canonical.com>  Tue, 21 Feb 2023 17:51:32 -0700
 

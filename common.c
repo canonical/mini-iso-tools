@@ -58,26 +58,35 @@ void iso_data_free(iso_data_t *iso_data)
     free(iso_data);
 }
 
-choices_t *choices_create(int len)
+choices_t *choices_create(int capacity)
 {
     choices_t *ret = (choices_t *)calloc(sizeof(choices_t), 1);
     if(!ret) return NULL;
 
-    ret->values = (iso_data_t **)calloc(sizeof(iso_data_t *), len);
+    ret->values = (iso_data_t **)calloc(sizeof(iso_data_t *), capacity);
     if(!ret->values) {
         free(ret);
         return NULL;
     }
-    ret->len = len;
+    ret->capacity = capacity;
     return ret;
 }
 
-void choices_free(choices_t *c)
+void choices_free(choices_t *choices)
 {
-    if(!c) return;
+    if(!choices) return;
 
-    for(int i = 0; i < c->len; i++) {
-        iso_data_free(c->values[i]);
+    for(int i = 0; i < choices->len; i++) {
+        iso_data_free(choices->values[i]);
     }
-    free(c);
+    free(choices);
+}
+
+bool choices_append(choices_t *choices, iso_data_t *data)
+{
+    if(choices->len < choices->capacity) {
+        choices->values[choices->len++] = data;
+        return true;
+    }
+    return false;
 }

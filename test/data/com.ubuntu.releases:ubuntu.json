@@ -243,7 +243,7 @@
       "os": "ubuntu",
       "release": "jammy",
       "release_codename": "Jammy Jellyfish",
-      "release_title": "22.04.1 LTS",
+      "release_title": "22.04.2 LTS",
       "version": "22.04",
       "versions": {
         "22.04.1": {
@@ -271,6 +271,34 @@
               "path": "jammy/ubuntu-22.04.1-desktop-amd64.manifest",
               "sha256": "b63b7916f415391c441babcd48511f8eaf54e30f76bfa04028231edabeef69c5",
               "size": 59000
+            }
+          }
+        },
+        "22.04.2": {
+          "items": {
+            "iso": {
+              "ftype": "iso",
+              "path": "jammy/ubuntu-22.04.2-desktop-amd64.iso",
+              "sha256": "b98dac940a82b110e6265ca78d1320f1f7103861e922aa1a54e4202686e9bbd3",
+              "size": 4927586304
+            },
+            "iso.zsync": {
+              "ftype": "iso.zsync",
+              "path": "jammy/ubuntu-22.04.2-desktop-amd64.iso.zsync",
+              "sha256": "2fc0edfc85cffe5684f75a135226d32007d75c8f38113694e2ee39b89eae767d",
+              "size": 10827453
+            },
+            "list": {
+              "ftype": "list",
+              "path": "jammy/ubuntu-22.04.2-desktop-amd64.list",
+              "sha256": "6f735216a00f6948d466d618c7c2e74e4b830af45faac27d83579fc45d862109",
+              "size": 24330
+            },
+            "manifest": {
+              "ftype": "manifest",
+              "path": "jammy/ubuntu-22.04.2-desktop-amd64.manifest",
+              "sha256": "6c5b7b0a26f417b6025acebfc6114839885c883c08ca7a3e87542d098655325d",
+              "size": 59931
             }
           }
         }
@@ -316,5 +344,5 @@
       }
     }
   },
-  "updated": "Thu, 20 Oct 2022 16:23:58 +0000"
+  "updated": "Thu, 23 Feb 2023 18:01:11 +0000"
 }

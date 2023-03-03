@@ -204,22 +204,8 @@ static void criteria_all_initialized(void **state)
     }
 }
 
-static void read_NULL(void **state)
-{
-    assert_null(get_newest_iso(NULL, NULL));
-}
-
-static void read_not_exist(void **state)
-{
-    assert_null(get_newest_iso("/not/exist", NULL));
-}
-
-static void read_empty_obj(void **state)
-{
-    assert_null(get_newest_iso("test/data/empty-obj.json", NULL));
-}
-
 static void _test_isodata(
+        int index,
         const char *filename,
         const char *arch,
         const char *expected_label,
@@ -227,7 +213,9 @@ static void _test_isodata(
         const char *expected_sha256sum,
         int64_t expected_size)
 {
-    iso_data_t *iso_data = get_newest_iso(filename, arch);
+    choices_t *choices = choices_create(2);
+    choices_extend_from_json(choices, filename, arch);
+    iso_data_t *iso_data = choices->values[index];
     assert_string_equal(expected_label, iso_data->label);
     assert_string_equal(expected_url, iso_data->url);
     assert_string_equal(expected_sha256sum, iso_data->sha256sum);
@@ -237,6 +225,7 @@ static void _test_isodata(
 static void read_ubuntu_server_cdimage(void **state)
 {
     _test_isodata(
+            0,
             "test/data/com.ubuntu.cdimage.daily:ubuntu-server.json",
             "amd64",
             "Ubuntu Server 23.04 (Lunar Lobster)",
@@ -248,6 +237,7 @@ static void read_ubuntu_server_cdimage(void **state)
 static void read_ubuntu_server_releases(void **state)
 {
     _test_isodata(
+            1,
             "test/data/com.ubuntu.releases:ubuntu-server.json",
             "amd64",
             "Ubuntu Server 22.10 (Kinetic Kudu)",
@@ -259,6 +249,7 @@ static void read_ubuntu_server_releases(void **state)
 static void read_ubuntu_desktop_cdimage(void **state)
 {
     _test_isodata(
+            0,
             "test/data/com.ubuntu.cdimage.daily:ubuntu.json",
             "amd64",
             "Ubuntu Desktop 23.04 (Lunar Lobster)",
@@ -270,6 +261,7 @@ static void read_ubuntu_desktop_cdimage(void **state)
 static void read_ubuntu_desktop_releases(void **state)
 {
     _test_isodata(
+            1,
             "test/data/com.ubuntu.releases:ubuntu.json",
             "amd64",
             "Ubuntu Desktop 22.10 (Kinetic Kudu)",
@@ -290,9 +282,6 @@ int main(void)
         cmocka_unit_test(newest_product_first),
         cmocka_unit_test(newest_product_second),
 
-        cmocka_unit_test(read_NULL),
-        cmocka_unit_test(read_not_exist),
-        cmocka_unit_test(read_empty_obj),
         cmocka_unit_test(read_ubuntu_server_cdimage),
         cmocka_unit_test(read_ubuntu_server_releases),
         cmocka_unit_test(read_ubuntu_desktop_cdimage),

@@ -8,8 +8,6 @@ set -e
 mkdir -p /tmp/mini-iso-menu
 
 urls=""
-urls="$urls https://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu-server.json"
-urls="$urls https://cdimage.ubuntu.com/streams/v1/com.ubuntu.cdimage.daily:ubuntu.json"
 urls="$urls https://releases.ubuntu.com/streams/v1/com.ubuntu.releases:ubuntu-server.json"
 urls="$urls https://releases.ubuntu.com/streams/v1/com.ubuntu.releases:ubuntu.json"
 

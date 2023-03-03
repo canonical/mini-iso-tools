@@ -8,7 +8,8 @@ compile: builddir
 	meson compile
 
 run: compile
-	./builddir/iso-chooser-menu /dev/null test/data/com*json
+	./builddir/iso-chooser-menu /dev/null \
+		test/data/com.ubuntu.releases*json
 
 test: builddir_coverage
 	cd $^
