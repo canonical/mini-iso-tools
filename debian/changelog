@@ -1,9 +1,12 @@
-mini-iso-tools (0.2.1) UNRELEASED; urgency=medium
+mini-iso-tools (0.2.1) lunar; urgency=medium
 
+  * Add build-dep to kexec-tools.  This is an artificial build-dep to fix an
+    issue with mini-iso-tools not being installable on riscv64 due to
+    kexec-tools not being available.
   * Move build system to meson
   * Only show the release ISOs for now
 
- -- Dan Bungert <daniel.bungert@canonical.com>  Tue, 21 Feb 2023 17:51:32 -0700
+ -- Dan Bungert <daniel.bungert@canonical.com>  Sat, 04 Mar 2023 13:50:42 -0700
 
 mini-iso-tools (0.2.0) lunar; urgency=medium
 
