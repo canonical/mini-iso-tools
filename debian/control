@@ -6,6 +6,7 @@ Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
  gcovr <!nocheck>,
+ kexec-tools,
  libcmocka-dev <!nocheck>,
  libjson-c-dev,
  libncurses-dev,
