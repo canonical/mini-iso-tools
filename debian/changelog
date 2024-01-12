@@ -1,3 +1,9 @@
+mini-iso-tools (0.2.2) mantic; urgency=medium
+
+  * Update initramfs-tools hook for changed ncurses paths.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Mon, 14 Aug 2023 13:55:35 -0700
+
 mini-iso-tools (0.2.1) lunar; urgency=medium
 
   * Add build-dep to kexec-tools.  This is an artificial build-dep to fix an

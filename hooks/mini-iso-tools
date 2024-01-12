@@ -43,7 +43,7 @@ copy_exec /sbin/agetty
 copy_exec /bin/setfont
 _copy_exec_force /usr/bin/dd
 _copy_recursive locale /usr/lib/locale/C.utf8
-copy_file terminfo /lib/terminfo/l/linux
+copy_file terminfo /usr/share/terminfo/l/linux
 copy_file script /usr/lib/mini-iso-tools/iso-menu-session
 copy_file script /usr/lib/mini-iso-tools/get_memmap_directive
 copy_file script /usr/lib/mini-iso-tools/checksum-device
