@@ -25,6 +25,9 @@ Depends:
  casper,
  kbd,
  kexec-tools,
+ openssl,
+ ca-certificates,
+ dhcpcd,
 Description: Show a menu of bootable ISOs
  This package provides hook scripts for the new mini.iso to allow it to
  present a menu of possible boot targets.
