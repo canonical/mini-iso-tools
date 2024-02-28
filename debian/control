@@ -16,7 +16,6 @@ Build-Depends:
 Standards-Version: 4.6.1
 Homepage: https://github.com/canonical/mini-iso-tools
 Vcs-Browser: https://github.com/canonical/mini-iso-tools
-Vcs-Git: https://github.com/canonical/mini-iso-tools.git
 
 Package: mini-iso-tools
 Architecture: any
