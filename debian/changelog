@@ -1,3 +1,19 @@
+mini-iso-tools (0.3.0) noble; urgency=medium
+
+  * Update for more changed ncurses paths, this time to switch to linux-c.
+  * Drop the Vcs-Git field, per discussion at
+    https://lists.ubuntu.com/archives/ubuntu-devel/2023-June/042597.html
+  * Move dependencies to this package, instead of relying on them being in
+    livecd-rootfs.
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Wed, 28 Feb 2024 13:55:00 -0700
+
+mini-iso-tools (0.2.2) mantic; urgency=medium
+
+  * Update initramfs-tools hook for changed ncurses paths.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Mon, 14 Aug 2023 13:55:35 -0700
+
 mini-iso-tools (0.2.1) lunar; urgency=medium
 
   * Add build-dep to kexec-tools.  This is an artificial build-dep to fix an

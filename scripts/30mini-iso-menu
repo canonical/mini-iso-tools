@@ -29,7 +29,7 @@ iso_chooser_step1() {
     chvt 2  # the chvts work around messages bleeding into the agetty
     /usr/sbin/agetty --skip-login \
         --login-program /usr/lib/mini-iso-tools/iso-menu-session \
-        tty2 linux
+        tty2 linux-c
     chvt 1
 
     if [ ! -f /mini-iso-menu.vars ] ; then
