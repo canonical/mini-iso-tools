@@ -1,3 +1,9 @@
+mini-iso-tools (0.3.1) noble; urgency=medium
+
+  * Correct depedency declaration on dhcp client, to dhcpcd-base
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Mon, 25 Mar 2024 08:53:19 -0600
+
 mini-iso-tools (0.3.0) noble; urgency=medium
 
   * Update for more changed ncurses paths, this time to switch to linux-c.
