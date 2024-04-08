@@ -1,3 +1,9 @@
+mini-iso-tools (0.3.2) noble; urgency=medium
+
+  * d/control: declare ncurses-term dependency
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Sun, 07 Apr 2024 20:30:58 -0600
+
 mini-iso-tools (0.3.1) noble; urgency=medium
 
   * Correct depedency declaration on dhcp client, to dhcpcd-base

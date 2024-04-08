@@ -22,12 +22,13 @@ Architecture: any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
+ ca-certificates,
  casper,
+ dhcpcd-base,
  kbd,
  kexec-tools,
+ ncurses-term,
  openssl,
- ca-certificates,
- dhcpcd-base,
 Description: Show a menu of bootable ISOs
  This package provides hook scripts for the new mini.iso to allow it to
  present a menu of possible boot targets.
