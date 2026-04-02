@@ -1,3 +1,9 @@
+mini-iso-tools (0.3.3) resolute; urgency=medium
+
+  * Leverage cdrom mounting logic from casper. (LP: #2146492)
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Wed, 01 Apr 2026 19:05:47 -0600
+
 mini-iso-tools (0.3.2build1) resolute; urgency=medium
 
   * No-change mass rebuild for Ubuntu 26.04 (LP: #2132257)
