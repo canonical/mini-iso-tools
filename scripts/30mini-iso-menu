@@ -17,6 +17,13 @@ esac
 
 . /scripts/casper-functions
 . /scripts/casper-helpers
+. /scripts/casper
+
+# standard is_casper_path in casper won't match what's in the mini.iso, but we
+# do want this to return success for what find_livefs wants.
+is_casper_path() {
+    return 0
+}
 
 mountpoint=/cdrom
 
@@ -39,10 +46,8 @@ iso_chooser_step1() {
 
     . /mini-iso-menu.vars
 
-    dev=$(blkid --match-token LABEL=ISOIMAGE | cut -d: -f1)
-
-    modprobe isofs
-    mount -o ro "$dev" "${mountpoint}"
+    # arrange for the cdrom to be mounted
+    find_livefs 0
 
     configure_networking
 
